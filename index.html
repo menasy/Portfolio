@@ -6,112 +6,360 @@
   <title>Mehmet Nasim Yılmaz - Portfolyo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #020721;
-      color: #f0f0f0;
-      text-align: center;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      background: #1e1e1e;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    h1, h2, h3, h4 {
-      color: #ffffff;
-      margin: 10px 0;
-    }
-    a {
-      color: #0d47a1;
-      text-decoration: underline;
-      font-style: italic;
-    }
-    a:hover {
-      text-decoration: none;
-    }
-    .section {
-      margin-bottom: 20px;
-    }
-    .project, .other-project {
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #444;
-    }
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      display: block;
-      margin: 20px auto;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .media {
-      margin: 10px 0;
-    }
-    video, img {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto;
-    }
-    .flex-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .column {
-      width: 45%;
-      padding: 10px;
-      text-align: left;
-    }
-    .tech-tools {
-      margin-left: 20px;
-    }
-    ul {
-      list-style: disc;
-      margin: 0;
-      padding-left: 20px;
-      text-align: left;
-    }
-    li {
-      margin: 5px 0;
-    }
-    #diger-projeler {
-      text-align: center;
-    }
-    #diger-projeler .other-project {
-      display: inline-block;
-      width: 90%;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
-    .single-column {
-      text-align: center;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-    .project-heading {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .project-heading img {
-      width: 30px;
-      height: auto;
-      vertical-align: middle;
-    }
-    /* Proje özetleri için stil */
-    .project-summary {
-      font-size: 1.1em;
-      line-height: 1.8;
-      margin: 10px 0 20px;
-      padding: 0 10px;
-      text-align: left;
-    }
+  font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0a192f 0%, #020721 100%);
+  color: #e6e6e6;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: rgba(26, 32, 53, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+  margin: 20px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  bottom: 0;
+  left: 20%;
+  background: linear-gradient(90deg, transparent, #4d7fff, transparent);
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #64ffda;
+}
+
+a {
+  color: #4d7fff;
+  text-decoration: none;
+  font-style: italic;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 2px 0;
+}
+
+a:hover {
+  color: #64ffda;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #64ffda;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(30, 39, 61, 0.6);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project, .other-project {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(40, 49, 71, 0.6);
+  border-bottom: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.project:hover, .other-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  background: rgba(45, 55, 80, 0.8);
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 20px auto;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4d7fff;
+  box-shadow: 0 0 20px rgba(77, 127, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+blockquote {
+  font-style: italic;
+  color: #b3b3b3;
+  margin: 25px auto;
+  max-width: 80%;
+  position: relative;
+  padding: 20px;
+}
+
+blockquote::before, blockquote::after {
+  content: '"';
+  font-size: 2rem;
+  color: #4d7fff;
+  position: absolute;
+  opacity: 0.4;
+}
+
+blockquote::before {
+  top: -10px;
+  left: -10px;
+}
+
+blockquote::after {
+  bottom: -20px;
+  right: -10px;
+}
+
+.media {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+video, img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.media:hover video, .media:hover img {
+  transform: scale(1.01);
+}
+
+/* Flex sütun düzeni düzeltildi */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 280px;
+  max-width: calc(50% - 20px);
+  padding: 15px;
+  text-align: left;
+  background: rgba(35, 44, 66, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Teknik Beceriler için düzeltmeler */
+#teknik-beceriler .flex-row {
+  justify-content: center;
+}
+
+#teknik-beceriler .column {
+  flex: 0 0 45%;
+}
+
+.tech-tools {
+  margin-left: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+li::before {
+  content: '•';
+  color: #64ffda;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+#diger-projeler {
+  text-align: center;
+}
+
+#diger-projeler .other-project {
+  display: inline-block;
+  width: 90%;
+  margin: 10px auto 20px;
+  text-align: center;
+  background: rgba(40, 49, 71, 0.6);
+  transition: all 0.3s ease;
+}
+
+.single-column {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.project-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.project-heading img {
+  width: 35px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.project-heading:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Proje özetleri için stil */
+.project-summary {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin: 15px 0 25px;
+  padding: 15px;
+  text-align: left;
+  background: rgba(30, 39, 61, 0.4);
+  border-radius: 8px;
+  border-left: 3px solid #4d7fff;
+}
+
+/* Header kısmı için özel stil */
+header {
+  padding: 30px 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(30, 39, 61, 0.8) 0%, rgba(26, 32, 53, 0.6) 100%);
+  margin-bottom: 30px;
+}
+
+header h2 {
+  margin-top: 5px;
+}
+
+header p {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+/* Teknoloji listeleri için vurgu */
+h4 {
+  color: #4d7fff;
+  border-bottom: 1px solid rgba(77, 127, 255, 0.3);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* İletişim bölümü için özel stil */
+#iletisim {
+  background: linear-gradient(135deg, rgba(30, 39, 61, 0.8) 0%, rgba(45, 55, 80, 0.8) 100%);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#iletisim a {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: rgba(77, 127, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+#iletisim a:hover {
+  background: rgba(77, 127, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Mobil için responsive düzenlemeler - iyileştirildi */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .column {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-heading {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
   </style>
 </head>
 <body>
@@ -132,7 +380,7 @@
     <section id="hedefim" class="section single-column">
       <p>
         Yazılım geliştirme, finans ve özellikle mobil programlama alanlarında kendimi sürekli geliştirmeye ve yeni teknolojiler öğrenmeye çalışıyorum. 
-        Edindiğim teknik ve teorik bilgileri pratiğe dökerek hem deneyim kazanmak hem de kendimi bu süreçte daha da ileriye taşımak istiyorum.
+        Edindiğim teknik ve teorik bilgileri pratiğe dökerek hem deneyim kazanmayı hem de kendimi bu süreçte daha da ileriye taşımayı hedefliyorum.
       </p>
     </section>
     
