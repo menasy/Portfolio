@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,6 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mehmet Nasim Yılmaz - Portfolyo</title>
   <style>
+   /* Navigasyon için stil */
+  .nav-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #1a2035 0%, #0a192f 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 12px 0;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 5px 10px;
+  }
+
+  .nav-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid transparent;
+    background: rgba(30, 39, 61, 0.6);
+    font-style: normal;
+  }
+
+  .nav-links a:hover {
+    color: #64ffda;
+    background: rgba(40, 49, 71, 0.8);
+    transform: translateY(-3px);
+    border: 1px solid rgba(77, 127, 255, 0.3);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  /* Scroll to top button */
+  .scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: #4d7fff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .scroll-top.visible {
+    opacity: 1;
+  }
+
+  .scroll-top:hover {
+    background: #64ffda;
+    transform: translateY(-5px);
+  }
+
+  /* Mobil için düzenleme */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: 8px;
+    }
+    
+    .nav-links a {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+    
+    .scroll-top {
+      width: 40px;
+      height: 40px;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
     body {
   font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
   line-height: 1.8;
@@ -365,6 +457,57 @@ h4 {
 </head>
 <body>
   <div class="container">
+
+  <div class="nav-links">
+    <a href="#hedefim">Hedefim</a>
+    <a href="#hakkimda-yeteneklerim">Hakkımda & Yeteneklerim</a>
+    <a href="#teknik-beceriler">Teknik Beceriler</a>
+    <a href="#one-cikan-projeler">Öne Çıkan Projeler</a>
+    <a href="#diger-projeler">Diğer Projeler</a>
+    <a href="#iletisim-cv">İletişim & CV</a>
+  </div>
+</div>
+
+<!-- Yukarı kaydırma butonu - </body> etiketinden hemen önce ekleyin -->
+<div id="scrollTopBtn" class="scroll-top">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- JavaScript kodu - </body> etiketinden hemen önce ekleyin -->
+<script>
+  // Yukarı kaydırma butonu için
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Yumuşak kaydırma için
+  document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
     <!-- Header Bölümü -->
 	<header>
 		<img src="https://github.com/menasy/Portfolio/blob/main/newProfil.jpeg?raw=true" alt="Profil Fotoğrafı" class="profile-photo">
@@ -461,206 +604,256 @@ h4 {
       </div>
     </section>
     
-    <!-- Öne Çıkan Projeler Bölümü -->
-    <section id="one-cikan-projeler" class="section single-column">
-      <h2>Öne Çıkan Projeler</h2>
-      <p>Tüm projelerimin kodlarına ve daha detaylı açıklamalarına <a href="https://github.com/menasy?tab=repositories">GitHub</a> sayfamdan ulaşabilirsiniz.</p>
+   <!-- Öne Çıkan Projeler Bölümü -->
+<!-- Öne Çıkan Projeler Bölümü -->
+<section id="one-cikan-projeler" class="section single-column">
+  <h2>Öne Çıkan Projeler</h2>
+  <p>Tüm projelerimin kodlarına ve daha detaylı açıklamalarına <a href="https://github.com/menasy?tab=repositories">GitHub</a> sayfamdan ulaşabilirsiniz.</p>
 
-      <!-- 1. HesKit MobilApp -->
-      <div class="project">
-        <h3 class="project-heading">
-          <a href="https://github.com/menasy/HesKit-MobilApp">HesKit MobilApp</a>
-          <img src="https://raw.githubusercontent.com/menasy/HesKit-MobilApp/main/OutFiles/heskit.png" alt="HesKit Simgesi">
-        </h3>
-        <!-- Proje özeti -->
-        <p class="project-summary">
-          HesKit MobilApp, Android platformunda Java ile geliştirilen bir mobil uygulamadır. İşçi ödemeleri, mesai takibi ve finansal süreç yönetimini optimize ederken, SQL tabanlı veritabanıyla gerçek zamanlı veri yönetimi sağlar.
-        </p>
-        <div class="media">
-          <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png" alt="HesKit Fotoğraf">
-        </div>
-        <div class="flex-row">
-          <div class="column">
-            <h4>Özellikler:</h4>
-            <ul>
-              <li>Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi</li>
-              <li>Ödeme İşlemleri: Havale, harçlık ve transfer takibi</li>
-              <li>Mesai Takibi: Çalışma günleri ve fazla mesailer</li>
-              <li>Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Teknolojiler:</h4>
-            <ul>
-              <li>Java</li>
-              <li>SQLite</li>
-              <li>Android SDK</li>
-              <li>XML, Gradle</li>
-              <li>Room Database</li>
-              <li>Singleton Pattern</li>
-              <li>Android Jetpack</li>
-              <li>RecyclerView</li>
-            </ul>
-          </div>
-        </div>
+  <!-- 1. HesKit MobilApp -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/menasy/HesKit-MobilApp">HesKit MobilApp</a>
+      <img src="https://raw.githubusercontent.com/menasy/HesKit-MobilApp/main/OutFiles/heskit.png" alt="HesKit Simgesi">
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      Android platformunda Java kullanarak geliştirdiğim HesKit MobilApp, küçük ve orta ölçekli işletmeler için finansal yönetim çözümüdür. Çalışan bilgileri, mesai takibi ve ödeme işlemlerini tek bir uygulama üzerinden yönetebilmeyi sağlar. SQLite veritabanı ile veri işleme, Android Jetpack ve Room Database kullanımı ile modern mimari yaklaşımları uyguladım. Kullanıcı deneyimini ön planda tutarken veri güvenliğini sağlayacak şekilde tasarladığım bu uygulama, işletmelerin günlük finansal işlemlerini optimize etmelerini sağlıyor.
+    </p>
+    <div class="media">
+      <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png" alt="HesKit Fotoğraf">
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi</li>
+          <li>Ödeme İşlemleri: Havale, harçlık ve transfer takibi</li>
+          <li>Mesai Takibi: Çalışma günleri ve fazla mesailer</li>
+          <li>Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi</li>
+        </ul>
       </div>
-	<!--2 Inception Projesi -->
-<div class="project">
-	<h3 class="project-heading">
-	  <a href="https://github.com/menasy/Inception_Docker">Inception</a>
-	</h3>
-	<!-- Proje özeti -->
-	<p class="project-summary">
-		Inception, Docker ve konteyner teknolojisi kullanılarak mikro servis mimarisi prensiplerini uygulayan kapsamlı bir web altyapısı projesidir. NGINX, WordPress ve MariaDB servislerini ayrı konteynerlerde çalıştırarak güvenli, ölçeklenebilir bir sistem oluşturulmuştur. Ayrıca bu proje ile ilgili deneyimlerimi, aldığım notları ve Docker öğrenme sürecimi ele alarak yazdığım dokümantasyonu <a href="https://medium.com/@menasy/docker-42-inception-projesi-484e48ae543c" target="_blank">Medium yazısı</a> olarak paylaştım.
-	  </p>
-	<!-- İki fotoğraf yan yana olacak şekilde düzenlendi -->
-	<div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
-	  <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png" alt="Inception Mimari" style="width: 49%;">
-	  <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg" alt="Docker Compose" style="width: 49%;">
-	</div>
-	<div class="flex-row">
-	  <div class="column">
-		<h4>Özellikler:</h4>
-		<ul>
-		  <li>Mikro Servis Mimarisi: Her servis için ayrı konteyner</li>
-		  <li>Reversi Proxy: NGINX yapılandırması ve yönlendirmesi</li>
-		  <li>Güvenli Bağlantılar: TLS/SSL sertifikaları</li>
-		  <li>Veritabanı Entegrasyonu: MariaDB yapılandırması</li>
-		  <li>WordPress Optimizasyonu: Özelleştirilmiş konteyner ortamı</li>
-		</ul>
-	  </div>
-	  <div class="column">
-		<h4>Teknolojiler:</h4>
-		<ul>
-		  <li>Docker</li>
-		  <li>Docker Compose</li>
-		  <li>NGINX</li>
-		  <li>WordPress</li>
-		  <li>MariaDB</li>
-		  <li>Bash Script</li>
-		  <li>TLS/SSL</li>
-		  <li>Alpine Linux</li>
-		</ul>
-	  </div>
-	</div>
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>Java</li>
+          <li>SQLite</li>
+          <li>Android SDK</li>
+          <li>XML, Gradle</li>
+          <li>Room Database</li>
+          <li>Singleton Pattern</li>
+          <li>Android Jetpack</li>
+          <li>RecyclerView</li>
+        </ul>
+      </div>
+    </div>
   </div>
-      <!-- 3. Minishell -->
-      <div class="project">
-        <h3 class="project-heading">
-          <a href="https://github.com/menasy/42-Minishell">Minishell</a>
-        </h3>
-        <!-- Proje özeti -->
-        <p class="project-summary">
-          Minishell, C dili kullanılarak geliştirilen Unix benzeri bir shell uygulamasıdır. Temel komutları desteklemenin yanı sıra, komut ayrıştırma, yönlendirme, boru hatları ve sinyal yönetimi ile sistem çağrıları konusunda derin pratik sunar.
-        </p>
-        <div class="media">
-          <video controls width="100%">
-            <source src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
-        <div class="flex-row">
-          <div class="column">
-            <h4>Özellikler:</h4>
-            <ul>
-              <li>Komut Ayırma: cd, echo, pwd</li>
-              <li>Boru Hatları, MPipe ve Yönlendirme: &gt;, &gt;&gt;</li>
-              <li>Komut Geçişi: Önceki komutlara erişim</li>
-              <li>Girdi Yönetimi: Komutların doğru işlenmesi</li>
-              <li>Sinyal Yönetimi: Ctrl+C, Ctrl+D sinyalleri</li>
-              <li>Sistem Programlama: Shell ve sistem çağrıları</li>
-              <li>Ekip Çalışması: Verimli iş birliği, zaman yönetimi</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Teknolojiler:</h4>
-            <ul>
-              <li>C</li>
-              <li>POSIX Sistem Çağrıları</li>
-              <li>Bash Shell</li>
-              <li>Signal Handling</li>
-              <li>File I/O</li>
-              <li>Process Management</li>
-              <li>Memory Management</li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
-      <!-- 4. Cub3D -->
-      <div class="project">
-        <h3 class="project-heading">
-          <a href="https://github.com/menasy/cub3d">Cub3D</a>
-        </h3>
-        <!-- Proje özeti -->
-        <p class="project-summary">
-          Cub3D, C dili ve MiniLibX kullanılarak geliştirilen bir oyun projesidir. Raycasting tekniği ile 2D haritaları 3D görünüme dönüştürür; dinamik perspektif ve derinlik algısı sunar.
-        </p>
-        <div class="media">
-          <video controls width="100%">
-            <source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-          </video>
-        </div>
-        <div class="flex-row">
-          <div class="column">
-            <h4>Özellikler:</h4>
-            <ul>
-              <li>Ray Casting: 2D haritaları 3D dünyaya dönüştürme</li>
-              <li>Dokulu Duvarlar: Gerçekçi ortamlar oluşturma</li>
-              <li>Oyuncu Kontrolleri: WASD ve ok tuşlarıyla sezgisel hareket</li>
-              <li>Hata Yönetimi: Kararlı ve güvenilir sistem</li>
-              <li>Grafik İşleme: RGB renkleriyle zemin ve gökyüzü entegrasyonu</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Teknolojiler:</h4>
-            <ul>
-              <li>C</li>
-              <li>MiniLibX</li>
-              <li>Matematik kütüphaneleri</li>
-              <li>Oyun Mekanikleri &amp; Kullanıcı Etkileşimi</li>
-              <li>Raycasting Algoritmaları</li>
-              <li>X11 (Linux pencere yönetimi)</li>
-            </ul>
-          </div>
-        </div>
+  <!-- 2. WebServ (HTTP Server) -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/e-kose/WebServer">WebServ</a>
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      WebServ, ekip arkadaşımla birlikte C++ dilinde sıfırdan geliştirdiğimiz kendi HTTP/1.1 web sunucumuzdur. Nginx benzeri olay tabanlı mimari (event-driven architecture) ile tek bir işlemde birden fazla bağlantıyı eşzamanlı olarak yönetebilen, socket programlama kullanarak tek thread üzerinde çalışan yüksek performanslı bir yapı tasarladık. Non-blocking I/O mekanizmaları sayesinde çoklu istemci bağlantılarını etkin şekilde yöneten sunucumuz, çoklu port desteği, dinamik içerik işleme ve özelleştirilebilir yönlendirme özellikleriyle modern web sunucusu ihtiyaçlarını karşılamaktadır. Bu proje, ağ programlama, HTTP protokolü ve sistem kaynaklarının optimum kullanımı konularında derinlemesine teknik deneyim sağladı.
+    </p>
+    <div class="media" style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
+      <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/ServerClientDiagram.png?raw=true" alt="Server-Client Diyagramı" style="width: 32%;">
+      <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/WebServer.png?raw=true" alt="WebServer Görseli" style="width: 32%;">
+      <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/eventDriven.jpg?raw=true" alt="Olay Tabanlı Mimari" style="width: 32%;">
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>HTTP Metodları: GET, POST, DELETE desteği</li>
+          <li>Olay Tabanlı Mimari: Verimli istek işleme ve kaynak yönetimi</li>
+          <li>Non-blocking I/O: Eşzamanlı istemci bağlantıları</li>
+          <li>Çoklu Sunucu: Port ve sunucu adı bazlı yapılandırma</li>
+          <li>Dinamik İçerik: CGI ile PHP ve Python desteği</li>
+          <li>İstek Yönlendirme: Özelleştirilebilir rotalar</li>
+          <li>Dizin Listesi: Otomatik içerik görüntüleme</li>
+          <li>Hata Yönetimi: Özelleştirilmiş HTTP durum sayfaları</li>
+        </ul>
       </div>
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>C++</li>
+          <li>Socket Programlama</li>
+          <li>I/O Multiplexing (poll/select)</li>
+          <li>Olay Tabanlı Mimari</li>
+          <li>HTTP Protokolü</li>
+          <li>POSIX API</li>
+          <li>CGI (Common Gateway Interface)</li>
+          <li>Config Dosyası Parsing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-      <!-- 5. Philosophers42 -->
-      <div class="project">
-        <h3 class="project-heading">
-          <a href="https://github.com/menasy/philosophers-42">Philosophers42</a>
-        </h3>
-        <!-- Proje özeti -->
-        <p class="project-summary">
-          Philosophers42, C dili kullanılarak geliştirilen ve farklı philosophers problemi varyasyonlarını simüle eden bir projedir. Multithreading ve multiprocessing kullanılarak senkronizasyon, yarış koşulları ve kaynak paylaşımı etkin şekilde yönetilir.
-        </p>
-        <div class="media">
-          <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png" alt="Philo Icon">
-        </div>
-        <div class="flex-row">
-          <div class="column">
-            <h4>Özellikler:</h4>
-            <ul>
-              <li>Yarış koşulları (race conditions)</li>
-              <li>Kaynak paylaşımı optimizasyonu</li>
-              <li>Deadlock çözümleri</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Teknolojiler:</h4>
-            <ul>
-              <li>C</li>
-              <li>pthread</li>
-              <li>mutex</li>
-              <li>Semaforlar</li>
-            </ul>
-          </div>
-        </div>
+  <!--3. Inception Projesi -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/menasy/Inception_Docker">Inception</a>
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      Docker teknolojisini derinlemesine öğrenmek amacıyla geliştirdiğim Inception projesi, web hizmetlerinin konteynerleştirilmiş bir altyapısını oluşturur. Her bir servisi (NGINX, WordPress, MariaDB) ayrı konteynerlerde çalıştırarak izolasyon ve ölçeklenebilirlik sağladım. TLS/SSL sertifikaları ile güvenli bağlantılar oluşturdum ve Docker Compose ile tüm sistem bileşenlerini tek bir yapılandırma dosyasıyla yönetmeyi başardım. Deneyimlerimi <a href="https://medium.com/@menasy/docker-42-inception-projesi-484e48ae543c" target="_blank">Medium yazısında</a> detaylı olarak paylaştım.
+    </p>
+    <!-- İki fotoğraf yan yana olacak şekilde düzenlendi -->
+    <div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
+      <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png" alt="Inception Mimari" style="width: 49%;">
+      <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg" alt="Docker Compose" style="width: 49%;">
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Mikro Servis Mimarisi: Her servis için ayrı konteyner</li>
+          <li>Reversi Proxy: NGINX yapılandırması ve yönlendirmesi</li>
+          <li>Güvenli Bağlantılar: TLS/SSL sertifikaları</li>
+          <li>Veritabanı Entegrasyonu: MariaDB yapılandırması</li>
+          <li>WordPress Optimizasyonu: Özelleştirilmiş konteyner ortamı</li>
+        </ul>
       </div>
-    </section>
-    
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>Docker</li>
+          <li>Docker Compose</li>
+          <li>NGINX</li>
+          <li>WordPress</li>
+          <li>MariaDB</li>
+          <li>Bash Script</li>
+          <li>TLS/SSL</li>
+          <li>Alpine Linux</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Minishell -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/menasy/42-Minishell">Minishell</a>
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      Ekip arkadaşımla birlikte C dilinde geliştirdiğimiz Minishell projesi, Unix benzeri bir komut satırı arayüzünü sıfırdan tasarlamamızı sağladı. Komut ayrıştırma, boru hatları (pipe) yönetimi ve yönlendirme mekanizmalarını başarıyla uygulayarak, girdi/çıktı akışlarını kontrol eden bir sistem oluşturduk. POSIX sistem çağrılarını kullanarak sinyal yönetimi ve bellek kontrolü konularında pratik deneyim elde ettim. Takım çalışması sürecinde iş bölümü ve ortak kod kalitesi standartları üzerinde çalışarak iletişim ve problem çözme becerilerimizi geliştirdik.
+    </p>
+    <div class="media">
+      <video controls width="100%">
+        <source src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Komut Ayırma: cd, echo, pwd</li>
+          <li>Boru Hatları, MPipe ve Yönlendirme: &gt;, &gt;&gt;</li>
+          <li>Komut Geçişi: Önceki komutlara erişim</li>
+          <li>Girdi Yönetimi: Komutların doğru işlenmesi</li>
+          <li>Sinyal Yönetimi: Ctrl+C, Ctrl+D sinyalleri</li>
+          <li>Sistem Programlama: Shell ve sistem çağrıları</li>
+          <li>Ekip Çalışması: Verimli iş birliği, zaman yönetimi</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>C</li>
+          <li>POSIX Sistem Çağrıları</li>
+          <li>Bash Shell</li>
+          <li>Signal Handling</li>
+          <li>File I/O</li>
+          <li>Process Management</li>
+          <li>Memory Management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Cub3D -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/menasy/cub3d">Cub3D</a>
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      Wolfenstein 3D oyunundan esinlenerek C dili ve MiniLibX grafik kütüphanesi ile geliştirdiğim Cub3D projesi, raycasting tekniğini kullanarak 2D bir haritayı gerçek zamanlı olarak 3D perspektife dönüştürür. Matematiksel hesaplamalar ve grafik işleme teknikleriyle duvarları dokularla kapladım ve oyuncu hareketlerini doğru açı ve perspektifte görüntüledim. WASD ve ok tuşlarıyla sezgisel bir kontrol mekanizması tasarlayarak kullanıcıların harita içinde gezinmesini sağladım.
+    </p>
+    <div class="media">
+      <video controls width="100%">
+        <source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Ray Casting: 2D haritaları 3D dünyaya dönüştürme</li>
+          <li>Dokulu Duvarlar: Gerçekçi ortamlar oluşturma</li>
+          <li>Oyuncu Kontrolleri: WASD ve ok tuşlarıyla sezgisel hareket</li>
+          <li>Hata Yönetimi: Kararlı ve güvenilir sistem</li>
+          <li>Grafik İşleme: RGB renkleriyle zemin ve gökyüzü entegrasyonu</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>C</li>
+          <li>MiniLibX</li>
+          <li>Matematik kütüphaneleri</li>
+          <li>Oyun Mekanikleri &amp; Kullanıcı Etkileşimi</li>
+          <li>Raycasting Algoritmaları</li>
+          <li>X11 (Linux pencere yönetimi)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Philosophers42 -->
+  <div class="project">
+    <h3 class="project-heading">
+      <a href="https://github.com/menasy/philosophers-42">Philosophers42</a>
+    </h3>
+    <!-- Proje özeti -->
+    <p class="project-summary">
+      C dilinde geliştirdiğim Philosophers42 projesi, klasik yemek yiyen filozoflar problemini simüle ederek çoklu iş parçacığı ve süreç yönetimini öğrenmemi sağladı. pthread ve mutex mekanizmalarını kullanarak, paylaşılan kaynaklar için rekabet eden filozofların deadlock durumlarına düşmeden yemek yeme ve düşünme döngülerini yönettim. Yarış koşulları ve senkronizasyon problemlerini çözerek zamanlamaya duyarlı bir simülasyon oluşturdum.
+    </p>
+    <div class="media">
+      <img src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png" alt="Philo Icon">
+    </div>
+    <div class="flex-row">
+      <div class="column">
+        <h4>Özellikler:</h4>
+        <ul>
+          <li>Yarış koşulları (race conditions)</li>
+          <li>Kaynak paylaşımı optimizasyonu</li>
+          <li>Deadlock çözümleri</li>
+          <li>Çoklu iş parçacığı senkronizasyonu</li>
+          <li>Zamanlama algoritmaları</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h4>Teknolojiler:</h4>
+        <ul>
+          <li>C</li>
+          <li>pthread</li>
+          <li>mutex</li>
+          <li>Semaforlar</li>
+          <li>Paralel programlama</li>
+          <li>Süreç yönetimi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- Diğer Projeler Bölümü -->
 <section id="diger-projeler" class="section">
 	<h2>Diğer Projeler</h2>
