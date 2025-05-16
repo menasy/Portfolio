@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -6,97 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mehmet Nasim Yılmaz - Portfolyo</title>
   <style>
-   /* Navigasyon için stil */
-  .nav-container {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: linear-gradient(90deg, #1a2035 0%, #0a192f 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    padding: 12px 0;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 5px 10px;
-  }
-
-  .nav-links a {
-    color: #b3b3b3;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    border: 1px solid transparent;
-    background: rgba(30, 39, 61, 0.6);
-    font-style: normal;
-  }
-
-  .nav-links a:hover {
-    color: #64ffda;
-    background: rgba(40, 49, 71, 0.8);
-    transform: translateY(-3px);
-    border: 1px solid rgba(77, 127, 255, 0.3);
-  }
-
-  .nav-links a::after {
-    display: none;
-  }
-
-  /* Scroll to top button */
-  .scroll-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 45px;
-    height: 45px;
-    background: #4d7fff;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .scroll-top.visible {
-    opacity: 1;
-  }
-
-  .scroll-top:hover {
-    background: #64ffda;
-    transform: translateY(-5px);
-  }
-
-  /* Mobil için düzenleme */
-  @media (max-width: 768px) {
-    .nav-links {
-      gap: 8px;
-    }
-    
-    .nav-links a {
-      padding: 6px 10px;
-      font-size: 0.9rem;
-    }
-    
-    .scroll-top {
-      width: 40px;
-      height: 40px;
-      bottom: 20px;
-      right: 20px;
-    }
-  }
     body {
   font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
   line-height: 1.8;
@@ -457,69 +365,17 @@ h4 {
 </head>
 <body>
   <div class="container">
-
-  <div class="nav-links">
-    <a href="#hedefim">Hedefim</a>
-    <a href="#hakkimda-yeteneklerim">Hakkımda & Yeteneklerim</a>
-    <a href="#teknik-beceriler">Teknik Beceriler</a>
-    <a href="#one-cikan-projeler">Öne Çıkan Projeler</a>
-    <a href="#diger-projeler">Diğer Projeler</a>
-    <a href="#iletisim-cv">İletişim & CV</a>
-  </div>
-</div>
-
-<!-- Yukarı kaydırma butonu - </body> etiketinden hemen önce ekleyin -->
-<div id="scrollTopBtn" class="scroll-top">
-  <i class="fas fa-arrow-up"></i>
-</div>
-
-<!-- JavaScript kodu - </body> etiketinden hemen önce ekleyin -->
-<script>
-  // Yukarı kaydırma butonu için
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
-  
-  scrollTopBtn.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-  
-  // Yumuşak kaydırma için
-  document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      window.scrollTo({
-        top: targetElement.offsetTop - 100,
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
     <!-- Header Bölümü -->
-<!-- Header Bölümü -->
-<header style="max-width: 1100px; margin: 40px auto;">
-  <img src="https://github.com/menasy/Portfolio/blob/main/newProfil.jpeg?raw=true" alt="Profil Fotoğrafı" class="profile-photo">
-  <h1>Mehmet Nasim Yılmaz</h1>
-  <h2><a href="https://github.com/menasy">MeNasy</a></h2>
-  <p>Software Developer &amp; Mobile Application Developer</p>
-  <blockquote>
-    "Bilmediğim hiçbir şey yok, sadece<br>
-    öğrenmedim şeyler var."
-  </blockquote>
-</header>
+	<header>
+		<img src="https://github.com/menasy/Portfolio/blob/main/newProfil.jpeg?raw=true" alt="Profil Fotoğrafı" class="profile-photo">
+		<h1>Mehmet Nasim Yılmaz</h1>
+		<h2><a href="https://github.com/menasy">MeNasy</a></h2>
+		<p>Software Developer &amp; Mobile Application Developer</p>
+		<blockquote>
+		  "Bilmediğim hiçbir şey yok, sadece<br>
+		  öğrenmedim şeyler var."
+		</blockquote>
+	  </header>
 	  
     
     <!-- Hedefim Bölümü -->
