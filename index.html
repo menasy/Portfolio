@@ -1,850 +1,979 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mehmet Nasim Yılmaz - Portfolyo</title>
-  <style>
-    body {
-  font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.8;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #0a192f 0%, #020721 100%);
-  color: #e6e6e6;
-  text-align: center;
-}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mehmet Nasim Yılmaz - Portfolyo</title>
+	<style>
+		body {
+			font-family: 'Poppins', 'Segoe UI', Roboto, sans-serif;
+			line-height: 1.8;
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(135deg, #0a192f 0%, #020721 100%);
+			color: #e6e6e6;
+			text-align: center;
+		}
 
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  background: rgba(26, 32, 53, 0.9);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-}
+		.container {
+			max-width: 1100px;
+			margin: 40px auto;
+			background: rgba(26, 32, 53, 0.9);
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(8px);
+		}
 
-h1, h2, h3, h4 {
-  color: #ffffff;
-  margin: 20px 0;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
+		h1,
+		h2,
+		h3,
+		h4 {
+			color: #ffffff;
+			margin: 20px 0;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+		}
 
-h1 {
-  font-size: 2.5rem;
-  margin-top: 10px;
-}
+		h1 {
+			font-size: 2.5rem;
+			margin-top: 10px;
+		}
 
-h2 {
-  font-size: 1.8rem;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-}
+		h2 {
+			font-size: 1.8rem;
+			position: relative;
+			display: inline-block;
+			padding-bottom: 10px;
+		}
 
-h2::after {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 3px;
-  bottom: 0;
-  left: 20%;
-  background: linear-gradient(90deg, transparent, #4d7fff, transparent);
-}
+		h2::after {
+			content: '';
+			position: absolute;
+			width: 60%;
+			height: 3px;
+			bottom: 0;
+			left: 20%;
+			background: linear-gradient(90deg, transparent, #4d7fff, transparent);
+		}
 
-h3 {
-  font-size: 1.4rem;
-  color: #64ffda;
-}
+		h3 {
+			font-size: 1.4rem;
+			color: #64ffda;
+		}
 
-a {
-  color: #4d7fff;
-  text-decoration: none;
-  font-style: italic;
-  transition: all 0.3s ease;
-  position: relative;
-  padding: 2px 0;
-}
+		a {
+			color: #4d7fff;
+			text-decoration: none;
+			font-style: italic;
+			transition: all 0.3s ease;
+			position: relative;
+			padding: 2px 0;
+		}
 
-a:hover {
-  color: #64ffda;
-}
+		a:hover {
+			color: #64ffda;
+		}
 
-a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #64ffda;
-  transition: width 0.3s ease;
-}
+		a::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: #64ffda;
+			transition: width 0.3s ease;
+		}
 
-a:hover::after {
-  width: 100%;
-}
+		a:hover::after {
+			width: 100%;
+		}
 
-.section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background: rgba(30, 39, 61, 0.6);
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
+		.section {
+			margin-bottom: 40px;
+			padding: 20px;
+			background: rgba(30, 39, 61, 0.6);
+			border-radius: 8px;
+			transition: transform 0.3s ease;
+		}
 
-.section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+		.section:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
 
-.project, .other-project {
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 8px;
-  background: rgba(40, 49, 71, 0.6);
-  border-bottom: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
+		.project,
+		.other-project {
+			margin-bottom: 30px;
+			padding: 20px;
+			border-radius: 8px;
+			background: rgba(40, 49, 71, 0.6);
+			border-bottom: none;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+			transition: all 0.3s ease;
+		}
 
-.project:hover, .other-project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  background: rgba(45, 55, 80, 0.8);
-}
+		.project:hover,
+		.other-project:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+			background: rgba(45, 55, 80, 0.8);
+		}
 
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  display: block;
-  margin: 20px auto;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4d7fff;
-  box-shadow: 0 0 20px rgba(77, 127, 255, 0.5);
-  transition: transform 0.3s ease;
-}
+		.profile-photo {
+			width: 180px;
+			height: 180px;
+			display: block;
+			margin: 20px auto;
+			object-fit: cover;
+			border-radius: 50%;
+			border: 4px solid #4d7fff;
+			box-shadow: 0 0 20px rgba(77, 127, 255, 0.5);
+			transition: transform 0.3s ease;
+		}
 
-.profile-photo:hover {
-  transform: scale(1.05);
-}
+		.profile-photo:hover {
+			transform: scale(1.05);
+		}
 
-blockquote {
-  font-style: italic;
-  color: #b3b3b3;
-  margin: 25px auto;
-  max-width: 80%;
-  position: relative;
-  padding: 20px;
-}
+		blockquote {
+			font-style: italic;
+			color: #b3b3b3;
+			margin: 25px auto;
+			max-width: 80%;
+			position: relative;
+			padding: 20px;
+		}
 
-blockquote::before, blockquote::after {
-  content: '"';
-  font-size: 2rem;
-  color: #4d7fff;
-  position: absolute;
-  opacity: 0.4;
-}
+		blockquote::before,
+		blockquote::after {
+			content: '"';
+			font-size: 2rem;
+			color: #4d7fff;
+			position: absolute;
+			opacity: 0.4;
+		}
 
-blockquote::before {
-  top: -10px;
-  left: -10px;
-}
+		blockquote::before {
+			top: -10px;
+			left: -10px;
+		}
 
-blockquote::after {
-  bottom: -20px;
-  right: -10px;
-}
+		blockquote::after {
+			bottom: -20px;
+			right: -10px;
+		}
 
-.media {
-  margin: 20px 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
+		.media {
+			margin: 20px 0;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+		}
 
-video, img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-}
+		video,
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+			transition: transform 0.3s ease;
+		}
 
-.media:hover video, .media:hover img {
-  transform: scale(1.01);
-}
+		.media:hover video,
+		.media:hover img {
+			transform: scale(1.01);
+		}
 
-/* Flex sütun düzeni düzeltildi */
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
+		/* Flex sütun düzeni düzeltildi */
+		.flex-row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 20px;
+			margin-top: 20px;
+		}
 
-.column {
-  flex: 1;
-  min-width: 280px;
-  max-width: calc(50% - 20px);
-  padding: 15px;
-  text-align: left;
-  background: rgba(35, 44, 66, 0.5);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+		.column {
+			flex: 1;
+			min-width: 280px;
+			max-width: calc(50% - 20px);
+			padding: 15px;
+			text-align: left;
+			background: rgba(35, 44, 66, 0.5);
+			border-radius: 8px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		}
 
-/* Teknik Beceriler için düzeltmeler */
-#teknik-beceriler .flex-row {
-  justify-content: center;
-}
+		/* Teknik Beceriler için düzeltmeler */
+		#teknik-beceriler .flex-row {
+			justify-content: center;
+		}
 
-#teknik-beceriler .column {
-  flex: 0 0 45%;
-}
+		#teknik-beceriler .column {
+			flex: 0 0 45%;
+		}
 
-.tech-tools {
-  margin-left: 0;
-}
+		.tech-tools {
+			margin-left: 0;
+		}
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 20px;
-  text-align: left;
-}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 20px;
+			text-align: left;
+		}
 
-li {
-  margin: 8px 0;
-  position: relative;
-  padding-left: 20px;
-}
+		li {
+			margin: 8px 0;
+			position: relative;
+			padding-left: 20px;
+		}
 
-li::before {
-  content: '•';
-  color: #64ffda;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-}
+		li::before {
+			content: '•';
+			color: #64ffda;
+			font-weight: bold;
+			position: absolute;
+			left: 0;
+		}
 
-#diger-projeler {
-  text-align: center;
-}
+		#diger-projeler {
+			text-align: center;
+		}
 
-#diger-projeler .other-project {
-  display: inline-block;
-  width: 90%;
-  margin: 10px auto 20px;
-  text-align: center;
-  background: rgba(40, 49, 71, 0.6);
-  transition: all 0.3s ease;
-}
+		#diger-projeler .other-project {
+			display: inline-block;
+			width: 90%;
+			margin: 10px auto 20px;
+			text-align: center;
+			background: rgba(40, 49, 71, 0.6);
+			transition: all 0.3s ease;
+		}
 
-.single-column {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 900px;
-}
+		.single-column {
+			text-align: center;
+			margin: 0 auto;
+			max-width: 900px;
+		}
 
-.project-heading {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
+		.project-heading {
+			display: inline-flex;
+			align-items: center;
+			gap: 15px;
+			padding: 5px 10px;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
 
-.project-heading img {
-  width: 35px;
-  height: auto;
-  vertical-align: middle;
-  transition: transform 0.3s ease;
-}
+		.project-heading img {
+			width: 35px;
+			height: auto;
+			vertical-align: middle;
+			transition: transform 0.3s ease;
+		}
 
-.project-heading:hover img {
-  transform: scale(1.1) rotate(5deg);
-}
+		.project-heading:hover img {
+			transform: scale(1.1) rotate(5deg);
+		}
 
-/* Proje özetleri için stil */
-.project-summary {
-  font-size: 1.1em;
-  line-height: 1.8;
-  margin: 15px 0 25px;
-  padding: 15px;
-  text-align: left;
-  background: rgba(30, 39, 61, 0.4);
-  border-radius: 8px;
-  border-left: 3px solid #4d7fff;
-}
+		/* Proje özetleri için stil */
+		.project-summary {
+			font-size: 1.1em;
+			line-height: 1.8;
+			margin: 15px 0 25px;
+			padding: 15px;
+			text-align: left;
+			background: rgba(30, 39, 61, 0.4);
+			border-radius: 8px;
+			border-left: 3px solid #4d7fff;
+		}
 
-/* Header kısmı için özel stil */
-header {
-  padding: 30px 0;
-  border-radius: 10px;
-  background: linear-gradient(180deg, rgba(30, 39, 61, 0.8) 0%, rgba(26, 32, 53, 0.6) 100%);
-  margin-bottom: 30px;
-}
+		/* Header kısmı için özel stil */
+		header {
+			padding: 30px 0;
+			border-radius: 10px;
+			background: linear-gradient(180deg, rgba(30, 39, 61, 0.8) 0%, rgba(26, 32, 53, 0.6) 100%);
+			margin-bottom: 30px;
+		}
 
-header h2 {
-  margin-top: 5px;
-}
+		header h2 {
+			margin-top: 5px;
+		}
 
-header p {
-  color: #b3b3b3;
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
+		header p {
+			color: #b3b3b3;
+			font-size: 1.2rem;
+			margin-top: 5px;
+		}
 
-/* Teknoloji listeleri için vurgu */
-h4 {
-  color: #4d7fff;
-  border-bottom: 1px solid rgba(77, 127, 255, 0.3);
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-}
+		/* Teknoloji listeleri için vurgu */
+		h4 {
+			color: #4d7fff;
+			border-bottom: 1px solid rgba(77, 127, 255, 0.3);
+			padding-bottom: 8px;
+			margin-bottom: 15px;
+		}
 
-/* İletişim bölümü için özel stil */
-#iletisim {
-  background: linear-gradient(135deg, rgba(30, 39, 61, 0.8) 0%, rgba(45, 55, 80, 0.8) 100%);
-  padding: 30px;
-  border-radius: 10px;
-}
+		/* İletişim bölümü için özel stil */
+		#iletisim {
+			background: linear-gradient(135deg, rgba(30, 39, 61, 0.8) 0%, rgba(45, 55, 80, 0.8) 100%);
+			padding: 30px;
+			border-radius: 10px;
+		}
 
-#iletisim a {
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background: rgba(77, 127, 255, 0.1);
-  transition: all 0.3s ease;
-}
+		#iletisim a {
+			display: inline-block;
+			margin: 10px 5px;
+			padding: 5px 15px;
+			border-radius: 20px;
+			background: rgba(77, 127, 255, 0.1);
+			transition: all 0.3s ease;
+		}
 
-#iletisim a:hover {
-  background: rgba(77, 127, 255, 0.2);
-  transform: translateY(-3px);
-}
+		#iletisim a:hover {
+			background: rgba(77, 127, 255, 0.2);
+			transform: translateY(-3px);
+		}
 
-/* Mobil için responsive düzenlemeler - iyileştirildi */
-@media (max-width: 768px) {
-  .container {
-    margin: 20px 10px;
-    padding: 15px;
-  }
+		/* Mobil için responsive düzenlemeler - iyileştirildi */
+		@media (max-width: 768px) {
+			.container {
+				margin: 20px 10px;
+				padding: 15px;
+			}
 
-  .column {
-    max-width: 100%;
-    flex: 0 0 100%;
-    margin-bottom: 15px;
-  }
+			.column {
+				max-width: 100%;
+				flex: 0 0 100%;
+				margin-bottom: 15px;
+			}
 
-  .flex-row {
-    flex-direction: column;
-    gap: 15px;
-  }
+			.flex-row {
+				flex-direction: column;
+				gap: 15px;
+			}
 
-  h1 {
-    font-size: 2rem;
-  }
+			h1 {
+				font-size: 2rem;
+			}
 
-  h2 {
-    font-size: 1.5rem;
-  }
+			h2 {
+				font-size: 1.5rem;
+			}
 
-  .project-heading {
-    flex-direction: column;
-    gap: 5px;
-  }
-}
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+			.project-heading {
+				flex-direction: column;
+				gap: 5px;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Header Bölümü -->
-	<header>
-		<img src="https://github.com/menasy/Portfolio/blob/main/newProfil.jpeg?raw=true" alt="Profil Fotoğrafı" class="profile-photo">
-		<h1>Mehmet Nasim Yılmaz</h1>
-		<h2><a href="https://github.com/menasy">MeNasy</a></h2>
-		<p>Software Developer &amp; Mobile Application Developer</p>
-		<blockquote>
-		  "Bilmediğim hiçbir şey yok, sadece<br>
-		  öğrenmedim şeyler var."
-		</blockquote>
-	  </header>
-	  
-    
-    <!-- Hedefim Bölümü -->
-    <section id="hedefim" class="section single-column">
-      <p>
-        Yazılım geliştirme, veri bilimi, yapay zeka ve özellikle mobil programlama alanlarında kendimi sürekli geliştirmeye ve yeni teknolojiler öğrenmeye çalışıyorum. 
-        Bugüne kadar edindiğim teknik ve teorik bilgiyle sağlam bir altyapı oluşturduğuma ​ ​
-		inanıyorum. Şimdi ise bu bilgi ve tecrübeyi iş hayatına taşıyarak hem çalışacağım şirkete ​
-		katkı sağlamak hem de kendimi daha ileri bir seviyeye taşımayı hedefliyorum.
-      </p>
-    </section>
-    
-    <!-- Hakkımda & Eğitim Bilgisi - Özet Paragraf -->
-    <section id="hakkimda-yeteneklerim" class="section single-column">
-      <div class="flex-row">
-        <!-- Eğitim Bilgisi -->
-        <div class="column">
-          <h2>Eğitim Bilgisi</h2>
-          <p>
-            <strong>42 İstanbul – Yazılım Geliştirme</strong>  <br> 
-            C/C++’ta ileri seviye programlama, multi-threading, sistem programlama ,bellek yönetimi, raycasting, 3D grafik render, ağ protokolleri, socket programlama, POSIX sinyalleri, veri yapıları, kernel optimizasyonu, algoritmalar ve karmaşık problem çözme teknikleri gibi konuları kapsayan bir eğitim alıyorum.<br><br>
-            <strong>İstanbul Gelişim Üniversitesi  – Yönetim Bilişim Sistemleri </strong> <br> 
-            Veri madenciliği, finansal teknolojiler, risk yönetimi, SQL veritabanı, iş zekası, veri görselleştirme, görsel programlama (C#), kurumsal IT altyapıları, bulut bilişim gibi alanlarında eğitim alyorum.
-          </p>
-        </div>
-        <!-- Yeteneklerim -->
-        <div class="column">
-          <h2>Yeteneklerim</h2>
-          <ul>
-            <li>Mobil Uygulama Geliştirme</li>
-            <li>Sistem Programlama</li>
-            <li>Çoklu İş Parçacığı Yönetimi</li>
-            <li>Socket Programlama</li>
-            <li>Nesne Yönelimli Programlama (OOP)</li>
-            <li>Algoritma ve Veri Yapıları</li>
-            <li>Veri Bilimi ve Analitik</li>
-            <li>Ağ ve Güvenlik</li>
-            <li>Veritabanı Yönetimi</li>
-            <li>Temiz Kod</li>
-            <li>Analitik Düşünce ve Problem Çözme</li>
-            <li>Takım Çalışması</li>
-            <li>Öğrenmeye Açıklık</li>
-            <li>Zaman Yönetimi</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Teknik Beceriler Bölümü -->
-    <section id="teknik-beceriler" class="section single-column">
-      <h2>Teknik Beceriler</h2>
-      <div class="flex-row" style="justify-content: center;">
-        <div class="column">
-          <h3>Programlama Dilleri</h3>
-          <ul>
-            <li>C (expert)</li>
-            <li>Git (expert)</li>
-            <li>C++ (expert)</li>
-            <li>Java (middle)</li>
-            <li>Python (middle)</li>
-            <li>Bash Script (middle)</li>
-            <li>XML (middle)</li>
-            <li>SQL (begin)</li>
-            <li>Kotlin (begin)</li>
-            <li>C# (begin)</li>
-          </ul>
-        </div>
-        <div class="column tech-tools">
-          <h3>Araçlar &amp; Teknolojiler</h3>
-          <ul>
-            <li>Android Studio</li>
-            <li>Visual Studio Code</li>
-            <li>PyCharm</li>
-            <li>Jupyter Notebook</li>
-            <li>Git/GitHub</li>
-            <li>Linux</li>
-            <li>Pandas</li>
-            <li>NumPy</li>
-            <li>Docker</li>
-            <li>Firebase</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Öne Çıkan Projeler Bölümü -->
-    <section id="one-cikan-projeler" class="section single-column">
-      <h2>Öne Çıkan Projeler</h2>
-      <p>Tüm projelerimin kodlarına ve daha detaylı açıklamalarına <a href="https://github.com/menasy?tab=repositories">GitHub</a> sayfamdan ulaşabilirsiniz.</p>
-	<!-- 1. HesKit MobilApp -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/menasy/HesKit-MobilApp">HesKit MobilApp</a>
-		<img src="https://raw.githubusercontent.com/menasy/HesKit-MobilApp/main/OutFiles/heskit.png" alt="HesKit Simgesi">
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		Android platformunda Java ile geliştirdiğim HesKit MobilApp, işletmeler için kapsamlı bir finansal yönetim çözümüdür. SQLite veritabanı entegrasyonuyla çalışan bilgileri, mesai takibi ve ödemeleri tek noktadan yönetim sağlar. Android Jetpack ve Room Database kullanarak kullanıcı dostu ve güvenli bir finansal yönetim deneyimi sundum.
-	  </p>
-	  <div class="media">
-		<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png" alt="HesKit Fotoğraf">
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi</li>
-			<li>Ödeme İşlemleri: Havale, harçlık ve transfer takibi</li>
-			<li>Mesai Takibi: Çalışma günleri ve fazla mesailer</li>
-			<li>Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>Java</li>
-			<li>SQLite</li>
-			<li>Android SDK</li>
-			<li>XML, Gradle</li>
-			<li>Room Database</li>
-			<li>Singleton Pattern</li>
-			<li>Android Jetpack</li>
-			<li>RecyclerView</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  
-	<!-- 2. WebServ (HTTP Server) -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/e-kose/WebServer">WebServ</a>
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		WebServ, ekip arkadaşımla birlikte C++ dilinde sıfırdan geliştirdiğimiz kendi HTTP/1.1 web sunucumuzdur. Nginx benzeri olay tabanlı mimari (event-driven architecture) ile tek bir işlemde birden fazla bağlantıyı eşzamanlı olarak yönetebilen, socket programlama kullanarak tek thread üzerinde çalışan yüksek performanslı bir yapı tasarladık. Non-blocking I/O mekanizmaları sayesinde çoklu istemci bağlantılarını etkin şekilde yöneten sunucumuz, çoklu port desteği, dinamik içerik işleme ve özelleştirilebilir yönlendirme özellikleriyle modern web sunucusu ihtiyaçlarını karşılamaktadır. Bu proje, ağ programlama, HTTP protokolü ve sistem kaynaklarının optimum kullanımı konularında derinlemesine teknik deneyim sağladı.
-	  </p>
-	  <div class="media" style="display: flex; flex-direction: column; gap: 10px;">
-		<div style="width: 100%;">
-		  <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/42WebServer.png?raw=true" alt="WebServer Görseli" style="width: 100%;">
-		</div>
-		<div style="display: flex; gap: 10px; justify-content: space-between;">
-		  <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/ServerClientDiagram.png?raw=true" alt="Server-Client Diyagramı" style="width: 49%;">
-		  <img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/eventDriven.jpg?raw=true" alt="Olay Tabanlı Mimari" style="width: 49%;">
-		</div>
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>HTTP Metodları: GET, POST, DELETE desteği</li>
-			<li>Olay Tabanlı Mimari: Verimli istek işleme ve kaynak yönetimi</li>
-			<li>Non-blocking I/O: Eşzamanlı istemci bağlantıları</li>
-			<li>Çoklu Sunucu: Port ve sunucu adı bazlı yapılandırma</li>
-			<li>Dinamik İçerik: CGI ile PHP ve Python desteği</li>
-			<li>İstek Yönlendirme: Özelleştirilebilir rotalar</li>
-			<li>Dizin Listesi: Otomatik içerik görüntüleme</li>
-			<li>Hata Yönetimi: Özelleştirilmiş HTTP durum sayfaları</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>C++</li>
-			<li>Socket Programlama</li>
-			<li>I/O Multiplexing (poll/select)</li>
-			<li>Olay Tabanlı Mimari</li>
-			<li>HTTP Protokolü</li>
-			<li>POSIX API</li>
-			<li>CGI (Common Gateway Interface)</li>
-			<li>Config Dosyası Parsing</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  
-	<!--3. Inception Projesi -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/menasy/Inception_Docker">Inception</a>
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		Docker teknolojisini derinlemesine öğrenmek amacıyla geliştirdiğim Inception projesi, web hizmetlerinin konteynerleştirilmiş bir altyapısını oluşturur. Her bir servisi (NGINX, WordPress, MariaDB) ayrı konteynerlerde çalıştırarak izolasyon ve ölçeklenebilirlik sağladım. TLS/SSL sertifikaları ile güvenli bağlantılar oluşturdum ve Docker Compose ile tüm sistem bileşenlerini tek bir yapılandırma dosyasıyla yönetmeyi başardım. Deneyimlerimi <a href="https://medium.com/@menasy/docker-42-inception-projesi-484e48ae543c" target="_blank">Medium yazısında</a> detaylı olarak paylaştım.
-	  </p>
-	  <!-- İki fotoğraf yan yana olacak şekilde düzenlendi -->
-	  <div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
-		<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png" alt="Inception Mimari" style="width: 49%;">
-		<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg" alt="Docker Compose" style="width: 49%;">
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>Mikro Servis Mimarisi: Her servis için ayrı konteyner</li>
-			<li>Reversi Proxy: NGINX yapılandırması ve yönlendirmesi</li>
-			<li>Güvenli Bağlantılar: TLS/SSL sertifikaları</li>
-			<li>Veritabanı Entegrasyonu: MariaDB yapılandırması</li>
-			<li>WordPress Optimizasyonu: Özelleştirilmiş konteyner ortamı</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>Docker</li>
-			<li>Docker Compose</li>
-			<li>NGINX</li>
-			<li>WordPress</li>
-			<li>MariaDB</li>
-			<li>Bash Script</li>
-			<li>TLS/SSL</li>
-			<li>Alpine Linux</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  
-	<!-- 4. Minishell -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/menasy/42-Minishell">Minishell</a>
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		Ekip arkadaşımla birlikte C dilinde geliştirdiğimiz Minishell projesi, Unix benzeri bir komut satırı arayüzünü sıfırdan tasarlamamızı sağladı. Komut ayrıştırma, boru hatları (pipe) yönetimi ve yönlendirme mekanizmalarını başarıyla uygulayarak, girdi/çıktı akışlarını kontrol eden bir sistem oluşturduk. POSIX sistem çağrılarını kullanarak sinyal yönetimi ve bellek kontrolü konularında pratik deneyim elde ettim. Takım çalışması sürecinde iş bölümü ve ortak kod kalitesi standartları üzerinde çalışarak iletişim ve problem çözme becerilerimizi de geliştirdik.</p>
-	  <div class="media">
-		<video controls width="100%">
-		  <source src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4" type="video/mp4">
-		  Tarayıcınız video etiketini desteklemiyor.
-		</video>
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>Komut Ayırma: cd, echo, pwd</li>
-			<li>Boru Hatları, MPipe ve Yönlendirme: &gt;, &gt;&gt;</li>
-			<li>Komut Geçişi: Önceki komutlara erişim</li>
-			<li>Girdi Yönetimi: Komutların doğru işlenmesi</li>
-			<li>Sinyal Yönetimi: Ctrl+C, Ctrl+D sinyalleri</li>
-			<li>Sistem Programlama: Shell ve sistem çağrıları</li>
-			<li>Ekip Çalışması: Verimli iş birliği, zaman yönetimi</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>C</li>
-			<li>POSIX Sistem Çağrıları</li>
-			<li>Bash Shell</li>
-			<li>Signal Handling</li>
-			<li>File I/O</li>
-			<li>Process Management</li>
-			<li>Memory Management</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  
-	<!-- 5. Cub3D -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/menasy/cub3d">Cub3D</a>
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		Wolfenstein 3D'den esinlenerek ekip arkadaşımla C dili ve MiniLibX kullanarak geliştirdiğimiz Cub3D projesi, raycasting tekniğiyle 2D haritaları gerçek zamanlı 3D görünüme dönüştürür. Matematiksel hesaplamalarla dokulu duvarlar oluşturarak doğru perspektif sağladık. WASD ve ok tuşları ile kontrol sistemi tasarlayarak kullanıcı dostu bir oyun deneyimi sunmayı başardık.	  </p>
-	  <div class="media">
-		<video controls width="100%">
-		  <source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4" type="video/mp4">
-		  Tarayıcınız video etiketini desteklemiyor.
-		</video>
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>Ray Casting: 2D haritaları 3D dünyaya dönüştürme</li>
-			<li>Dokulu Duvarlar: Gerçekçi ortamlar oluşturma</li>
-			<li>Oyuncu Kontrolleri: WASD ve ok tuşlarıyla sezgisel hareket</li>
-			<li>Hata Yönetimi: Kararlı ve güvenilir sistem</li>
-			<li>Grafik İşleme: RGB renkleriyle zemin ve gökyüzü entegrasyonu</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>C</li>
-			<li>MiniLibX</li>
-			<li>Matematik kütüphaneleri</li>
-			<li>Oyun Mekanikleri &amp; Kullanıcı Etkileşimi</li>
-			<li>Raycasting Algoritmaları</li>
-			<li>X11 (Linux pencere yönetimi)</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  
-	<!-- 6. Philosophers42 -->
-	<div class="project">
-	  <h3 class="project-heading">
-		<a href="https://github.com/menasy/philosophers-42">Philosophers42</a>
-	  </h3>
-	  <!-- Proje özeti -->
-	  <p class="project-summary">
-		C dilinde geliştirdiğim Philosophers42 projesi, klasik "The Dining Philosophers Problem"  simülasyonudur. Pthread ve mutex mekanizmalarını kullanarak paylaşılan kaynaklar için rekabet eden filozofların deadlock yaşamadan yemek yeme ve düşünme döngülerini yönettim. Yarış koşulları ve senkronizasyon problemlerini çözerek, çoklu iş parçacığı programlama konusunda değerli deneyim kazandım.	  </p>
-	  <div class="media">
-		<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png" alt="Philo Icon">
-	  </div>
-	  <div class="flex-row">
-		<div class="column">
-		  <h4>Özellikler:</h4>
-		  <ul>
-			<li>Yarış koşulları (race conditions)</li>
-			<li>Kaynak paylaşımı optimizasyonu</li>
-			<li>Deadlock çözümleri</li>
-			<li>Çoklu iş parçacığı senkronizasyonu</li>
-			<li>Zamanlama algoritmaları</li>
-		  </ul>
-		</div>
-		<div class="column">
-		  <h4>Teknolojiler:</h4>
-		  <ul>
-			<li>C</li>
-			<li>pthread</li>
-			<li>mutex</li>
-			<li>Semaforlar</li>
-			<li>Paralel programlama</li>
-			<li>Süreç yönetimi</li>
-		  </ul>
-		</div>
-	  </div>
-	</div>
-  </section>
-    
-    <!-- Diğer Projeler Bölümü -->
-<section id="diger-projeler" class="section">
-	<h2>Diğer Projeler</h2>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/libft">Libft Kütüphanesi (C, Dinamik Bellek, Algoritmalar)</a></h3>
-	  <p>
-		C dilinde, dinamik bellek yönetimi ve algoritmalar kullanarak 42 işlevden oluşan bir kütüphane geliştirdim. Proje, dizi işlemleri, bellek ayırma ve liste yönetimiyle C'nin ileri düzey kullanımını pekiştirdi.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/ft_printf">Ft_printf (C, Variadic Fonksiyonlar, Format)</a></h3>
-	  <p>
-		C dilinde, printf fonksiyonunu yeniden yazarak, variadic fonksiyonlar ve formatlama ile farklı veri türlerini destekleyen bir çıktı mekanizması geliştirdim.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3>Born_to_be_root (Linux Yönetimi, Sanallaştırma)</h3>
-	  <p>
-		Sanal makine üzerinde özelleştirilmiş bir işletim sistemi kurarak, güvenlik ve yönetim ayarlarını istediğim şekilde yapılandırdım.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/Minitalk">Minitalk Program (C, UNIX Sinyalleri, IPC)</a></h3>
-	  <p>
-		UNIX sinyalleri kullanarak iki süreç arasında asenkron veri iletimi sağlayan bir proje; sinyal yönetimi ve IPC konularında pratik kazandırdı.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/so_long">So_long Oyunu (C, MiniLibX, 2D Oyun)</a></h3>
-	  <p>
-		MiniLibX ile 2D oyun geliştirerek, dinamik harita, hareketli oyuncu, toplanabilir öğeler ve çıkış mekaniği sunan temel oyun mekaniği ve grafik işlemi deneyimi sağladım.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/push_swap">Push_swap Sorting Program (C, Stack, Algorithms)</a></h3>
-	  <p>
-		İki yığın kullanarak sayı dizilerini minimum işlemle sıralamayı hedefleyen, algoritma optimizasyonuna odaklanan bir proje.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/NetPractice">Net_Practice (Networking, IP Addressing, Subnetting)</a></h3>
-	  <p>
-		Ağ yapıları, IP adresleme ve subnetting konularına odaklanarak, yönlendirme protokolleri hakkında pratik bilgi kazandıran bir proje.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/Java_Playground">Java101 (Java, Algorithms, Problem Solving)</a></h3>
-	  <p>
-		Java 101 kapsamında, temel ve karmaşık programlama görevlerini içeren projeler geliştirerek Java yeteneklerimi pekiştirdim.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/Mine_Sweeper_Game">Mine Sweeper (Java, Console)</a></h3>
-	  <p>
-		Java ile konsol tabanlı klasik mayın tarlası oyunu geliştirerek, özelleştirilebilir ızgara ve rastgele mayın yerleşimi sundum.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/MobileApp_Playground">MobilApp Playground (Kotlin, Java)</a></h3>
-	  <p>
-		Kotlin ve Java kullanarak Android uygulamaları geliştirdiğim bu projede, kullanıcı arayüzü tasarımı ve veri yönetimi üzerine pratik kazandım.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-	  <h3>Data Analysis and Visualization (Python, Pandas, Matplotlib)</h3>
-	  <p>
-		Hindistan emlak verilerini analiz ve görselleştirerek, veri temizleme ve istatistiksel analizle anlamlı içgörüler sundum.
-	  </p>
-	</div>
-	
-	<div class="other-project">
-		<h3><a href="https://github.com/menasy/Cpp_Module">Cpp Module (Object-Oriented Programming)</a></h3>
-		<p>
-		  42 okulundaki C++ modüllerini tamamlayarak, OOP prensiplerini detaylı şekilde öğrendim; bellek yönetimi, veri yapıları ve algoritmalar üzerinde pratik kazandım. Bu öğrenme sürecimde edindiğim bilgileri ve çözüm yaklaşımlarımı <a href="https://medium.com/@menasy/list/42-cpp-modulleri-ve-c-temelleri-710fabe3b608" target="_blank">Medium'daki C++ yazı serimde</a> detaylı olarak paylaştım.
-		</p>
-	  </div>
-	
-	<div class="other-project">
-	  <h3><a href="https://github.com/menasy/VisualProgramming_CSharp">Visual Programming (C#, .NET)</a></h3>
-	  <p>
-		C# ve .NET ile kullanıcı dostu arayüzler oluşturarak, kimlik doğrulama, quiz, bahis simülasyonu ve rezervasyon yönetimi projeleri geliştirdim.
-	  </p>
-	</div>
-  </section>
-  
-<!-- İletişim ve CV İndirme Bölümü -->
-<section id="iletisim-cv" class="section">
-	<div class="flex-row">
-	   <!-- İletişim Bölümü -->
-	   <div class="column" style="font-size: 20px;">
-		<h2 style="font-size: 25px;">İletişim ve Bağlantılar</h2>
-		<p style="margin-bottom: 12px;">
-		  <a href="mailto:mehmetnasim42@gmail.com" style="font-size: 20px;">
-			<i class="fas fa-envelope" style="margin-right: 6px;"></i> mehmetnasim42@gmail.com
-		  </a>
-		</p>
-		<p>
-		  <a href="https://github.com/menasy" target="_blank" style="font-size: 20px;">
-			<i class="fab fa-github" style="margin-right: 6px;"></i> GitHub
-		  </a><br>
-		  <a href="https://linkedin.com/in/menasy" target="_blank" style="font-size: 20px;">
-			<i class="fab fa-linkedin" style="margin-right: 6px;"></i> LinkedIn
-		  </a><br>
-		  <a href="https://medium.com/@menasy" target="_blank" style="font-size: 20px;">
-			<i class="fab fa-medium" style="margin-right: 6px;"></i> Medium
-		  </a>
-		</p>
-	  </div>
-	  
-	  <!-- CV İndir Bölümü -->
-	  <div class="column">
-		<h2 style="font-size: 25px;">CV İndir</h2>
-		<p>Aşağıdaki linklerden CV'mi PDF formatında indirebilirsiniz:</p>
-		<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
-		  <a href="https://github.com/menasy/Portfolio/raw/main/MenasyCV.pdf" download="MehmetNasimYilmaz_CV_TR.pdf" style="display: inline-block; padding: 8px 15px; background: rgba(77, 127, 255, 0.2); border-radius: 5px; transition: all 0.3s ease;">
-			<span style="font-size: 1.1em;">📄 Türkçe CV</span>
-		  </a>
-		  <a href="https://github.com/menasy/Portfolio/raw/main/MenasyEnCV.pdf" download="MehmetNasimYilmaz_CV_EN.pdf" style="display: inline-block; padding: 8px 15px; background: rgba(77, 127, 255, 0.2); border-radius: 5px; transition: all 0.3s ease;">
-			<span style="font-size: 1.1em;">📄 İngilizce CV</span>
-		  </a>
-		</div>
-	  </div>
-	</div>
-  </section>
+	<div class="container">
+		<!-- Header Bölümü -->
+		<header>
+			<img src="https://github.com/menasy/Portfolio/blob/main/newProfil.jpeg?raw=true" alt="Profil Fotoğrafı"
+				class="profile-photo">
+			<h1>Mehmet Nasim Yılmaz</h1>
+			<h2><a href="https://github.com/menasy">MeNasy</a></h2>
+			<p>Software Developer &amp; Mobile Application Developer</p>
+			<blockquote>
+				"Bilmediğim hiçbir şey yok, sadece<br>
+				öğrenmedim şeyler var."
+			</blockquote>
+		</header>
+
+
+		<!-- Hedefim Bölümü -->
+		<section id="hedefim" class="section single-column">
+			<p>
+				Yazılım geliştirme, veri bilimi, blockchain-web3 ve özellikle mobil programlama alanlarında kendimi
+				sürekli geliştirmeye ve yeni teknolojiler öğrenmeye çalışıyorum.
+				Bugüne kadar edindiğim teknik ve teorik bilgiyle sağlam bir altyapı oluşturduğuma ​ ​
+				inanıyorum. Şimdi ise bu bilgi ve tecrübeyi iş hayatına taşıyarak hem çalışacağım şirkete ​
+				katkı sağlamak hem de kendimi daha ileri bir seviyeye taşımayı hedefliyorum.
+			</p>
+		</section>
+
+		<!-- Hakkımda & Eğitim Bilgisi - Özet Paragraf -->
+		<section id="hakkimda-yeteneklerim" class="section single-column">
+			<div class="flex-row">
+				<!-- Eğitim Bilgisi -->
+				<div class="column">
+					<h2>Eğitim Bilgisi</h2>
+					<p>
+						<strong>42 İstanbul – Yazılım Geliştirme</strong> <br>
+						C/C++’ta ileri seviye programlama, multi-threading, sistem programlama ,bellek yönetimi,
+						raycasting, 3D grafik render, ağ protokolleri, socket programlama, POSIX sinyalleri, veri
+						yapıları, kernel optimizasyonu, algoritmalar ve karmaşık problem çözme teknikleri gibi konuları
+						kapsayan bir eğitim alıyorum.<br><br>
+						<strong>İstanbul Gelişim Üniversitesi – Yönetim Bilişim Sistemleri </strong> <br>
+						Veri madenciliği, finansal teknolojiler, risk yönetimi, SQL veritabanı, iş zekası, veri
+						görselleştirme, görsel programlama (C#), kurumsal IT altyapıları, bulut bilişim gibi alanlarında
+						eğitim alyorum.
+					</p>
+				</div>
+				<!-- Yeteneklerim -->
+				<div class="column">
+					<h2>Yeteneklerim</h2>
+					<ul>
+						<li>Mobil Uygulama Geliştirme</li>
+						<li>Sistem Programlama</li>
+						<li>Çoklu İş Parçacığı Yönetimi</li>
+						<li>Socket Programlama</li>
+						<li>Nesne Yönelimli Programlama (OOP)</li>
+						<li>Algoritma ve Veri Yapıları</li>
+						<li>Veri Bilimi ve Analitik</li>
+						<li>Ağ ve Güvenlik</li>
+						<li>Veritabanı Yönetimi</li>
+						<li>Temiz Kod</li>
+						<li>Analitik Düşünce ve Problem Çözme</li>
+						<li>Takım Çalışması</li>
+						<li>Öğrenmeye Açıklık</li>
+						<li>Zaman Yönetimi</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Teknik Beceriler Bölümü -->
+		<section id="teknik-beceriler" class="section single-column">
+			<h2>Teknik Beceriler</h2>
+			<div class="flex-row" style="justify-content: center;">
+				<div class="column">
+					<h3>Programlama Dilleri</h3>
+					<ul>
+						<li>C (expert)</li>
+						<li>Git (expert)</li>
+						<li>C++ (expert)</li>
+						<li>Java (middle)</li>
+						<li>Python (middle)</li>
+						<li>Bash Script (middle)</li>
+						<li>XML (middle)</li>
+						<li>SQL (begin)</li>
+						<li>Kotlin (begin)</li>
+						<li>C# (begin)</li>
+						<li>Solidity (begin)</li>
+					</ul>
+				</div>
+				<div class="column tech-tools">
+					<h3>Araçlar &amp; Teknolojiler</h3>
+					<ul>
+						<li>Android Studio</li>
+						<li>Visual Studio Code</li>
+						<li>PyCharm</li>
+						<li>Jupyter Notebook</li>
+						<li>Remix IDE</li>
+						<li>Git/GitHub</li>
+						<li>Linux</li>
+						<li>Pandas</li>
+						<li>NumPy</li>
+						<li>Docker</li>
+						<li>Firebase</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Öne Çıkan Projeler Bölümü -->
+		<section id="one-cikan-projeler" class="section single-column">
+			<h2>Öne Çıkan Projeler</h2>
+			<p>Tüm projelerimin kodlarına ve daha detaylı açıklamalarına <a
+					href="https://github.com/menasy?tab=repositories">GitHub</a> sayfamdan ulaşabilirsiniz.</p>
+			<!-- 1. HesKit MobilApp -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/HesKit-MobilApp">HesKit MobilApp</a>
+					<img src="https://raw.githubusercontent.com/menasy/HesKit-MobilApp/main/OutFiles/heskit.png"
+						alt="HesKit Simgesi">
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					Android platformunda Java ile geliştirdiğim HesKit MobilApp, işletmeler için kapsamlı bir finansal
+					yönetim çözümüdür. SQLite veritabanı entegrasyonuyla çalışan bilgileri, mesai takibi ve ödemeleri
+					tek noktadan yönetim sağlar. Android Jetpack ve Room Database kullanarak kullanıcı dostu ve güvenli
+					bir finansal yönetim deneyimi sundum.
+				</p>
+				<div class="media">
+					<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png"
+						alt="HesKit Fotoğraf">
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi</li>
+							<li>Ödeme İşlemleri: Havale, harçlık ve transfer takibi</li>
+							<li>Mesai Takibi: Çalışma günleri ve fazla mesailer</li>
+							<li>Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>Java</li>
+							<li>SQLite</li>
+							<li>Android SDK</li>
+							<li>XML, Gradle</li>
+							<li>Room Database</li>
+							<li>Singleton Pattern</li>
+							<li>Android Jetpack</li>
+							<li>RecyclerView</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 2. WebServ (HTTP Server) -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/e-kose/WebServer">WebServ</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					WebServ, ekip arkadaşımla birlikte C++ dilinde sıfırdan geliştirdiğimiz kendi HTTP/1.1 web
+					sunucumuzdur. Nginx benzeri olay tabanlı mimari (event-driven architecture) ile tek bir işlemde
+					birden fazla bağlantıyı eşzamanlı olarak yönetebilen, socket programlama kullanarak tek thread
+					üzerinde çalışan yüksek performanslı bir yapı tasarladık. Non-blocking I/O mekanizmaları sayesinde
+					çoklu istemci bağlantılarını etkin şekilde yöneten sunucumuz, çoklu port desteği, dinamik içerik
+					işleme ve özelleştirilebilir yönlendirme özellikleriyle modern web sunucusu ihtiyaçlarını
+					karşılamaktadır. Bu proje, ağ programlama, HTTP protokolü ve sistem kaynaklarının optimum kullanımı
+					konularında derinlemesine teknik deneyim sağladı.
+				</p>
+				<div class="media" style="display: flex; flex-direction: column; gap: 10px;">
+					<div style="width: 100%;">
+						<img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/42WebServer.png?raw=true"
+							alt="WebServer Görseli" style="width: 100%;">
+					</div>
+					<div style="display: flex; gap: 10px; justify-content: space-between;">
+						<img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/ServerClientDiagram.png?raw=true"
+							alt="Server-Client Diyagramı" style="width: 49%;">
+						<img src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/eventDriven.jpg?raw=true"
+							alt="Olay Tabanlı Mimari" style="width: 49%;">
+					</div>
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>HTTP Metodları: GET, POST, DELETE desteği</li>
+							<li>Olay Tabanlı Mimari: Verimli istek işleme ve kaynak yönetimi</li>
+							<li>Non-blocking I/O: Eşzamanlı istemci bağlantıları</li>
+							<li>Çoklu Sunucu: Port ve sunucu adı bazlı yapılandırma</li>
+							<li>Dinamik İçerik: CGI ile PHP ve Python desteği</li>
+							<li>İstek Yönlendirme: Özelleştirilebilir rotalar</li>
+							<li>Dizin Listesi: Otomatik içerik görüntüleme</li>
+							<li>Hata Yönetimi: Özelleştirilmiş HTTP durum sayfaları</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>C++</li>
+							<li>Socket Programlama</li>
+							<li>I/O Multiplexing (poll/select)</li>
+							<li>Olay Tabanlı Mimari</li>
+							<li>HTTP Protokolü</li>
+							<li>POSIX API</li>
+							<li>CGI (Common Gateway Interface)</li>
+							<li>Config Dosyası Parsing</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!--3. Inception Projesi -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/Inception_Docker">Inception</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					Docker teknolojisini derinlemesine öğrenmek amacıyla geliştirdiğim Inception projesi, web
+					hizmetlerinin konteynerleştirilmiş bir altyapısını oluşturur. Her bir servisi (NGINX, WordPress,
+					MariaDB) ayrı konteynerlerde çalıştırarak izolasyon ve ölçeklenebilirlik sağladım. TLS/SSL
+					sertifikaları ile güvenli bağlantılar oluşturdum ve Docker Compose ile tüm sistem bileşenlerini tek
+					bir yapılandırma dosyasıyla yönetmeyi başardım. Deneyimlerimi <a
+						href="https://medium.com/@menasy/docker-42-inception-projesi-484e48ae543c"
+						target="_blank">Medium yazısında</a> detaylı olarak paylaştım.
+				</p>
+				<!-- İki fotoğraf yan yana olacak şekilde düzenlendi -->
+				<div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
+					<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png"
+						alt="Inception Mimari" style="width: 49%;">
+					<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg"
+						alt="Docker Compose" style="width: 49%;">
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>Mikro Servis Mimarisi: Her servis için ayrı konteyner</li>
+							<li>Reversi Proxy: NGINX yapılandırması ve yönlendirmesi</li>
+							<li>Güvenli Bağlantılar: TLS/SSL sertifikaları</li>
+							<li>Veritabanı Entegrasyonu: MariaDB yapılandırması</li>
+							<li>WordPress Optimizasyonu: Özelleştirilmiş konteyner ortamı</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>Docker</li>
+							<li>Docker Compose</li>
+							<li>NGINX</li>
+							<li>WordPress</li>
+							<li>MariaDB</li>
+							<li>Bash Script</li>
+							<li>TLS/SSL</li>
+							<li>Alpine Linux</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 4. Minishell -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/42-Minishell">Minishell</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					Ekip arkadaşımla birlikte C dilinde geliştirdiğimiz Minishell projesi, Unix benzeri bir komut satırı
+					arayüzünü sıfırdan tasarlamamızı sağladı. Komut ayrıştırma, boru hatları (pipe) yönetimi ve
+					yönlendirme mekanizmalarını başarıyla uygulayarak, girdi/çıktı akışlarını kontrol eden bir sistem
+					oluşturduk. POSIX sistem çağrılarını kullanarak sinyal yönetimi ve bellek kontrolü konularında
+					pratik deneyim elde ettim. Takım çalışması sürecinde iş bölümü ve ortak kod kalitesi standartları
+					üzerinde çalışarak iletişim ve problem çözme becerilerimizi de geliştirdik.</p>
+				<div class="media">
+					<video controls width="100%">
+						<source
+							src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4"
+							type="video/mp4">
+						Tarayıcınız video etiketini desteklemiyor.
+					</video>
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>Komut Ayırma: cd, echo, pwd</li>
+							<li>Boru Hatları, MPipe ve Yönlendirme: &gt;, &gt;&gt;</li>
+							<li>Komut Geçişi: Önceki komutlara erişim</li>
+							<li>Girdi Yönetimi: Komutların doğru işlenmesi</li>
+							<li>Sinyal Yönetimi: Ctrl+C, Ctrl+D sinyalleri</li>
+							<li>Sistem Programlama: Shell ve sistem çağrıları</li>
+							<li>Ekip Çalışması: Verimli iş birliği, zaman yönetimi</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>C</li>
+							<li>POSIX Sistem Çağrıları</li>
+							<li>Bash Shell</li>
+							<li>Signal Handling</li>
+							<li>File I/O</li>
+							<li>Process Management</li>
+							<li>Memory Management</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 5. Cub3D -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/cub3d">Cub3D</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					Wolfenstein 3D'den esinlenerek ekip arkadaşımla C dili ve MiniLibX kullanarak geliştirdiğimiz Cub3D
+					projesi, raycasting tekniğiyle 2D haritaları gerçek zamanlı 3D görünüme dönüştürür. Matematiksel
+					hesaplamalarla dokulu duvarlar oluşturarak doğru perspektif sağladık. WASD ve ok tuşları ile kontrol
+					sistemi tasarlayarak kullanıcı dostu bir oyun deneyimi sunmayı başardık. </p>
+				<div class="media">
+					<video controls width="100%">
+						<source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4"
+							type="video/mp4">
+						Tarayıcınız video etiketini desteklemiyor.
+					</video>
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>Ray Casting: 2D haritaları 3D dünyaya dönüştürme</li>
+							<li>Dokulu Duvarlar: Gerçekçi ortamlar oluşturma</li>
+							<li>Oyuncu Kontrolleri: WASD ve ok tuşlarıyla sezgisel hareket</li>
+							<li>Hata Yönetimi: Kararlı ve güvenilir sistem</li>
+							<li>Grafik İşleme: RGB renkleriyle zemin ve gökyüzü entegrasyonu</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>C</li>
+							<li>MiniLibX</li>
+							<li>Matematik kütüphaneleri</li>
+							<li>Oyun Mekanikleri &amp; Kullanıcı Etkileşimi</li>
+							<li>Raycasting Algoritmaları</li>
+							<li>X11 (Linux pencere yönetimi)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 6 Blockchain Tabanlı Noter Uygulaması -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/BlockChain_NoteryProject">Blockchain Tabanlı Noter Uygulaması</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					Web3 tabanlı noter uygulamam, belgeleri SHA256 algoritmasıyla benzersiz şekilde imzalayıp
+					Ethereum Sepolia test ağındaki Solidity akıllı sözleşmeler aracılığıyla blok zincirine kaydeder.
+					Belgeler değiştirilemez, zaman damgalı ve herkese açık biçimde saklanır. MetaMask entegrasyonu
+					ve sade web arayüzüyle kullanıcılar, belgelerini güvenle doğrulayıp kayıt altına alabilir.
+				</p>
+				<div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
+					<img src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/BlockChainNotaryWeb.png?raw=true"
+						alt="Blockchain Noter Web Arayüzü" style="width: 49%;">
+					<img src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/solFileRemixIDE.png?raw=true"
+						alt="Remix IDE Solidity Kodu" style="width: 49%;">
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>SHA256 Hash Hesaplama: Belge doğrulama ve bütünlük kontrolü</li>
+							<li>Blockchain Kayıt: Ethereum Sepolia test ağı entegrasyonu</li>
+							<li>Zaman Damgalama: Belgelerin kaydedilme zamanının blockchain'de saklanması</li>
+							<li>MetaMask Entegrasyonu: Kolay kullanım için cüzdan bağlantısı</li>
+							<li>Tekrar Önleme: Aynı belgenin birden fazla kez kaydedilmesinin engellenmesi</li>
+							<li>Belge Doğrulama: Belgelerin değişip değişmediğinin kontrol edilmesi</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>Solidity</li>
+							<li>Ethereum Sepolia Test Ağı</li>
+							<li>Ethers.js</li>
+							<li>CryptoJS</li>
+							<li>HTML/JavaScript</li>
+							<li>MetaMask</li>
+							<li>Remix IDE</li>
+							<li>Web3 Teknolojileri</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 7. Philosophers42 -->
+			<div class="project">
+				<h3 class="project-heading">
+					<a href="https://github.com/menasy/philosophers-42">Philosophers42</a>
+				</h3>
+				<!-- Proje özeti -->
+				<p class="project-summary">
+					C dilinde geliştirdiğim Philosophers42 projesi, klasik "The Dining Philosophers Problem"
+					simülasyonudur. Pthread ve mutex mekanizmalarını kullanarak paylaşılan kaynaklar için rekabet eden
+					filozofların deadlock yaşamadan yemek yeme ve düşünme döngülerini yönettim. Yarış koşulları ve
+					senkronizasyon problemlerini çözerek, çoklu iş parçacığı programlama konusunda değerli deneyim
+					kazandım. </p>
+				<div class="media">
+					<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png"
+						alt="Philo Icon">
+				</div>
+				<div class="flex-row">
+					<div class="column">
+						<h4>Özellikler:</h4>
+						<ul>
+							<li>Yarış koşulları (race conditions)</li>
+							<li>Kaynak paylaşımı optimizasyonu</li>
+							<li>Deadlock çözümleri</li>
+							<li>Çoklu iş parçacığı senkronizasyonu</li>
+							<li>Zamanlama algoritmaları</li>
+						</ul>
+					</div>
+					<div class="column">
+						<h4>Teknolojiler:</h4>
+						<ul>
+							<li>C</li>
+							<li>pthread</li>
+							<li>mutex</li>
+							<li>Semaforlar</li>
+							<li>Paralel programlama</li>
+							<li>Süreç yönetimi</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Diğer Projeler Bölümü -->
+		<section id="diger-projeler" class="section">
+			<h2>Diğer Projeler</h2>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/libft">Libft Kütüphanesi (C, Dinamik Bellek, Algoritmalar)</a>
+				</h3>
+				<p>
+					C dilinde, dinamik bellek yönetimi ve algoritmalar kullanarak 42 işlevden oluşan bir kütüphane
+					geliştirdim. Proje, dizi işlemleri, bellek ayırma ve liste yönetimiyle C'nin ileri düzey kullanımını
+					pekiştirdi.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/ft_printf">Ft_printf (C, Variadic Fonksiyonlar, Format)</a></h3>
+				<p>
+					C dilinde, printf fonksiyonunu yeniden yazarak, variadic fonksiyonlar ve formatlama ile farklı veri
+					türlerini destekleyen bir çıktı mekanizması geliştirdim.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3>Born_to_be_root (Linux Yönetimi, Sanallaştırma)</h3>
+				<p>
+					Sanal makine üzerinde özelleştirilmiş bir işletim sistemi kurarak, güvenlik ve yönetim ayarlarını
+					istediğim şekilde yapılandırdım.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/Minitalk">Minitalk Program (C, UNIX Sinyalleri, IPC)</a></h3>
+				<p>
+					UNIX sinyalleri kullanarak iki süreç arasında asenkron veri iletimi sağlayan bir proje; sinyal
+					yönetimi ve IPC konularında pratik kazandırdı.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/so_long">So_long Oyunu (C, MiniLibX, 2D Oyun)</a></h3>
+				<p>
+					MiniLibX ile 2D oyun geliştirerek, dinamik harita, hareketli oyuncu, toplanabilir öğeler ve çıkış
+					mekaniği sunan temel oyun mekaniği ve grafik işlemi deneyimi sağladım.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/push_swap">Push_swap Sorting Program (C, Stack, Algorithms)</a>
+				</h3>
+				<p>
+					İki yığın kullanarak sayı dizilerini minimum işlemle sıralamayı hedefleyen, algoritma
+					optimizasyonuna odaklanan bir proje.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/NetPractice">Net_Practice (Networking, IP Addressing,
+						Subnetting)</a></h3>
+				<p>
+					Ağ yapıları, IP adresleme ve subnetting konularına odaklanarak, yönlendirme protokolleri hakkında
+					pratik bilgi kazandıran bir proje.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/Java_Playground">Java101 (Java, Algorithms, Problem Solving)</a>
+				</h3>
+				<p>
+					Java 101 kapsamında, temel ve karmaşık programlama görevlerini içeren projeler geliştirerek Java
+					yeteneklerimi pekiştirdim.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/Mine_Sweeper_Game">Mine Sweeper (Java, Console)</a></h3>
+				<p>
+					Java ile konsol tabanlı klasik mayın tarlası oyunu geliştirerek, özelleştirilebilir ızgara ve
+					rastgele mayın yerleşimi sundum.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/MobileApp_Playground">MobilApp Playground (Kotlin, Java)</a></h3>
+				<p>
+					Kotlin ve Java kullanarak Android uygulamaları geliştirdiğim bu projede, kullanıcı arayüzü tasarımı
+					ve veri yönetimi üzerine pratik kazandım.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3>Data Analysis and Visualization (Python, Pandas, Matplotlib)</h3>
+				<p>
+					Hindistan emlak verilerini analiz ve görselleştirerek, veri temizleme ve istatistiksel analizle
+					anlamlı içgörüler sundum.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/Cpp_Module">Cpp Module (Object-Oriented Programming)</a></h3>
+				<p>
+					42 okulundaki C++ modüllerini tamamlayarak, OOP prensiplerini detaylı şekilde öğrendim; bellek
+					yönetimi, veri yapıları ve algoritmalar üzerinde pratik kazandım. Bu öğrenme sürecimde edindiğim
+					bilgileri ve çözüm yaklaşımlarımı <a
+						href="https://medium.com/@menasy/list/42-cpp-modulleri-ve-c-temelleri-710fabe3b608"
+						target="_blank">Medium'daki C++ yazı serimde</a> detaylı olarak paylaştım.
+				</p>
+			</div>
+
+			<div class="other-project">
+				<h3><a href="https://github.com/menasy/VisualProgramming_CSharp">Visual Programming (C#, .NET)</a></h3>
+				<p>
+					C# ve .NET ile kullanıcı dostu arayüzler oluşturarak, kimlik doğrulama, quiz, bahis simülasyonu ve
+					rezervasyon yönetimi projeleri geliştirdim.
+				</p>
+			</div>
+		</section>
+
+		<!-- İletişim ve CV İndirme Bölümü -->
+		<section id="iletisim-cv" class="section">
+			<div class="flex-row">
+				<!-- İletişim Bölümü -->
+				<div class="column" style="font-size: 20px;">
+					<h2 style="font-size: 25px;">İletişim ve Bağlantılar</h2>
+					<p style="margin-bottom: 12px;">
+						<a href="mailto:mehmetnasim42@gmail.com" style="font-size: 20px;">
+							<i class="fas fa-envelope" style="margin-right: 6px;"></i> mehmetnasim42@gmail.com
+						</a>
+					</p>
+					<p>
+						<a href="https://github.com/menasy" target="_blank" style="font-size: 20px;">
+							<i class="fab fa-github" style="margin-right: 6px;"></i> GitHub
+						</a><br>
+						<a href="https://linkedin.com/in/menasy" target="_blank" style="font-size: 20px;">
+							<i class="fab fa-linkedin" style="margin-right: 6px;"></i> LinkedIn
+						</a><br>
+						<a href="https://medium.com/@menasy" target="_blank" style="font-size: 20px;">
+							<i class="fab fa-medium" style="margin-right: 6px;"></i> Medium
+						</a>
+					</p>
+				</div>
+
+				<!-- CV İndir Bölümü -->
+				<div class="column">
+					<h2 style="font-size: 25px;">CV İndir</h2>
+					<p>Aşağıdaki linklerden CV'mi PDF formatında indirebilirsiniz:</p>
+					<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+						<a href="https://github.com/menasy/Portfolio/raw/main/MenasyCV.pdf"
+							download="MehmetNasimYilmaz_CV_TR.pdf"
+							style="display: inline-block; padding: 8px 15px; background: rgba(77, 127, 255, 0.2); border-radius: 5px; transition: all 0.3s ease;">
+							<span style="font-size: 1.1em;">📄 Türkçe CV</span>
+						</a>
+						<a href="https://github.com/menasy/Portfolio/raw/main/MenasyEnCV.pdf"
+							download="MehmetNasimYilmaz_CV_EN.pdf"
+							style="display: inline-block; padding: 8px 15px; background: rgba(77, 127, 255, 0.2); border-radius: 5px; transition: all 0.3s ease;">
+							<span style="font-size: 1.1em;">📄 İngilizce CV</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 </body>
+
 </html>
