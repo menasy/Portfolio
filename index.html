@@ -898,6 +898,61 @@
 			text-shadow: 0 4px 18px #4d7fff44, 0 2px 8px #64ffda33;
 			font-size: 1.41rem;
 		}
+		/* Diğer Projeler için iki sütunlu kart tasarımı */
+		.other-project-flex {
+			display: block;
+			background: rgba(40,49,71,0.6);
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+			margin: 18px auto 28px auto;
+			padding: 18px 18px 10px 18px;
+			max-width: 900px;
+		}
+		.other-project-desc {
+			text-align: left;
+			margin-bottom: 10px;
+		}
+		.other-project-details-row {
+			display: flex;
+			gap: 24px;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+		.other-project-tech, .other-project-features {
+			flex: 1 1 220px;
+			background: rgba(30,39,61,0.18);
+			border-radius: 8px;
+			padding: 10px 18px 10px 18px;
+			min-width: 180px;
+			max-width: 260px;
+			align-self: flex-start;
+		}
+		.other-project-tech h4, .other-project-features h4 {
+			color: #4d7fff;
+			font-size: 1.08rem;
+			margin-bottom: 7px;
+			margin-top: 0;
+			font-weight: 700;
+		}
+		.other-project-tech ul, .other-project-features ul {
+			margin: 0 0 10px 0;
+			padding-left: 18px;
+			font-size: 0.98rem;
+		}
+		@media (max-width: 900px) {
+			.other-project-details-row {
+				flex-direction: column;
+				gap: 10px;
+			}
+			.other-project-tech, .other-project-features {
+				max-width: 100%;
+				padding: 0 0 10px 0;
+			}
+		}
+		.other-project-desc h3 {
+			text-align: center;
+		}
 	</style>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -954,7 +1009,7 @@
 						<strong>İstanbul Gelişim Üniversitesi – Yönetim Bilişim Sistemleri </strong> <br>
 						Veri madenciliği, finansal teknolojiler, risk yönetimi, SQL veritabanı, iş zekası, veri
 						görselleştirme, görsel programlama (C#), kurumsal IT altyapıları, bulut bilişim gibi alanlarında
-						eğitim alyorum.
+						eğitim aldım.
 					</p>
 				</div>
 				<!-- Yeteneklerim -->
@@ -977,12 +1032,12 @@
 						<li>Takım Çalışması</li>
 						<li>Zaman Yönetimi</li>
 						<li>Clean Code</li>
+						<li>REST API</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 		<hr class="section-divider">
-		<!-- Teknik Beceriler (irfan.html'deki gibi, ama index.html renk ve stilinde) -->
 		<section id="teknik-beceriler" class="section single-column">
 			<h2>🛠️ Teknik Beceriler</h2>
 			<div class="tech-skills-wrapper">
@@ -1081,6 +1136,7 @@
 						<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" class="lang-icon"><span>Pandas</span></li>
 						<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" class="lang-icon"><span>NumPy</span></li>
 						<li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="lang-icon"><span>Firebase</span></li>
+						<li><img src="https://d33wubrfki0l68.cloudfront.net/70f55b8fa4e75bc7489ea68f628a8a60781c6387/18999/static/rest-api-c2f25fbadba477948398d96acac29c08.png" alt="REST API" class="lang-icon"><span>REST API</span></li>
 						<li><img src="https://img.freepik.com/premium-vector/blockchain-logo-design_611243-62.jpg?semt=ais_hybrid&w=740" alt="Blockchain" class="lang-icon"><span>BlockChain</span></li>
 						<li><img src="https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png" alt="Web3" class="lang-icon"><span>Web3</span></li>
 					</ul>
@@ -1088,7 +1144,7 @@
 			</div>
 		</section>
 		<hr class="section-divider">
-		<!-- Blog Yazılarım (irfan.html'deki gibi, ama index.html renk ve stilinde) -->
+		<!-- Blog Yazılarım -->
 		<section id="blog-yazilari" class="section single-column">
 			<h2>📝 Blog Yazılarım</h2>
 			<p style="margin-bottom: 30px;">Yazılım geliştirme yolculuğumda edindiğim deneyimleri, teknik bilgileri ve ilginç keşiflerimi paylaştığım Medium blog yazılarım:</p>
@@ -1309,7 +1365,6 @@
 						href="https://medium.com/@menasy/docker-42-inception-projesi-484e48ae543c"
 						target="_blank">Medium yazısında</a> detaylı olarak paylaştım.
 				</p>
-				<!-- İki fotoğraf yan yana olacak şekilde düzenlendi -->
 				<div class="media" style="display: flex; gap: 10px; justify-content: space-between;">
 					<img src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png"
 						alt="Inception Mimari" style="width: 49%;">
@@ -1522,122 +1577,421 @@
 		</section>
 		<hr class="section-divider">
 		<!-- Diğer Projeler Bölümü -->
-		<section id="diger-projeler" class="section">
-			<h2>Diğer Projelerim</h2>
+<section id="diger-projeler" class="section">
+	<h2>Diğer Projelerim</h2>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/libft">Libft Kütüphanesi (C, Dinamik Bellek, Algoritmalar)</a>
-				</h3>
-				<p>
-					C dilinde, dinamik bellek yönetimi ve algoritmalar kullanarak 42 işlevden oluşan bir kütüphane
-					geliştirdim. Proje, dizi işlemleri, bellek ayırma ve liste yönetimiyle C'nin ileri düzey kullanımını
-					pekiştirdi.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/Cpp_Module">Cpp Module</a></h3>
+			<p>
+				42 okulundaki C++ modüllerini tamamlayarak nesne yönelimli programlamanın derinliklerini öğrendim. Bellek yönetimi, polimorfizm ve abstract sınıflar konularında uzmanlaştım. Öğrenme sürecimi <a href="https://medium.com/@menasy/list/42-cpp-modulleri-ve-c-temelleri-710fabe3b608" target="_blank">Medium yazı serimde</a> detaylandırdım.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C++</li>
+					<li>OOP</li>
+					<li>STL</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>İleri seviye OOP kavramları</li>
+					<li>Template programlama</li>
+					<li>Medium yazı serisi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/ft_printf">Ft_printf (C, Variadic Fonksiyonlar, Format)</a></h3>
-				<p>
-					C dilinde, printf fonksiyonunu yeniden yazarak, variadic fonksiyonlar ve formatlama ile farklı veri
-					türlerini destekleyen bir çıktı mekanizması geliştirdim.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/JavaScript_Project">JavaScript Projects</a></h3>
+			<p>
+				JavaScript, TypeScript ve Tailwind CSS kullanarak çeşitli web uygulamaları geliştirdim. Modern web teknolojileri ile DOM işlemleri, API entegrasyonları ve kullanıcı arayüzü tasarımı konularında pratik kazandım.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>JavaScript</li>
+					<li>TypeScript</li>
+					<li>Tailwind CSS</li>
+					<li>HTML/CSS</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>İnteraktif web uygulamaları</li>
+					<li>DOM manipülasyonu</li>
+					<li>API entegrasyonları</li>
+					<li>Responsive tasarım</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3>Born_to_be_root (Linux Yönetimi, Sanallaştırma)</h3>
-				<p>
-					Sanal makine üzerinde özelleştirilmiş bir işletim sistemi kurarak, güvenlik ve yönetim ayarlarını
-					istediğim şekilde yapılandırdım.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/wpGroup-Extractor">WpGroup_Extractor</a></h3>
+			<p>
+				WhatsApp gruplarındaki numaraları otomatik olarak çeken ve belirtilen kaynak veri ile karşılaştırarak grup üyelerini yöneten Node.js uygulaması. Docker ve Docker Compose ile konteyner ortamında çalışacak şekilde geliştirildi.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Node.js</li>
+					<li>JavaScript</li>
+					<li>Docker</li>
+					<li>Venom Bot</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>WhatsApp grup otomasyonu</li>
+					<li>Numara çekme ve karşılaştırma</li>
+					<li>Docker konteynerizasyonu</li>
+					<li>Otomatik üye yönetimi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/Minitalk">Minitalk Program (C, UNIX Sinyalleri, IPC)</a></h3>
-				<p>
-					UNIX sinyalleri kullanarak iki süreç arasında asenkron veri iletimi sağlayan bir proje; sinyal
-					yönetimi ve IPC konularında pratik kazandırdı.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/MobileApp_Playground">MobilApp Playground</a></h3>
+			<p>
+				Kotlin ve Java kullanarak Android uygulamaları geliştirdiğim proje koleksiyonu. Mobil uygulama geliştirme süreçlerini, kullanıcı arayüzü tasarımını ve veri yönetimini öğrenmek için çeşitli deneysel uygulamalar içeriyor.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Kotlin</li>
+					<li>Java</li>
+					<li>Android SDK</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Android uygulama geliştirme</li>
+					<li>Kullanıcı arayüzü tasarımı</li>
+					<li>Veri yönetimi</li>
+					<li>Çoklu uygulama deneyimi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/so_long">So_long Oyunu (C, MiniLibX, 2D Oyun)</a></h3>
-				<p>
-					MiniLibX ile 2D oyun geliştirerek, dinamik harita, hareketli oyuncu, toplanabilir öğeler ve çıkış
-					mekaniği sunan temel oyun mekaniği ve grafik işlemi deneyimi sağladım.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/Java_Playground">Java101</a></h3>
+			<p>
+				Java programlama dilinin temellerinden ileri seviye konularına kadar çeşitli projeler geliştirdim. Algoritma geliştirme, veri yapıları ve problem çözme teknikleri üzerine odaklanarak Java becerilerimi pekiştirdim.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Java</li>
+					<li>Algoritmalar</li>
+					<li>Veri Yapıları</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Algoritma implementasyonları</li>
+					<li>Veri yapısı örnekleri</li>
+					<li>Problem çözme projeleri</li>
+					<li>OOP uygulamaları</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/push_swap">Push_swap Sorting Program (C, Stack, Algorithms)</a>
-				</h3>
-				<p>
-					İki yığın kullanarak sayı dizilerini minimum işlemle sıralamayı hedefleyen, algoritma
-					optimizasyonuna odaklanan bir proje.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/VisualProgramming_CSharp">Visual Programming</a></h3>
+			<p>
+				C# ve .NET Framework kullanarak Windows Forms tabanlı masaüstü uygulamaları geliştirdim. Kimlik doğrulama, quiz sistemleri, bahis simülasyonu ve rezervasyon yönetimi gibi farklı işlevlere sahip uygulamalar içeriyor.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C#</li>
+					<li>.NET Framework</li>
+					<li>Windows Forms</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Masaüstü uygulama geliştirme</li>
+					<li>Kullanıcı kimlik doğrulama</li>
+					<li>Quiz ve sınav sistemleri</li>
+					<li>Rezervasyon yönetimi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/NetPractice">Net_Practice (Networking, IP Addressing,
-						Subnetting)</a></h3>
-				<p>
-					Ağ yapıları, IP adresleme ve subnetting konularına odaklanarak, yönlendirme protokolleri hakkında
-					pratik bilgi kazandıran bir proje.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/Mine_Sweeper_Game">Mine Sweeper</a></h3>
+			<p>
+				Java ile konsol tabanlı klasik mayın tarlası oyunu. Özelleştirilebilir ızgara boyutları, dinamik zorluk seviyeleri ve kullanıcı skorlama sistemi ile geliştirildi.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Java</li>
+					<li>Console UI</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Rastgele mayın dağılımı</li>
+					<li>Dinamik zorluk seviyeleri</li>
+					<li>Skor takip sistemi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/Java_Playground">Java101 (Java, Algorithms, Problem Solving)</a>
-				</h3>
-				<p>
-					Java 101 kapsamında, temel ve karmaşık programlama görevlerini içeren projeler geliştirerek Java
-					yeteneklerimi pekiştirdim.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/NetPractice">Net_Practice</a></h3>
+			<p>
+				Ağ protokolleri ve konfigürasyonları üzerine derinlemesine çalışma. IP adresleme, subnetting, routing tablolarını ve ağ topolojilerini öğrenmek için geliştirilen pratik senaryolar.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Networking</li>
+					<li>TCP/IP</li>
+					<li>Routing</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Ağ topolojisi tasarımı</li>
+					<li>Subnet hesaplamaları</li>
+					<li>Routing protokolleri</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/Mine_Sweeper_Game">Mine Sweeper (Java, Console)</a></h3>
-				<p>
-					Java ile konsol tabanlı klasik mayın tarlası oyunu geliştirerek, özelleştirilebilir ızgara ve
-					rastgele mayın yerleşimi sundum.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/push_swap">Push_swap Sorting</a></h3>
+			<p>
+				Stack veri yapısı kullanarak sayısal dizileri minimum işlem sayısıyla sıralayan algoritma projesi. Performans optimizasyonu ve algoritma karmaşıklığı analizi odaklı geliştirildi.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C</li>
+					<li>Stack Data Structure</li>
+					<li>Algorithms</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Optimum sıralama algoritması</li>
+					<li>Stack manipülasyonu</li>
+					<li>Performans analizi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/MobileApp_Playground">MobilApp Playground (Kotlin, Java)</a></h3>
-				<p>
-					Kotlin ve Java kullanarak Android uygulamaları geliştirdiğim bu projede, kullanıcı arayüzü tasarımı
-					ve veri yönetimi üzerine pratik kazandım.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/so_long">So_long Game</a></h3>
+			<p>
+				MiniLibX grafik kütüphanesi ile 2D oyun geliştirme projesi. Piksel tabanlı hareket sistemi, çarpışma tespiti ve oyun durumu yönetimi implementasyonları içeriyor.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C</li>
+					<li>MiniLibX</li>
+					<li>Game Development</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>2D oyun mekaniği</li>
+					<li>Collision detection</li>
+					<li>Sprite animasyonları</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3>Data Analysis and Visualization (Python, Pandas, Matplotlib)</h3>
-				<p>
-					Hindistan emlak verilerini analiz ve görselleştirerek, veri temizleme ve istatistiksel analizle
-					anlamlı içgörüler sundum.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/Minitalk">Minitalk</a></h3>
+			<p>
+				UNIX sinyal sistemini kullanarak süreçler arası iletişim sağlayan C projesi. Bit manipülasyonu ve asenkron programlama kavramlarını pratik olarak uygulayan bir çalışma.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C</li>
+					<li>UNIX Signals</li>
+					<li>IPC</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Sinyal tabanlı iletişim</li>
+					<li>Bit manipülasyonu</li>
+					<li>Asenkron veri transferi</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/Cpp_Module">Cpp Module (Object-Oriented Programming)</a></h3>
-				<p>
-					42 okulundaki C++ modüllerini tamamlayarak, OOP prensiplerini detaylı şekilde öğrendim; bellek
-					yönetimi, veri yapıları ve algoritmalar üzerinde pratik kazandım. Bu öğrenme sürecimde edindiğim
-					bilgileri ve çözüm yaklaşımlarımı <a
-						href="https://medium.com/@menasy/list/42-cpp-modulleri-ve-c-temelleri-710fabe3b608"
-						target="_blank">Medium'daki C++ yazı serimde</a> detaylı olarak paylaştım.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3>Born_to_be_root</h3>
+			<p>
+				Linux sistem yönetimi ve güvenlik konfigürasyonları projesi. Sanal makine kurulumu, kullanıcı yönetimi, güvenlik duvarı ayarları ve servis konfigürasyonları ile sistem yöneticiliği becerilerimi geliştirdim.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Linux</li>
+					<li>System Administration</li>
+					<li>Security</li>
+				</ul>
 			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Sistem güvenlik konfigürasyonu</li>
+					<li>Kullanıcı ve grup yönetimi</li>
+					<li>Servis otomasyonu</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-			<div class="other-project">
-				<h3><a href="https://github.com/menasy/VisualProgramming_CSharp">Visual Programming (C#, .NET)</a></h3>
-				<p>
-					C# ve .NET ile kullanıcı dostu arayüzler oluşturarak, kimlik doğrulama, quiz, bahis simülasyonu ve
-					rezervasyon yönetimi projeleri geliştirdim.
-				</p>
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/libft">Libft Library</a></h3>
+			<p>
+				C dilinde 42 temel fonksiyondan oluşan kişisel kütüphane implementasyonu. Standart C library fonksiyonlarını yeniden yazarak, algoritma geliştirme ve bellek yönetimi becerilerimi pekiştirdim.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C</li>
+					<li>Memory Management</li>
+					<li>Algorithms</li>
+				</ul>
 			</div>
-		</section>
-		<hr class="section-divider">
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>42 temel fonksiyon implementasyonu</li>
+					<li>Linked list operations</li>
+					<li>String ve bellek işlemleri</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3><a href="https://github.com/menasy/ft_printf">Ft_printf</a></h3>
+			<p>
+				C dilinde printf fonksiyonunu sıfırdan yeniden yazma projesi. Variadic fonksiyonlar, format specifier parsing ve bellek yönetimi konularında derinlemesine deneyim kazandım.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>C</li>
+					<li>Variadic Functions</li>
+					<li>String Parsing</li>
+				</ul>
+			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Format specifier implementation</li>
+					<li>Variadic parametre yönetimi</li>
+					<li>Çoklu veri tipi desteği</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="other-project-flex">
+		<div class="other-project-desc">
+			<h3>Data Analysis & Visualization</h3>
+			<p>
+				Python ekosistemi kullanarak emlak verilerinin analizi ve görselleştirilmesi projesi. Pandas ile veri temizleme, Matplotlib ile grafik oluşturma ve istatistiksel analiz teknikleri uygulandı.
+			</p>
+		</div>
+		<div class="other-project-details-row">
+			<div class="other-project-tech">
+				<h4>Teknolojiler</h4>
+				<ul>
+					<li>Python</li>
+					<li>Pandas</li>
+					<li>Matplotlib</li>
+				</ul>
+			</div>
+			<div class="other-project-features">
+				<h4>Özellikler</h4>
+				<ul>
+					<li>Büyük veri seti analizi</li>
+					<li>İstatistiksel görselleştirme</li>
+					<li>Veri temizleme teknikleri</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+<hr class="section-divider">
 		<!-- İletişim ve CV İndirme Bölümü -->
 		<section id="iletisim-cv" class="section">
 			<div class="contact-cv-flex">
