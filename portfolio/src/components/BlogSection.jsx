@@ -2,13 +2,20 @@ import React from 'react';
 
 export default function BlogSection() {
   return (
-    <section id="blog-yazilari" className="space-y-8">
-      <div className="text-center">
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 mb-4 shadow-lg">
-          <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-pulse"></div>
-          <span className="text-sm font-semibold text-green-700 dark:text-green-300 uppercase tracking-wide">Blog Yazılarım</span>
+    <section id="blog-yazilari" className="space-y-6">
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          <span className="text-sm font-semibold text-green-600 dark:text-green-400 uppercase tracking-wider">Blog</span>
         </div>
-        <p className="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          Blog Yazılarım
+        </h2>
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Yazılım geliştirme yolculuğumda edindiğim deneyimleri, teknik bilgileri ve ilginç keşiflerimi paylaştığım Medium blog yazılarım
         </p>
       </div>

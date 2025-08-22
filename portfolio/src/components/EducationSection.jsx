@@ -3,11 +3,23 @@ import React from 'react';
 export default function EducationSection() {
   return (
     <section id="egitim" className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 mb-6 shadow-lg">
-          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
-          <span className="text-sm font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide">Eğitim Bilgileri</span>
+      {/* Modern Section Header */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-3 mb-4">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            </svg>
+          </div>
+          <span className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 uppercase tracking-wider">Eğitim</span>
         </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          Eğitim Bilgileri
+        </h2>
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Akademik geçmişim ve aldığım eğitimler
+        </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

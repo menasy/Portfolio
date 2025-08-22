@@ -54,40 +54,20 @@ const LanguageItem = ({ src, alt, label, level }) => {
 
 export default function TechSkillsInner() {
   return (
-    <div className="space-y-8">
-      {/* Programlama Dilleri */}
-      <div className="group relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl blur-sm group-hover:blur-md transition-all duration-300"></div>
-        <div className="relative p-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg group-hover:shadow-xl transition-all duration-300">
-          
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 shadow-md">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Programlama Dilleri</h3>
-          </div>
-          
-            <div className="space-y-2.5">
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" label="C" level="expert" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" label="C++" level="expert" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" label="Git" level="expert" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" label="Java" level="middle" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" label="Python" level="middle" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" label="Bash" level="middle" />
-              <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" alt="XML" label="XML" level="middle" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" label="C#" level="middle" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" label="SQL" level="begin" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" label="Kotlin" level="begin" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" label="HTML/CSS" level="begin" />
-              <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" label="JavaScript" level="begin" />
-              <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" alt="Solidity" label="Solidity" level="begin" />
-            </div>
-        </div>
-      </div>
+    <div className="space-y-2.5">
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" label="C" level="expert" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" label="C++" level="expert" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" label="Git" level="expert" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" label="Java" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" label="Python" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" label="Bash" level="middle" />
+      <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" alt="XML" label="XML" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" label="C#" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" label="SQL" level="begin" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" label="Kotlin" level="begin" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" label="HTML/CSS" level="begin" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" label="JavaScript/React" level="begin" />
+      <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" alt="Solidity" label="Solidity" level="begin" />
     </div>
   );
 }
-
-
