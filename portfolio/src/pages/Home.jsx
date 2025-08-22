@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import BlogSection from '../components/BlogSection';
-import AboutSection from '../components/AboutSection';
 import ToolsTechnologies from '../components/ToolsTechnologies';
-import ContactForm from '../components/ContactForm';
+import Comminication from '../components/Comminication';
+import EducationSection from '../components/EducationSection';
+import ExperienceSection from '../components/ExperienceSection';
+import TechSkillsInner from '../components/TechSkillsInner';
+import SkillsSection from '../components/SkillsSection';
 
 export default function Home() {
   const [typingText, setTypingText] = useState('');
@@ -54,7 +57,7 @@ export default function Home() {
               alt="Profil Fotoğrafı"
               className="relative h-32 w-32 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl group-hover:scale-105 transition-transform duration-300"
               loading="eager"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           </div>
           
@@ -82,34 +85,14 @@ export default function Home() {
             </div>
 
             <div className="mt-12 relative max-w-2xl mx-auto">
-              {/* Floating decoration */}
-              <div className="absolute -top-3 -left-3 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-3 -right-3 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div>
-              
-              {/* Main quote container */}
-              <div className="group relative overflow-hidden rounded-2xl">
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-emerald-50 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-emerald-900/20 animate-gradient-xy"></div>
-                
-                {/* Border gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-200 via-purple-200 to-emerald-200 dark:from-blue-700 dark:via-purple-700 dark:to-emerald-700 rounded-2xl p-[1px]">
-                  <div className="h-full w-full bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl"></div>
-                </div>
-                
-                {/* Content */}
-                <div className="relative p-6">
-                  {/* Quote text */}
-                  <blockquote className="text-center">
-                    <p className="text-lg md:text-xl font-medium text-slate-800 dark:text-slate-200 leading-relaxed mb-3">
-                      Bilmediğim hiçbir şey yok, sadece öğrenmedim şeyler var.
-                    </p>
-                  </blockquote>
-                  
-                  {/* Decorative line */}
-                  <div className="flex justify-center">
-                    <div className="w-16 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 rounded-full"></div>
-                  </div>
-                </div>
+              {/* Simple quote container */}
+              <div className="relative p-6 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm">
+                {/* Quote text */}
+                <blockquote className="text-center">
+                  <p className="text-lg md:text-xl font-medium text-slate-800 dark:text-slate-200 leading-relaxed italic">
+                    "Bilmediğim hiçbir şey yok, sadece öğrenmedim şeyler var."
+                  </p>
+                </blockquote>
               </div>
             </div>
           </div>
@@ -117,9 +100,6 @@ export default function Home() {
       </header>
 
       <section id="hedefim" className="max-w-4xl mx-auto relative">
-        {/* Decorative elements */}
-        <div className="absolute -top-6 left-0 w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-        
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-blue-900/10 dark:via-slate-800/50 dark:to-purple-900/10 rounded-3xl blur-sm"></div>
           <div className="relative p-8 md:p-12 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
@@ -169,10 +149,127 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      <EducationSection />
+
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      <ExperienceSection />
+
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
       <BlogSection />
-      <AboutSection />
+
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Teknik Beceriler Section */}
+      <section className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border border-orange-200 dark:border-orange-700 mb-6 shadow-lg">
+            <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full animate-pulse"></div>
+            <span className="text-sm font-semibold text-orange-700 dark:text-orange-300 uppercase tracking-wide">Teknik Beceriler</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            Yeteneklerim & Teknolojilerim
+          </h2>
+        </div>
+
+        {/* Teknik Beceriler (sol) + Yeteneklerim (sağ) */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
+          {/* Teknik Beceriler */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+            <div className="relative p-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300">
+              
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-2xl">⚡</div>
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white">Teknik Beceriler</h2>
+              </div>
+              
+              <div className="w-12 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-4"></div>
+              
+              <TechSkillsInner />
+            </div>
+          </div>
+          
+          {/* Yeteneklerim */}
+          <div className="group relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl blur-sm group-hover:blur-md transition-all duration-300"></div>
+            <div className="relative p-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300">
+              <SkillsSection />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
       <ToolsTechnologies />
-      <ContactForm />
+
+      {/* Section Divider */}
+      <div className="relative py-4">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-slate-200 dark:border-slate-700"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="bg-white dark:bg-slate-900 px-4">
+            <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      <Comminication />
     </div>
   );
 }

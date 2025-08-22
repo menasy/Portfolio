@@ -1,5 +1,3 @@
-import React from 'react';
-import AboutSection from '../components/AboutSection';
 import ToolsTechnologies from '../components/ToolsTechnologies';
 
 export default function About() {
@@ -53,7 +51,6 @@ export default function About() {
           </div>
         </div>
       </section>
-      <AboutSection />
       <ToolsTechnologies />
     </div>
   );

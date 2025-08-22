@@ -20,7 +20,9 @@ export default function BlogSection() {
           <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl border border-green-200/50 dark:border-green-700/50 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 min-h-[320px]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">M</span>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-tight">C++ Modülleri ve C++ Temelleri</h3>
             </div>
@@ -48,7 +50,9 @@ export default function BlogSection() {
           <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl border border-blue-200/50 dark:border-blue-700/50 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 min-h-[320px]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">M</span>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-tight">Docker — 42 Inception Projesi</h3>
             </div>
@@ -76,7 +80,9 @@ export default function BlogSection() {
           <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl border border-purple-200/50 dark:border-purple-700/50 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 min-h-[320px]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">M</span>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-tight">BlockChain Teknolojisi ve Kur'an-ı Kerim'in Muhafaza Sistemi</h3>
             </div>
@@ -104,7 +110,9 @@ export default function BlogSection() {
           <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500 min-h-[320px]">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">M</span>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                </svg>
               </div>
               <h3 className="font-bold text-slate-900 dark:text-white text-xl leading-tight">Tüm Blog Yazılarım</h3>
             </div>

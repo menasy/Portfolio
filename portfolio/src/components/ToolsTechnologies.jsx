@@ -3,99 +3,123 @@ import React from 'react';
 export default function ToolsTechnologies() {
   // Araçlar (Sol taraf)
   const tools = [
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", alt: "VS Code", label: "Visual Studio Code" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg", alt: "Android Studio", label: "Android Studio" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg", alt: "Jupyter", label: "Jupyter Notebook" },
-    { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg", alt: "Remix IDE", label: "Remix IDE" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg", alt: "PyCharm", label: "PyCharm" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", alt: "GitHub", label: "Git/GitHub" },
-    { src: "https://www.svgrepo.com/show/354202/postman-icon.svg", alt: "Postman", label: "Postman" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", alt: "VS Code", label: "Visual Studio Code", color: "from-blue-500 to-blue-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg", alt: "Android Studio", label: "Android Studio", color: "from-green-500 to-green-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg", alt: "Jupyter", label: "Jupyter Notebook", color: "from-orange-500 to-red-500" },
+    { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg", alt: "Remix IDE", label: "Remix IDE", color: "from-gray-600 to-gray-700" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg", alt: "PyCharm", label: "PyCharm", color: "from-yellow-500 to-green-500" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", alt: "Linux", label: "Linux", color: "from-gray-800 to-black" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", alt: "GitHub", label: "Git/GitHub", color: "from-gray-700 to-gray-800" },
+    { src: "https://www.svgrepo.com/show/354202/postman-icon.svg", alt: "Postman", label: "Postman", color: "from-orange-500 to-red-500" },
   ];
 
   // Teknolojiler (Sağ taraf)
   const technologies = [
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker Compose", label: "Docker Compose" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", alt: "Pandas", label: "Pandas" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", alt: "NumPy", label: "NumPy" },
-    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", alt: "Firebase", label: "Firebase" },
-    { src: "https://d33wubrfki0l68.cloudfront.net/70f55b8fa4e75bc7489ea68f628a8a60781c6387/18999/static/rest-api-c2f25fbadba477948398d96acac29c08.png", alt: "REST API", label: "REST API" },
-    { src: "https://img.freepik.com/premium-vector/blockchain-logo-design_611243-62.jpg?semt=ais_hybrid&w=740", alt: "Blockchain", label: "BlockChain" },
-    { src: "https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png", alt: "Web3", label: "Web3" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", label: "Docker", color: "from-blue-500 to-blue-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker Compose", label: "Docker Compose", color: "from-blue-600 to-indigo-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", alt: "Pandas", label: "Pandas", color: "from-purple-500 to-purple-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", alt: "NumPy", label: "NumPy", color: "from-blue-400 to-blue-500" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg", alt: "TensorFlow", label: "TensorFlow", color: "from-orange-500 to-orange-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", alt: "PyTorch", label: "PyTorch", color: "from-red-500 to-red-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg", alt: "OpenCV", label: "OpenCV", color: "from-green-500 to-green-600" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL", label: "MySQL", color: "from-blue-600 to-blue-700" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", alt: "MongoDB", label: "MongoDB", color: "from-green-600 to-green-700" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React", label: "React", color: "from-cyan-400 to-blue-500" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", alt: "Node.js", label: "Node.js", color: "from-green-500 to-green-600" },
+    { src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg", alt: "Express.js", label: "Express.js", color: "from-gray-600 to-gray-700" },
   ];
 
-  return (
-    <div className="flex justify-center">
-      <div className="max-w-6xl w-full space-y-6">
-        {/* Header */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-50 to-cyan-50 dark:from-emerald-900/20 dark:to-cyan-900/20 border border-emerald-200 dark:border-emerald-700 mb-4 shadow-lg">
-            <div className="w-3 h-3 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wide">Araçlar & Teknolojiler</span>
-          </div>
-        </div>
+  const TechItem = ({ src, alt, label, color }) => (
+    <div className="group/tech flex items-center gap-3 p-4 rounded-2xl bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 hover:bg-white dark:hover:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+      <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center shadow-lg group-hover/tech:scale-110 group-hover/tech:rotate-3 transition-all duration-300`}>
+        <img src={src} alt={alt} className="h-6 w-6 rounded filter brightness-0 invert" loading="lazy" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <span className="font-semibold text-slate-900 dark:text-white text-sm truncate block group-hover/tech:text-blue-600 dark:group-hover/tech:text-blue-400 transition-colors">{label}</span>
+      </div>
+      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
+    </div>
+  );
 
-        {/* Araçlar ve Teknolojiler kartları yan yana */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Araçlar */}
-          <div className="group relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-2xl blur-sm group-hover:blur-md transition-all duration-300"></div>
-            <div className="relative p-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg group-hover:shadow-xl transition-all duration-300">
+  return (
+    <section className="space-y-12">
+      {/* Modern Section Header */}
+      <div className="text-center">
+        <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 dark:from-purple-900/20 dark:via-indigo-900/20 dark:to-blue-900/20 border border-purple-200/50 dark:border-purple-700/50 mb-8 shadow-xl backdrop-blur-sm">
+          <div className="relative">
+            <div className="w-4 h-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 w-4 h-4 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full animate-ping opacity-30"></div>
+          </div>
+          <span className="text-lg font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wide">Araçlar & Teknolojiler</span>
+        </div>
+        
+        <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-purple-800 to-slate-900 dark:from-white dark:via-purple-200 dark:to-white bg-clip-text text-transparent mb-6">
+          Araçlar & Teknolojiler
+        </h2>
+        
+        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Geliştirme süreçlerimde kullandığım araçlar ve teknolojiler
+        </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+          
+          {/* Sol taraf - Araçlar */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl blur-md group-hover:blur-lg transition-all duration-500"></div>
+            <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl group-hover:shadow-3xl group-hover:-translate-y-2 transition-all duration-500">
               
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-600 shadow-md">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.26 0-2.12-1.26-.707-2.707l5-5A2 2 0 009.172 10V5L8 4z" />
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 shadow-xl">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Araçlar</h3>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Geliştirme Araçları</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">IDE'ler ve platformlar</p>
+                </div>
               </div>
               
-              <div className="grid grid-cols-1 gap-3">
-                {tools.map((tool, index) => (
-                  <div key={tool.label} className="group/tool flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-white dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-300">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center group-hover/tool:scale-110 transition-transform duration-300 shadow-sm">
-                      <img className="h-5 w-5" src={tool.src} alt={tool.alt} loading="lazy" />
-                    </div>
-                    <span className="flex-1 font-medium text-sm text-slate-700 dark:text-slate-300">{tool.label}</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 opacity-0 group-hover/tool:opacity-100 transition-opacity duration-300"></div>
-                  </div>
+              <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6"></div>
+              
+              <div className="space-y-3">
+                {tools.map((tool) => (
+                  <TechItem key={tool.label} {...tool} />
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Teknolojiler */}
-          <div className="group relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl blur-sm group-hover:blur-md transition-all duration-300"></div>
-            <div className="relative p-6 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg group-hover:shadow-xl transition-all duration-300">
+          {/* Sağ taraf - Teknolojiler */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl blur-md group-hover:blur-lg transition-all duration-500"></div>
+            <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-slate-200/50 dark:border-slate-700/50 shadow-2xl group-hover:shadow-3xl group-hover:-translate-y-2 transition-all duration-500">
               
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-md">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 shadow-xl">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Teknolojiler</h3>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Teknolojiler</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">Framework'ler ve kütüphaneler</p>
+                </div>
               </div>
               
-              <div className="grid grid-cols-1 gap-3">
-                {technologies.map((tech, index) => (
-                  <div key={tech.label} className="group/tech flex items-center gap-2.5 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-white dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:shadow-sm hover:-translate-y-0.5 transition-all duration-300">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center group-hover/tech:scale-110 transition-transform duration-300 shadow-sm">
-                      <img className="h-5 w-5" src={tech.src} alt={tech.alt} loading="lazy" />
-                    </div>
-                    <span className="flex-1 font-medium text-sm text-slate-700 dark:text-slate-300">{tech.label}</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300"></div>
-                  </div>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-6"></div>
+              
+              <div className="space-y-3">
+                {technologies.map((tech) => (
+                  <TechItem key={tech.label} {...tech} />
                 ))}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

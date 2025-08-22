@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { featuredProjects, otherProjects } from '../data/projects';
 import { useLocation } from 'react-router-dom';
