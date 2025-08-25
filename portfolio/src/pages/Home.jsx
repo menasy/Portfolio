@@ -4,8 +4,7 @@ import ToolsTechnologies from '../components/ToolsTechnologies';
 import ContactCv from '../components/ContactCv';
 import EducationSection from '../components/EducationSection';
 import ExperienceSection from '../components/ExperienceSection';
-import TechSkillsInner from '../components/TechSkillsInner';
-import Skills from '../components/Skills';
+import TechSkillsCombo from '../components/TechSkillsCombo';
 
 export default function Home() {
   const [typingText, setTypingText] = useState('');
@@ -201,49 +200,8 @@ export default function Home() {
 
       {/* Teknik Beceriler Section */}
       <section className="max-w-7xl mx-auto px-4">
-        {/* Modern Section Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Yetenekler</span>
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Teknik Beceriler
-          </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Yazılım geliştirme alanındaki teknik yeteneklerim ve kişisel becerilerim
-          </p>
-        </div>
-
-        {/* Programlama Dilleri (sol) + Yeteneklerim (sağ) */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
-          {/* Programlama Dilleri */}
-          <div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 shadow-xl">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Programlama Dilleri</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Kullandığım diller ve seviyeler</p>
-              </div>
-            </div>
-            
-            <div className="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-6"></div>
-            
-            <TechSkillsInner />
-          </div>
-          
-          {/* Yeteneklerim */}
-          <div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
-            <Skills />
-          </div>
+        <div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+          <TechSkillsCombo showHeader={true} />
         </div>
       </section>
 

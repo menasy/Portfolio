@@ -109,9 +109,9 @@ export const featuredProjects = [
     media: (
       <video 
         autoPlay
-        muted 
-        loop 
-        playsInline 
+        muted
+        loop
+        playsInline
         preload="metadata"
         className="w-full h-full object-cover"
         style={{ pointerEvents: 'none' }}

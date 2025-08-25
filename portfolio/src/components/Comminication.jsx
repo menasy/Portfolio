@@ -76,7 +76,7 @@ export default function Comminication() {
           <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">İletişim</span>
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-          İletişim & CV
+          📧 İletişim & CV
         </h2>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Benimle iletişime geçmek için sosyal platformları kullanabilirsiniz

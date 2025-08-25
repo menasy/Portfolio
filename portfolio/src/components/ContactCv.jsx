@@ -68,7 +68,7 @@ export default function ContactCv() {
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
-          İletişim & CV
+        💬 İletişim & CV
         </h2>
         <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           Benimle iletişime geçmek için sosyal platformları kullanabilirsiniz
@@ -80,11 +80,10 @@ export default function ContactCv() {
         
         {/* İletişim ve Bağlantılar - Sol */}
         <div className="relative group h-full">
-          {/* Background Animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl opacity-20 animate-pulse blur-sm"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 rounded-3xl opacity-10 animate-pulse delay-1000 blur-lg"></div>
+          {/* Blog-style Background Animation */}
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
           
-          <div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+          <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-cyan-200/50 dark:border-cyan-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500 h-full">
             
             {/* Section Header */}
             <div className="flex items-center gap-4 mb-8">
@@ -104,32 +103,36 @@ export default function ContactCv() {
             {/* Contact Items */}
             <div className="space-y-4">
               {contactItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/item block"
-                >
-                  <div className={`p-5 rounded-2xl bg-gradient-to-r ${item.bgColor} border ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.color} text-white shadow-xl group-hover/item:scale-110 transition-transform duration-300 overflow-hidden`}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-                          <img src={item.icon} alt={item.title} className="relative w-6 h-6 filter brightness-0 invert" />
+                <div key={index} className="group relative">
+                  {/* Enhanced background effects */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 rounded-2xl group-hover:scale-105 transition-transform duration-500"></div>
+                  
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/item block relative"
+                  >
+                    <div className={`relative p-5 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-2 ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.bgColor} shadow-xl border-2 ${item.borderColor} overflow-hidden`}>
+                            <img src={item.icon} alt={item.title} className="relative w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-slate-900 dark:text-white text-lg">{item.title}</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold text-slate-900 dark:text-white text-lg">{item.title}</h4>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
+                        <div className={`flex flex-col items-center gap-1 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300`}>
+                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${item.color}`}></div>
+                          <div className={`w-1 h-1 rounded-full bg-gradient-to-r ${item.color}`}></div>
                         </div>
-                      </div>
-                      <div className="flex flex-col items-center gap-1 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
-                        <div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500"></div>
-                        <div className="w-1 h-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               ))}
             </div>
           </div>
@@ -137,11 +140,10 @@ export default function ContactCv() {
 
         {/* CV İndir - Sağ */}
         <div className="relative group h-full">
-          {/* Background Animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-3xl opacity-20 animate-pulse blur-sm delay-500"></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-green-400 via-emerald-500 to-teal-500 rounded-3xl opacity-10 animate-pulse delay-1500 blur-lg"></div>
+          {/* Blog-style Background Animation */}
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-teal-500/30 transition-all duration-500"></div>
           
-          <div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+          <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-emerald-200/50 dark:border-emerald-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500 h-full">
             
             {/* Section Header */}
             <div className="flex items-center gap-4 mb-8">
@@ -161,37 +163,40 @@ export default function ContactCv() {
             {/* CV Download Items */}
             <div className="space-y-4">
               {cvItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group/item block"
-                  download
-                >
-                  <div className={`p-6 rounded-2xl bg-gradient-to-r ${item.bgColor} border ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.color} text-white shadow-xl group-hover/item:scale-110 transition-transform duration-300 overflow-hidden`}>
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
-                          <span className="relative text-2xl filter drop-shadow-lg">{item.icon}</span>
+                <div key={index} className="group relative">
+                  {/* Enhanced background effects */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
+                  
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group/item block relative"
+                    download
+                  >
+                    <div className={`relative p-6 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-2 ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-4">
+                          <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.bgColor} shadow-xl border-2 ${item.borderColor} overflow-hidden`}>
+                            <span className="relative text-2xl">{item.icon}</span>
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h4>
+                            <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h4>
-                          <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
+                        <div className="text-right">
+                          <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r ${item.color} text-white font-medium shadow-lg group-hover/item:shadow-xl transition-all duration-300`}>
+                            {item.action}
+                            <svg className="w-4 h-4 group-hover/item:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                          </span>
                         </div>
-                      </div>
-                      <div className="text-right">
-                        <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r ${item.color} text-white font-medium shadow-lg group-hover/item:shadow-xl transition-all duration-300`}>
-                          {item.action}
-                          <svg className="w-4 h-4 group-hover/item:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                          </svg>
-                        </span>
                       </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
+                </div>
               ))}
             </div>
           </div>

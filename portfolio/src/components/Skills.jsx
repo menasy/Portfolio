@@ -24,7 +24,7 @@ export default function Skills({ showHeader = true, variant = "grid" }) {
   if (variant === "simple") {
     return (
       <div>
-        {showHeader && <h3 className="font-semibold mb-2">Yeteneklerim</h3>}
+        {showHeader && <h3 className="font-semibold mb-2" aria-label="Yetkinliklerim">🧑‍💻 Yetkinliklerim</h3>}
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700 dark:text-slate-300">
           {skills.map((skill) => (
             <li key={skill.text} className="flex items-center gap-2">
@@ -47,7 +47,7 @@ export default function Skills({ showHeader = true, variant = "grid" }) {
             </svg>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Yeteneklerim</h3>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">💼 Yetkinliklerim</h3>
             <p className="text-sm text-slate-500 dark:text-slate-400">Teknik ve kişisel becerilerim</p>
           </div>
         </div>
@@ -57,15 +57,18 @@ export default function Skills({ showHeader = true, variant = "grid" }) {
       
       <div className="space-y-2.5">
         {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="flex items-center gap-3 p-3 rounded-lg bg-white dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600 hover:border-slate-300 dark:hover:border-slate-500 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
-          >
-            <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center shadow-sm">
-              <span className="text-sm">{skill.icon}</span>
-            </div>
-            <div className="flex-1">
-              <span className="font-medium text-sm text-slate-900 dark:text-white">{skill.text}</span>
+          <div key={index} className="group relative">
+            {/* Enhanced background effects */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 rounded-lg group-hover:scale-105 transition-transform duration-500"></div>
+            
+            <div className="relative flex items-center gap-3 p-3 rounded-lg bg-white/95 dark:bg-slate-700/95 backdrop-blur-sm border border-emerald-200/50 dark:border-emerald-600/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+              <div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center shadow-sm">
+                <span className="text-sm">{skill.icon}</span>
+              </div>
+              <div className="flex-1">
+                <span className="font-medium text-sm text-slate-900 dark:text-white">{skill.text}</span>
+              </div>
             </div>
           </div>
         ))}
