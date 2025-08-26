@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import ImagePreloader from "./components/ImagePreloader";
 
 function App() {
+  React.useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
   return (
     <BrowserRouter>
       <ImagePreloader />

@@ -2,66 +2,56 @@ import ToolsTechnologies from '../components/ToolsTechnologies';
 import TechSkillsCombo from '../components/TechSkillsCombo';
 
 export default function About() {
-  return (
-    <div className="space-y-16">
-      {/* Hakkımda Section */}
-      <section className="max-w-7xl mx-auto px-6">
-        <div className="group relative">
-          {/* Enhanced background animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-400/5 to-blue-400/5 rounded-3xl group-hover:scale-[1.02] transition-transform duration-500"></div>
-          
-          <div className="relative p-8 md:p-12 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border-2 border-blue-200/50 dark:border-blue-700/50 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-2 transition-all duration-500">
-            
-            {/* Header */}
-            <div className="text-center mb-10">
-              <div className="inline-flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-                Hakkımda
-                </h2>
-              </div>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto"></div>
-            </div>
+	return (
+		<div className="space-y-16">
+			{/* Hakkımda Section */}
+			<section className="max-w-5xl mx-auto px-8">
+				<div className="relative bg-white dark:bg-slate-800 rounded-3xl shadow-md border border-slate-200 dark:border-slate-700 p-12 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
+					{/* Animated Gradient Background on hover */}
+					<div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-100 via-cyan-100 to-teal-100 dark:from-purple-900/20 dark:via-cyan-900/10 dark:to-teal-900/20 opacity-0 hover:opacity-60 transition-opacity duration-500 pointer-events-none"></div>
+					{/* Header */}
+					<div className="flex flex-col items-center justify-center mb-8 relative z-10">
+						<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center mb-2">
+							<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+							</svg>
+						</div>
+						<h2 className="text-2xl font-bold text-slate-900 dark:text-white text-center">
+							Hakkımda
+						</h2>
+					</div>
 
-            {/* Content */}
-            <div className="space-y-6 text-slate-700 dark:text-slate-300">
-              <p className="text-lg leading-relaxed">
-                <span className="font-semibold text-blue-600 dark:text-blue-400">Ben Mehmet Nasım Yılmaz.</span> 42 İstanbul'da Bilişim Teknolojileri Mimarisi alanında yoğun ve kapsamlı bir eğitim alıyor, aynı zamanda İstanbul Gelişim Üniversitesi Yönetim Bilişim Sistemleri bölümünden 2025 yılı itibarıyla mezun olmuş bulunuyorum.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                Eğitim ve proje çalışmalarım boyunca birçok programlama dili, framework ve teknolojiyle çalışma fırsatı buldum. Bu süreçte hem teknik becerilerimi hem de analitik düşünme yeteneğimi geliştirdim.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                Teknolojiye duyduğum ilgi, sürekli öğrenme motivasyonum ve problem çözme odaklı yaklaşımım sayesinde farklı alanlarda deneyim kazanarak geniş bir teknik yelpaze edindim.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                <span className="font-semibold text-purple-600 dark:text-purple-400">Hedefim,</span> yenilikçi projeler üreterek çalıştığım ekibe ve organizasyona değer katmak; modern teknolojilerle ölçeklenebilir, verimli ve sürdürülebilir çözümler geliştirmektir.
-              </p>
-              
-              <p className="text-lg leading-relaxed">
-                Özellikle <span className="font-medium text-emerald-600 dark:text-emerald-400">web teknolojileri, mobil uygulama geliştirme ve DevOps</span> alanlarında kendimi sürekli geliştirerek uzmanlık seviyemi ileri taşımayı amaçlıyorum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+					{/* Content with colored left borders */}
+					<div className="space-y-8">
 
-      {/* Teknik Becerilerim Section */}
-      <section className="max-w-7xl mx-auto px-6">
-        <TechSkillsCombo />
-      </section>
+						{/* First paragraph - About me and education */}
+						<div className="border-l-4 border-purple-500 pl-6 py-3">
+							<p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+								<span className="font-semibold text-purple-600 dark:text-purple-400">Ben Mehmet Nasım Yılmaz.</span> 42 İstanbul'da Bilişim Teknolojileri Mimarisi alanında yoğun ve kapsamlı bir eğitim alıyor, aynı zamanda İstanbul Gelişim Üniversitesi Yönetim Bilişim Sistemleri bölümünden 2025 yılı itibarıyla mezun olmuş bulunuyorum. Eğitim ve proje çalışmalarım boyunca birçok programlama dili, framework ve teknolojiyle çalışma fırsatı buldum.
+							</p>
+						</div>
 
-      <ToolsTechnologies />
-    </div>
-  );
+						{/* Second paragraph - Goals and motivation */}
+						<div className="border-l-4 border-teal-500 pl-6 py-3">
+							<p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+								<span className="font-semibold text-teal-600 dark:text-teal-400">Hedefim,</span> yenilikçi projeler üreterek çalıştığım ekibe ve organizasyona değer katmak; modern teknolojilerle ölçeklenebilir, verimli ve sürdürülebilir çözümler geliştirmektir. Teknolojiye duyduğum ilgi, sürekli öğrenme motivasyonum ve problem çözme odaklı yaklaşımım sayesinde geniş bir teknik yelpaze edindim.
+							</p>
+						</div>
+
+						{/* Third paragraph - Specialization areas */}
+						<div className="border-l-4 border-cyan-500 pl-6 py-3">
+							<p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+								Özellikle <span className="text-cyan-600 dark:text-cyan-400 font-medium">web teknolojileri, mobil uygulama geliştirme ve DevOps</span> alanlarında kendimi sürekli geliştirerek uzmanlık seviyemi ileri taşımayı amaçlıyorum. Bu alanlarda hem teknik becerilerimi hem de analitik düşünme yeteneğimi sürekli geliştiriyorum.
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			{/* Teknik Becerilerim Section */}
+			<TechSkillsCombo />
+			<ToolsTechnologies />
+		</div>
+	);
 }
-
-

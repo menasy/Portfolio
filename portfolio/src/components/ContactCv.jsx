@@ -1,207 +1,215 @@
-import React from 'react';
+import React from "react";
 
 export default function ContactCv() {
-  const contactItems = [
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
-      title: 'Email',
-      description: 'mehmetnasim42@gmail.com',
-      link: 'mailto:mehmetnasim42@gmail.com',
-      color: 'from-red-500 to-pink-500',
-      bgColor: 'from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20',
-      borderColor: 'border-red-200 dark:border-red-700'
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-      title: 'GitHub',
-      description: 'Projelerim ve kod örnekleri',
-      link: 'https://github.com/menasy',
-      color: 'from-gray-600 to-slate-700',
-      bgColor: 'from-gray-50 to-slate-50 dark:from-gray-900/20 dark:to-slate-900/20',
-      borderColor: 'border-gray-200 dark:border-gray-700'
-    },
-    {
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg',
-      title: 'LinkedIn',
-      description: 'Profesyonel ağ ve kariyer',
-      link: 'https://linkedin.com/in/menasy',
-      color: 'from-blue-600 to-blue-700',
-      bgColor: 'from-blue-50 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/20',
-      borderColor: 'border-blue-200 dark:border-blue-700'
-    },
-    {
-      icon: 'https://simpleicons.org/icons/medium.svg',
-      title: 'Medium',
-      description: 'Yazılarım ve teknik içerikler',
-      link: 'https://medium.com/@menasy',
-      color: 'from-green-600 to-emerald-600',
-      bgColor: 'from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20',
-      borderColor: 'border-green-200 dark:border-green-700'
-    }
-  ];
+	const contactItems = [
+		{
+			icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
+			title: "Email",
+			description: "mehmetnasim42@gmail.com",
+			link: "mailto:mehmetnasim42@gmail.com",
+			color: "from-red-500 to-pink-500",
+			borderColor: "border-red-400 dark:border-red-600"
+		},
+		{
+			icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+			title: "GitHub",
+			description: "Projelerim ve kod örnekleri",
+			link: "https://github.com/menasy",
+			color: "from-gray-700 to-slate-700",
+			borderColor: "border-gray-500 dark:border-gray-700"
+		},
+		{
+			icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+			title: "LinkedIn",
+			description: "Profesyonel ağ ve kariyer",
+			link: "https://linkedin.com/in/menasy",
+			color: "from-blue-600 to-blue-700",
+			borderColor: "border-blue-500 dark:border-blue-700"
+		},
+		{
+			icon: "https://simpleicons.org/icons/medium.svg",
+			title: "Medium",
+			description: "Yazılarım ve teknik içerikler",
+			link: "https://medium.com/@menasy",
+			color: "from-green-600 to-emerald-600",
+			borderColor: "border-green-500 dark:border-emerald-700"
+		},
+	];
 
-  const cvItems = [
-    {
-      icon: '📄',
-      title: 'Türkçe CV',
-      description: 'PDF formatında detaylı özgeçmiş',
-      link: 'https://github.com/menasy/Portfolio/blob/main/MehmetNasimYilmazCv.pdf?raw=true',
-      action: 'İndir',
-      color: 'from-purple-600 to-indigo-600',
-      bgColor: 'from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20',
-      borderColor: 'border-purple-200 dark:border-purple-700'
-    },
-    {
-      icon: '📄',
-      title: 'English CV',
-      description: 'Detailed resume in PDF format',
-      link: 'https://github.com/menasy/Portfolio/blob/main/MehmetNasimYilmazEnCv.pdf?raw=true',
-      action: 'Download',
-      color: 'from-slate-600 to-gray-700',
-      bgColor: 'from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20',
-      borderColor: 'border-slate-200 dark:border-slate-700'
-    }
-  ];
+	const cvItems = [
+		{
+			icon: (
+				<span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-purple-400 dark:border-purple-600 bg-gradient-to-br from-purple-100 to-indigo-100 dark:from-purple-900/30 dark:to-indigo-900/30">
+					<svg className="w-6 h-6 text-purple-600 dark:text-purple-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+						<rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
+						<path d="M8 8h8M8 12h8M8 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+					</svg>
+				</span>
+			),
+			title: "Türkçe CV",
+			description: "PDF formatında detaylı özgeçmiş",
+			link: "https://github.com/menasy/Portfolio/blob/main/MehmetNasimYilmazCv.pdf?raw=true",
+			action: "İndir",
+			borderColor: "border-purple-400 dark:border-purple-600"
+		},
+		{
+			icon: (
+				<span className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-slate-400 dark:border-slate-600 bg-gradient-to-br from-slate-100 to-gray-100 dark:from-slate-900/30 dark:to-gray-900/30">
+					<svg className="w-6 h-6 text-slate-600 dark:text-slate-300" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+						<rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" strokeWidth="2" fill="none" />
+						<path d="M8 8h8M8 12h8M8 16h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+					</svg>
+				</span>
+			),
+			title: "English CV",
+			description: "Detailed resume in PDF format",
+			link: "https://github.com/menasy/Portfolio/blob/main/MehmetNasimYilmazEnCv.pdf?raw=true",
+			action: "Download",
+			borderColor: "border-slate-400 dark:border-slate-600"
+		},
+	];
 
-  return (
-    <section className="max-w-7xl mx-auto px-4">
-      {/* Section Header */}
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-3">
-        💬 İletişim & CV
-        </h2>
-        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-          Benimle iletişime geçmek için sosyal platformları kullanabilirsiniz
-        </p>
-      </div>
+	return (
+		<section className="max-w-7xl mx-auto px-4">
+			<div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+				{/* Modern Single Title */}
+				<div className="text-center mb-12">
+					<h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text">
+						💬 İletişim & CV
+					</h2>
+					<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+						Benimle iletişime geçmek veya özgeçmişimi indirmek için buradan
+						ulaşabilirsiniz
+					</p>
+				</div>
 
-      {/* Main Content Grid */}
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
-        
-        {/* İletişim ve Bağlantılar - Sol */}
-        <div className="relative group h-full">
-          {/* Blog-style Background Animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-500"></div>
-          
-          <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-cyan-200/50 dark:border-cyan-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500 h-full">
-            
-            {/* Section Header */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-xl">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">İletişim ve Bağlantılar</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400">Sosyal platformlarım</p>
-              </div>
-            </div>
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+					{/* İletişim ve Bağlantılar */}
+					<div className="relative group/card">
+						<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
+						<div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-cyan-200/50 dark:border-cyan-700/50">
+							<div className="flex items-center gap-3 mb-6">
+								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg">
+									<svg
+										className="w-4 h-4"
+										fill="none"
+										stroke="currentColor"
+										strokeWidth={2}
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+										/>
+									</svg>
+								</div>
+								<h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">
+									İletişim ve Bağlantılar
+								</h3>
+							</div>
+							<div className="space-y-4">
+								{contactItems.map((item, index) => (
+									<a
+										key={index}
+										href={item.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="block group/item"
+									>
+										<div className={`flex items-center gap-4 p-4 rounded-xl border ${item.borderColor} bg-white/90 dark:bg-slate-800/90 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
+											<div className="w-12 h-12 flex items-center justify-center rounded-lg">
+												<img
+													src={item.icon}
+													alt={item.title}
+													className="w-6 h-6"
+												/>
+											</div>
+											<div>
+												<h4 className="font-medium text-slate-800 dark:text-slate-200">
+													{item.title}
+												</h4>
+												<p className="text-sm text-slate-600 dark:text-slate-400">
+													{item.description}
+												</p>
+											</div>
+										</div>
+									</a>
+								))}
+							</div>
+						</div>
+					</div>
 
-            <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8"></div>
-
-            {/* Contact Items */}
-            <div className="space-y-4">
-              {contactItems.map((item, index) => (
-                <div key={index} className="group relative">
-                  {/* Enhanced background effects */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 rounded-2xl group-hover:scale-105 transition-transform duration-500"></div>
-                  
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/item block relative"
-                  >
-                    <div className={`relative p-5 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-2 ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.bgColor} shadow-xl border-2 ${item.borderColor} overflow-hidden`}>
-                            <img src={item.icon} alt={item.title} className="relative w-6 h-6" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-slate-900 dark:text-white text-lg">{item.title}</h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
-                          </div>
-                        </div>
-                        <div className={`flex flex-col items-center gap-1 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300`}>
-                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${item.color}`}></div>
-                          <div className={`w-1 h-1 rounded-full bg-gradient-to-r ${item.color}`}></div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* CV İndir - Sağ */}
-        <div className="relative group h-full">
-          {/* Blog-style Background Animation */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-teal-500/30 transition-all duration-500"></div>
-          
-          <div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-emerald-200/50 dark:border-emerald-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500 h-full">
-            
-            {/* Section Header */}
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 shadow-xl">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">CV İndir</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400">PDF formatında özgeçmiş</p>
-              </div>
-            </div>
-
-            <div className="w-16 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mb-8"></div>
-
-            {/* CV Download Items */}
-            <div className="space-y-4">
-              {cvItems.map((item, index) => (
-                <div key={index} className="group relative">
-                  {/* Enhanced background effects */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-2xl blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
-                  
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/item block relative"
-                    download
-                  >
-                    <div className={`relative p-6 rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border-2 ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.bgColor} shadow-xl border-2 ${item.borderColor} overflow-hidden`}>
-                            <span className="relative text-2xl">{item.icon}</span>
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">{item.description}</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r ${item.color} text-white font-medium shadow-lg group-hover/item:shadow-xl transition-all duration-300`}>
-                            {item.action}
-                            <svg className="w-4 h-4 group-hover/item:translate-y-0.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+					{/* CV İndir */}
+					<div className="relative group/card">
+						<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
+						<div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-emerald-200/50 dark:border-emerald-700/50">
+							<div className="flex items-center gap-3 mb-6">
+								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg">
+									<svg
+										className="w-4 h-4"
+										fill="none"
+										stroke="currentColor"
+										strokeWidth={2}
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+										/>
+									</svg>
+								</div>
+								<h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">
+									CV İndir
+								</h3>
+							</div>
+							<div className="space-y-4">
+								{cvItems.map((item, index) => (
+									<a
+										key={index}
+										href={item.link}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="block group/item"
+										download
+									>
+										<div className={`flex items-center justify-between p-4 rounded-xl border ${item.borderColor} bg-white/90 dark:bg-slate-800/90 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
+											<div className="flex items-center gap-4">
+												{item.icon}
+												<div>
+													<h4 className="font-medium text-slate-800 dark:text-slate-200">
+														{item.title}
+													</h4>
+													<p className="text-sm text-slate-600 dark:text-slate-400">
+														{item.description}
+													</p>
+												</div>
+											</div>
+											<span className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+												{item.action}
+												<svg
+													className="w-4 h-4"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth={2}
+													viewBox="0 0 24 24"
+												>
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+													/>
+												</svg>
+											</span>
+										</div>
+									</a>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }
