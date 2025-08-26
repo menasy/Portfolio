@@ -2,17 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [dark, setDark] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+const getInitialDark = () => {
+  // Check localStorage first
+  const stored = localStorage.getItem('theme');
+  if (stored) return stored === 'dark';
+  // Fallback to system preference
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+};
+const [dark, setDark] = useState(getInitialDark);
 	const { pathname } = useLocation();
 
-	useEffect(() => {
-		if (dark) {
-			document.documentElement.classList.add('dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-		}
-	}, [dark]);
+useEffect(() => {
+	if (dark) {
+		document.documentElement.classList.add('dark');
+		localStorage.setItem('theme', 'dark');
+	} else {
+		document.documentElement.classList.remove('dark');
+		localStorage.setItem('theme', 'light');
+	}
+}, [dark]);
 
 	useEffect(() => {
 		setIsOpen(false);
@@ -25,7 +34,7 @@ export default function Navbar() {
 					MeNasy
 				</Link>
 				<nav className="hidden md:flex items-center gap-1 rounded-lg p-1 bg-slate-100/60 dark:bg-slate-800/60">
-					{[
+					{[ 
 						{ to: '/', label: 'Ana Sayfa' },
 						{ to: '/projects', label: 'Projeler' },
 						{ to: '/about', label: 'Hakkımda' },
