@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
+	const { pathname } = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 	const currentYear = new Date().getFullYear();
 
 	const socialLinks = [
@@ -56,13 +61,13 @@ export default function Footer() {
 		}
 	];
 
-	const quickLinks = [
-		{ name: 'Ana Sayfa', href: '/' },
-		{ name: 'Hakkımda', href: '/about' },
-		{ name: 'Projeler', href: '/projects' },
-		{ name: 'Blog', href: '/#blog-yazilari' },
-		{ name: 'İletişim', href: '/contact' },
-	];
+const quickLinks = [
+	{ name: 'Ana Sayfa', href: '/' },
+	{ name: 'Hakkımda', href: '/about' },
+	{ name: 'Projeler', href: '/projects' },
+	{ name: 'Blog', href: '/#blog-yazilari' },
+	{ name: 'İletişim', href: '/contact' },
+];
 
 	return (
 		<footer className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white mt-20">
@@ -110,18 +115,33 @@ export default function Footer() {
 
 						<div className="space-y-2">
 							{quickLinks.map((link) => (
-								<a
-									key={link.name}
-									href={link.href}
-									className="group flex items-center justify-between p-3 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 w-full md:w-72"
-								>
-									<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-sm font-medium">
-										{link.name}
-									</span>
-									<svg className="w-3 h-3 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-									</svg>
-								</a>
+								link.href.startsWith('/#') ? (
+									<a
+										key={link.name}
+										href={link.href}
+										className="group flex items-center justify-between p-3 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 w-full md:w-72"
+									>
+										<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-sm font-medium">
+											{link.name}
+										</span>
+										<svg className="w-3 h-3 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+										</svg>
+									</a>
+								) : (
+									<Link
+										key={link.name}
+										to={link.href}
+										className="group flex items-center justify-between p-3 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 w-full md:w-72"
+									>
+										<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-sm font-medium">
+											{link.name}
+										</span>
+										<svg className="w-3 h-3 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+										</svg>
+									</Link>
+								)
 							))}
 						</div>
 					</div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import BlogSection from '../components/BlogSection';
 import ToolsTechnologies from '../components/ToolsTechnologies';
 import ContactCv from '../components/ContactCv';
@@ -8,6 +9,7 @@ import TechSkillsCombo from '../components/TechSkillsCombo';
 import SectionDivider from '../components/SectionDivider';
 
 export default function Home() {
+	const { pathname } = useLocation();
 	const [typingText, setTypingText] = useState('');
 	const roles = ['Software Developer', 'Mobile Application Developer'];
 
@@ -38,6 +40,11 @@ export default function Home() {
 		return () => { clearTimeout(start); clearTimeout(raf); };
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	// Sayfa yönlendirmelerinde en başa git
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
 
 	return (
 		<div className="space-y-8">
@@ -128,18 +135,18 @@ export default function Home() {
 
 						{/* Action buttons */}
 						<div className="flex flex-wrap justify-center gap-4 pt-6">
-							<button
-								onClick={() => window.location.href = '/projects'}
-								className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+							<Link
+								to="/projects"
+								className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center"
 							>
 								Projelerim
-							</button>
-							<button
-								onClick={() => window.location.href = '/contact'}
-								className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-medium border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-600 transform hover:scale-105 transition-all duration-300"
+							</Link>
+							<Link
+								to="/contact"
+								className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-medium border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
 							>
 								İletişim
-							</button>
+							</Link>
 						</div>
 					</div>
 				</div>
