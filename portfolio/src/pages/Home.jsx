@@ -125,11 +125,12 @@ export default function Home() {
 						<div className="relative">
 							<div className="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
 							<p className="text-lg leading-8 text-slate-700 dark:text-slate-300 pl-8 text-left max-w-3xl">
-								Yazılım geliştirme, web teknolojileri, DevOps ve özellikle mobil programlama alanlarında kendimi
-								sürekli geliştirmeye ve yeni teknolojiler öğrenmeye çalışıyorum.
-								Bugüne kadar edindiğim teknik ve teorik bilgiyle sağlam bir altyapı oluşturduğuma
-								inanıyorum. Şimdi ise bu bilgi ve tecrübeyi iş hayatına taşıyarak hem çalışacağım şirkete
-								katkı sağlamak hem de kendimi daha ileri bir seviyeye taşımayı hedefliyorum.
+								Ben Mehmet Nasim Yılmaz. 42 İstanbul'da Bilişim Teknolojileri Mimarisi alanında yoğun ve kapsamlı bir eğitim alıyor,
+								aynı zamanda İstanbul Gelişim Üniversitesi Yönetim Bilişim Sistemleri bölümünden 2025 yılı itibarıyla mezun olmuş bulunuyorum.
+								Eğitim ve proje çalışmalarım süresince birçok programlama dili, framework ve teknolojiyle çalışma imkânı bularak kendimi
+								farklı alanlarda geliştirdim.
+
+								Bugün ise sahip olduğum bilgi birikimini sürekli artırmaya, yeni teknolojileri keşfetmeye ve yetkinliklerimi daha ileriye taşımaya devam ediyorum.
 							</p>
 						</div>
 
