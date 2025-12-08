@@ -70,24 +70,24 @@ export default function ContactCv() {
 	];
 
 	return (
-		<section className="max-w-7xl mx-auto px-4">
-			<div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+		<section className="max-w-5xl mx-auto px-4 sm:px-6">
+			<div className="p-6 sm:p-8 bg-white dark:bg-slate-800 rounded-2xl sm:rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
 				{/* Modern Single Title */}
 				<div className="text-center mb-12">
 					<h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text">
 						💬 İletişim & CV
 					</h2>
-					<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+					<p className="text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
 						Benimle iletişime geçmek veya özgeçmişimi indirmek için buradan
 						ulaşabilirsiniz
 					</p>
 				</div>
 
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					{/* İletişim ve Bağlantılar */}
 					<div className="relative group/card">
 						<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
-						<div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-cyan-200/50 dark:border-cyan-700/50">
+						<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-cyan-200/50 dark:border-cyan-700/50">
 							<div className="flex items-center gap-3 mb-6">
 								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg">
 									<svg
@@ -143,7 +143,7 @@ export default function ContactCv() {
 					{/* CV İndir */}
 					<div className="relative group/card">
 						<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
-						<div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-emerald-200/50 dark:border-emerald-700/50">
+						<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-emerald-200/50 dark:border-emerald-700/50">
 							<div className="flex items-center gap-3 mb-6">
 								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg">
 									<svg

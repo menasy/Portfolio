@@ -17,7 +17,7 @@ export default function AboutSection() {
 
 	return (
 		<motion.section
-			className="max-w-7xl mx-auto px-4"
+			className="max-w-5xl mx-auto px-4"
 			initial="hidden"
 			animate="visible"
 			variants={containerVariants}

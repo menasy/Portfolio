@@ -41,18 +41,18 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 	}
 
 	return (
-		<section className="max-w-7xl mx-auto px-4">
+		<section className="max-w-5xl mx-auto px-4">
 			<div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
 				{/* Ana Başlık */}
 				<div className="text-center mb-12">
 					<h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
 						👨🏻‍💻 Yetkinliklerim
 					</h2>
-					<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+					<p className="text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
 						Yazılım geliştirme alanındaki teknik yeteneklerim ve kişisel becerilerim
 					</p>
 				</div>
-				<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+				<div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
 					{/* Programlama Dilleri Card - Sol */}
 					<div className="relative group">
 						<div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-orange-500/30 group-hover:to-red-600/30 transition-all duration-500"></div>

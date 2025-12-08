@@ -64,7 +64,7 @@ export default function Comminication() {
 	];
 
 	return (
-		<section className="max-w-7xl mx-auto px-4">
+		<section className="max-w-5xl mx-auto px-4">
 			{/* Modern Section Header */}
 			<div className="text-center mb-12">
 				<div className="inline-flex items-center gap-3 mb-4">
@@ -78,13 +78,13 @@ export default function Comminication() {
 				<h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
 					📧 İletişim & CV
 				</h2>
-				<p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+				<p className="text-base text-slate-600 dark:text-slate-400 max-w-xl mx-auto">
 					Benimle iletişime geçmek için sosyal platformları kullanabilirsiniz
 				</p>
 			</div>
 
 			{/* Main Content Grid */}
-			<div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-stretch">
+			<div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-stretch">
 
 				{/* İletişim ve Bağlantılar - Sol */}
 				<div className="relative group h-full">
@@ -92,7 +92,7 @@ export default function Comminication() {
 					<div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl opacity-20 animate-pulse blur-sm"></div>
 					<div className="absolute inset-0 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 rounded-3xl opacity-10 animate-pulse delay-1000 blur-lg"></div>
 
-					<div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+					<div className="relative p-6 sm:p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
 
 						{/* Section Header */}
 						<div className="flex items-center gap-4 mb-8">
@@ -149,7 +149,7 @@ export default function Comminication() {
 					<div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 rounded-3xl opacity-20 animate-pulse blur-sm delay-500"></div>
 					<div className="absolute inset-0 bg-gradient-to-tr from-green-400 via-emerald-500 to-teal-500 rounded-3xl opacity-10 animate-pulse delay-1500 blur-lg"></div>
 
-					<div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+					<div className="relative p-6 sm:p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
 
 						{/* Section Header */}
 						<div className="flex items-center gap-4 mb-8">
@@ -177,7 +177,7 @@ export default function Comminication() {
 									className="group/item block"
 									download
 								>
-									<div className={`p-6 rounded-2xl bg-gradient-to-r ${item.bgColor} border ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
+										<div className={`p-5 sm:p-6 rounded-2xl bg-gradient-to-r ${item.bgColor} border ${item.borderColor} hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group-hover/item:scale-[1.02] cursor-pointer`}>
 										<div className="flex items-center justify-between">
 											<div className="flex items-center gap-4">
 												<div className={`relative p-4 rounded-2xl bg-gradient-to-br ${item.color} text-white shadow-xl group-hover/item:scale-110 transition-transform duration-300 overflow-hidden`}>

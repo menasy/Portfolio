@@ -45,24 +45,24 @@ export default function ToolsTechnologies() {
   );
 
   return (
-    <section className="max-w-7xl mx-auto px-4">
-      <div className="p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+    <section className="max-w-5xl mx-auto px-4">
+      <div className="p-6 sm:p-8 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
         {/* Modern Single Title */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text">
             ⚒️ Araçlar & Teknolojiler
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-base text-slate-600 max-w-xl mx-auto">
             Projelerimde kullandığım modern araçlar ve teknolojiler
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Araçlar */}
           <div className="relative group/card">
             {/* Enhanced background effects for the whole card - only on direct hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-green-600/20 rounded-2xl blur-sm group-hover/card:blur-lg group-hover/card:from-teal-500/30 group-hover/card:to-green-600/30 transition-all duration-500"></div>
-            <div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-teal-200/50 dark:border-teal-700/50">
+            <div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-teal-200/50 dark:border-teal-700/50">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-400 to-green-500 text-white shadow-lg">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">

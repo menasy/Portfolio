@@ -29,26 +29,26 @@ useEffect(() => {
 
 	return (
 		<header className="sticky top-0 z-40 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60 bg-white/70 dark:bg-slate-900/50">
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-				<Link to="/" className="font-extrabold tracking-tight text-xl">
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 h-12 sm:h-14 flex items-center justify-between">
+				<Link to="/" className="font-extrabold tracking-tight text-base sm:text-lg">
 					MeNasy
 				</Link>
-				<nav className="hidden md:flex items-center gap-1 rounded-lg p-1 bg-slate-100/60 dark:bg-slate-800/60">
+				<nav className="hidden md:flex items-center gap-0.5 rounded-lg p-0.5 bg-slate-100/60 dark:bg-slate-800/60">
 					{[ 
 						{ to: '/', label: 'Ana Sayfa' },
 						{ to: '/projects', label: 'Projeler' },
 						{ to: '/about', label: 'Hakkımda' },
 						{ to: '/contact', label: 'İletişim' }
 					].map((item) => (
-						<Link key={item.to} to={item.to} className="px-3 py-1.5 rounded-md hover:bg-white dark:hover:bg-slate-700/60 transition">
+						<Link key={item.to} to={item.to} className="px-2.5 py-1 text-sm rounded-md hover:bg-white dark:hover:bg-slate-700/60 transition">
 							{item.label}
 						</Link>
 					))}
 				</nav>
-				<div className="flex items-center gap-2">
+				<div className="flex items-center gap-1.5">
 					<button
 						onClick={() => setDark(v => !v)}
-						className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
+						className="inline-flex h-8 w-8 text-sm items-center justify-center rounded-md border border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800"
 						aria-label="Tema"
 					>
 						{dark ? (
@@ -58,7 +58,7 @@ useEffect(() => {
 						)}
 					</button>
 					<button
-						className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-300 dark:border-slate-700"
+						className="md:hidden inline-flex h-8 w-8 text-sm items-center justify-center rounded-md border border-slate-300 dark:border-slate-700"
 						onClick={() => setIsOpen(v => !v)}
 						aria-label="Menü"
 					>
@@ -68,11 +68,11 @@ useEffect(() => {
 			</div>
 			{isOpen && (
 				<div className="md:hidden border-t border-slate-200 dark:border-slate-700">
-					<div className="container mx-auto px-4 py-3 flex flex-col gap-3">
-						<Link to="/" className="hover:text-sky-600">Ana Sayfa</Link>
-						<Link to="/projects" className="hover:text-sky-600">Projeler</Link>
-						<Link to="/about" className="hover:text-sky-600">Hakkımda</Link>
-						<Link to="/contact" className="hover:text-sky-600">İletişim</Link>
+					<div className="container mx-auto px-4 py-2 flex flex-col gap-2 text-sm">
+						<Link to="/" className="hover:text-sky-600 py-1">Ana Sayfa</Link>
+						<Link to="/projects" className="hover:text-sky-600 py-1">Projeler</Link>
+						<Link to="/about" className="hover:text-sky-600 py-1">Hakkımda</Link>
+						<Link to="/contact" className="hover:text-sky-600 py-1">İletişim</Link>
 					</div>
 				</div>
 			)}
