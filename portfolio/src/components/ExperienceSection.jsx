@@ -40,7 +40,7 @@ export default function ExperienceSection() {
 													<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
 													</svg>
-													01.07.2025 - Devam Ediyor
+													01.07.2025 – Devam Ediyor
 												</span>
 											</div>
 											<h3 className="text-xl font-bold text-slate-900 dark:text-white">T3 Vakfı</h3>
@@ -50,31 +50,59 @@ export default function ExperienceSection() {
 										{/* Description */}
 										<div className="p-5">
 											<p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-												Next Sosyal projesi kapsamında Android mobil uygulamanın geliştirme süreçlerine katkı sağlıyorum.
-												Java diliyle sosyal medya platformunun Android uygulamasını geliştiriyor, kullanıcı deneyimini
-												iyileştirmek ve uygulamanın işlevselliğini artırmak için modern mobil geliştirme yöntemlerini
-												uyguluyorum. Ekip çalışması içinde farklı modüllerde aktif rol alarak kod kalitesini ve
-												sürdürülebilirliği ön planda tutuyorum.
+												Next Sosyal projesi kapsamında, Java tabanlı Android uygulamasının geliştirme süreçlerinde aktif rol alıyorum. Kullanıcı deneyimini iyileştiren yeni modüllerin entegrasyonunu gerçekleştiriyor; kod kalitesi ve sürdürülebilirlik odaklı çalışmalarla projenin gelişimini destekliyorum.
 											</p>
-											<div className="space-y-3">
-												<div>
-													<div className="flex flex-wrap gap-2">
-														{['Java', 'Android SDK'].map((tech) => (
-															<span key={tech} className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded text-sm">
-																{tech}
-															</span>
-														))}
-													</div>
-												</div>
-												<div>
-													<div className="flex flex-wrap gap-2">
-														{['Mobil Uygulama Geliştirme', 'Kullanıcı Deneyimi', 'Modüler Yapı', 'Takım Çalışması'].map((area) => (
-															<span key={area} className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 rounded text-sm">
-																{area}
-															</span>
-														))}
-													</div>
-												</div>
+											<div className="flex flex-wrap gap-2">
+												{['Java', 'Android SDK', 'Mobil Geliştirme', 'Kullanıcı Deneyimi', 'Git'].map((tech) => (
+													<span key={tech} className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded text-sm">
+														{tech}
+													</span>
+												))}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Baykar Teknoloji */}
+					<div className="relative flex items-start group">
+						{/* Timeline Dot */}
+						<div className="absolute left-4 w-4 h-4 bg-red-500 rounded-full border-3 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
+
+						{/* Content Card */}
+						<div className="ml-12 w-full">
+							<div className="group-hover:-translate-y-1 transition-all duration-300">
+								<div className="relative rounded-xl bg-white dark:bg-slate-800 border border-red-200 dark:border-red-700 shadow-lg group-hover:shadow-xl overflow-hidden">
+									<div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-red-500 via-orange-500 to-amber-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
+									<div className="relative bg-white dark:bg-slate-800 rounded-xl m-0.5">
+
+										{/* Header */}
+										<div className="relative p-5 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-t-xl">
+											<div className="flex items-center justify-between mb-2">
+												<span className="inline-flex items-center gap-2 px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded-full text-sm font-semibold">
+													<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+													</svg>
+													06.10.2025 – 27.12.2025
+												</span>
+											</div>
+											<h3 className="text-xl font-bold text-slate-900 dark:text-white">Baykar Teknoloji</h3>
+											<p className="text-red-600 dark:text-red-400 font-semibold">Merkezi Kontrol Yazılımları Stajyeri</p>
+										</div>
+
+										{/* Description */}
+										<div className="p-5">
+											<p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+												Medya sunucuları ve video akış teknolojileri üzerine çalışmalar yürüttüm. Wowza Streaming Engine, .NET Web API ve React mimarilerini kullanarak uçtan uca (Full-Stack) bir canlı yayın platformunu hayata geçirdim. Medya iletim süreçlerini modern web teknolojileriyle birleştirerek proje hedeflerini tamamladım.
+											</p>
+											<div className="flex flex-wrap gap-2">
+												{['ASP.NET Core', 'React', 'Web API', 'Wowza Streaming Engine', 'Full Stack'].map((tech) => (
+													<span key={tech} className="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded text-sm">
+														{tech}
+													</span>
+												))}
 											</div>
 										</div>
 									</div>
@@ -112,19 +140,14 @@ export default function ExperienceSection() {
 										{/* Description */}
 										<div className="p-5">
 											<p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-												IT altyapısı ve sistem yönetimi süreçlerinde görev aldım. Kullanıcı destek taleplerini
-												karşılayarak yazılım ve donanım kaynaklı sorunların çözümüne katkıda bulundum. Sistem
-												güncellemeleri ve temel bakım işlemlerinde aktif rol aldım. Şirket içi teknik destek
-												süreçlerinde yer alarak operasyonların sürekliliğini destekledim.
+												Şirket içi IT altyapısını ve sistem yönetim süreçlerini takip ettim. Donanım ve yazılım kaynaklı talepleri karşılayarak gerekli teknik çözümleri ürettim; sistem güncellemeleri ve bakım işlemleriyle operasyonel sürekliliği sağladım.
 											</p>
-											<div>
-												<div className="flex flex-wrap gap-2">
-													{['Sistem Yönetimi', 'Teknik Destek', 'IT Altyapısı', 'Kullanıcı Desteği'].map((keyword) => (
-														<span key={keyword} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-sm">
-															{keyword}
-														</span>
-													))}
-												</div>
+											<div className="flex flex-wrap gap-2">
+												{['Sistem Yönetimi', 'Teknik Destek', 'IT Altyapısı', 'Sorun Giderme'].map((keyword) => (
+													<span key={keyword} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded text-sm">
+														{keyword}
+													</span>
+												))}
 											</div>
 										</div>
 									</div>
@@ -162,20 +185,14 @@ export default function ExperienceSection() {
 										{/* Description */}
 										<div className="p-5">
 											<p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-												Fiziksel sunucu kurulumu ve yapılandırma süreçlerinde görev aldım. Veri merkezinde donanım
-												montajı, kablolama, ağ bağlantılarının sağlanması ve sistem bileşenlerinin kurulumu üzerine
-												çalıştım. Sunucuların devreye alınması sırasında test ve kontrolleri gerçekleştirdim. Büyük
-												ölçekli altyapılarda kurulum ve operasyon süreçlerine katılarak sistemlerin kesintisiz
-												çalışmasını destekledim.
+												Veri merkezinde fiziksel sunucu kurulumu, donanım montajı ve ağ yapılandırma operasyonlarını gerçekleştirdim. Kurulum sonrası test süreçlerini tamamlayarak sunucuların devreye alınmasını üstlendim.
 											</p>
-											<div>
-												<div className="flex flex-wrap gap-2">
-													{['Sunucu Kurulumu', 'Veri Merkezi', 'Donanım Montajı', 'Ağ Yapılandırma'].map((keyword) => (
-														<span key={keyword} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-sm">
-															{keyword}
-														</span>
-													))}
-												</div>
+											<div className="flex flex-wrap gap-2">
+												{['Sunucu Kurulumu', 'Veri Merkezi', 'Donanım Montajı', 'Ağ Yapılandırma'].map((keyword) => (
+													<span key={keyword} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded text-sm">
+														{keyword}
+													</span>
+												))}
 											</div>
 										</div>
 									</div>

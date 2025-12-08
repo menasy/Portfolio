@@ -7,6 +7,7 @@ import EducationSection from '../components/EducationSection';
 import ExperienceSection from '../components/ExperienceSection';
 import TechSkillsCombo from '../components/TechSkillsCombo';
 import SectionDivider from '../components/SectionDivider';
+import AboutSection from '../components/AboutSection';
 
 export default function Home() {
 	const { pathname } = useLocation();
@@ -106,52 +107,7 @@ export default function Home() {
 				</div>
 			</header>
 
-			<section id="hedefim" className="max-w-4xl mx-auto">
-				<div className="p-8 md:p-12 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg">
-					{/* Icon */}
-					<div className="flex justify-center mb-6">
-						<div className="p-4 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
-							<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-							</svg>
-						</div>
-					</div>
-
-					<div className="text-center space-y-6">
-						<h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-							Hedefim & Vizyonum
-						</h2>
-
-						<div className="relative">
-							<div className="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
-							<p className="text-lg leading-8 text-slate-700 dark:text-slate-300 pl-8 text-left max-w-3xl">
-								Ben Mehmet Nasim Yılmaz. 42 İstanbul'da Bilişim Teknolojileri Mimarisi alanında yoğun ve kapsamlı bir eğitim alıyor,
-								aynı zamanda İstanbul Gelişim Üniversitesi Yönetim Bilişim Sistemleri bölümünden 2025 yılı itibarıyla mezun olmuş bulunuyorum.
-								Eğitim ve proje çalışmalarım süresince birçok programlama dili, framework ve teknolojiyle çalışma imkânı bularak kendimi
-								farklı alanlarda geliştirdim.
-
-								Bugün ise sahip olduğum bilgi birikimini sürekli artırmaya, yeni teknolojileri keşfetmeye ve yetkinliklerimi daha ileriye taşımaya devam ediyorum.
-							</p>
-						</div>
-
-						{/* Action buttons */}
-						<div className="flex flex-wrap justify-center gap-4 pt-6">
-							<Link
-								to="/projects"
-								className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:from-blue-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center"
-							>
-								Projelerim
-							</Link>
-							<Link
-								to="/contact"
-								className="px-6 py-3 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-medium border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-600 transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
-							>
-								İletişim
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
+			<AboutSection />
 
 			<SectionDivider color="from-blue-500 to-purple-500" />
 

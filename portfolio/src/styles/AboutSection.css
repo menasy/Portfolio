@@ -1,0 +1,237 @@
+/* Modern AboutSection Styles */
+
+.about-modern-card {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  padding: 3.5rem 3rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.about-modern-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+  opacity: 0.9;
+}
+
+.about-modern-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transform: translateY(-4px);
+}
+
+/* Dark mode */
+.dark .about-modern-card {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-color: rgba(71, 85, 105, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.dark .about-modern-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.about-modern-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-modern-card:hover .about-icon-wrapper {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.about-icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+  stroke-width: 2.5;
+}
+
+.about-modern-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.dark .about-modern-title {
+  color: #f1f5f9;
+}
+
+.about-title-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+/* Content */
+.about-modern-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-paragraph-wrapper {
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.about-paragraph-wrapper:hover {
+  padding-left: 2rem;
+}
+
+.about-paragraph-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.about-paragraph-wrapper:hover .about-paragraph-accent {
+  width: 6px;
+  background: linear-gradient(180deg, #8b5cf6, #06b6d4);
+}
+
+.about-paragraph {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: #475569;
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.dark .about-paragraph {
+  color: #cbd5e1;
+}
+
+/* Decorative Elements */
+.about-decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.05;
+}
+
+.about-decorative-circle-1 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  top: -50px;
+  right: -50px;
+}
+
+.about-decorative-circle-2 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  bottom: -30px;
+  left: -30px;
+}
+
+.dark .about-decorative-circle {
+  opacity: 0.08;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-modern-card {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .about-modern-title {
+    font-size: 2rem;
+  }
+  
+  .about-icon-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .about-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .about-paragraph {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  
+  .about-modern-content {
+    gap: 1.5rem;
+  }
+}
+
+.dark .about-accent {
+  background: linear-gradient(120deg, #1e3a8a 0%, #4c1d95 100%);
+  color: #bfdbfe;
+}
+
+/* Short variant */
+.about-short {
+  max-width: 800px;
+}
+
+.about-short .about-card {
+  padding: 2.5rem 2rem;
+}
+
+.about-short .about-content {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .about-short .about-card {
+    padding: 1.75rem 1.25rem;
+  }
+}

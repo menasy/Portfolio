@@ -1,0 +1,36 @@
+/* ProjectCard.css - Modern card styling */
+
+.project-card {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-card-media {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  cursor: pointer;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.project-card-media:hover video,
+.project-card-media:hover img {
+  transform: scale(1.05);
+}
+
+.project-card-media video,
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .project-card-body {
+    padding: 1rem;
+  }
+}
