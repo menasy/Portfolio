@@ -2,6 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import { featuredProjects, otherProjects } from '../data/projects';
 import { useLocation } from 'react-router-dom';
+import Divider from '../components/partial/Divider';
 
 const categoryList = [
 	'All',
@@ -112,20 +113,7 @@ export default function Projects() {
 
 			{/* Divider between sections */}
 			{filteredFeatured.length > 0 && filteredOthers.length > 0 && (
-				<div className="relative py-8">
-					<div className="absolute inset-0 flex items-center">
-						<div className="w-full border-t border-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
-					</div>
-					<div className="relative flex justify-center">
-						<div className="px-6 py-3 bg-white dark:bg-slate-900 rounded-full border border-slate-200 dark:border-slate-700 shadow-lg">
-							<div className="flex items-center gap-2">
-								<div className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 animate-pulse"></div>
-								<span className="text-sm font-medium text-slate-600 dark:text-slate-400">Daha Fazla Proje</span>
-								<div className="w-2 h-2 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 animate-pulse delay-300"></div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<Divider />
 			)}
 
 			{/* Other Projects - Enhanced Design */}
