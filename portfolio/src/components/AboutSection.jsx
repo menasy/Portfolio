@@ -1,27 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import '../styles/AboutSection.css';
 
 export default function AboutSection() {
-	const containerVariants = {
-		hidden: { opacity: 0, y: 20 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			transition: {
-				duration: 0.5,
-				ease: "easeOut"
-			}
-		}
-	};
-
 	return (
-		<motion.section
-			className="max-w-5xl mx-auto px-4"
-			initial="hidden"
-			animate="visible"
-			variants={containerVariants}
-		>
+		<section className="max-w-5xl mx-auto px-4">
 			<div className="about-modern-card">
 				{/* Header with Icon */}
 				<div className="about-modern-header">
@@ -62,6 +44,6 @@ export default function AboutSection() {
 				<div className="about-decorative-circle about-decorative-circle-1"></div>
 				<div className="about-decorative-circle about-decorative-circle-2"></div>
 			</div>
-		</motion.section>
+		</section>
 	);
 }

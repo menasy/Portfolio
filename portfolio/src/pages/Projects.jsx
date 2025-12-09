@@ -3,6 +3,7 @@ import ProjectCard from '../components/ProjectCard';
 import { featuredProjects, otherProjects } from '../data/projects';
 import { useLocation } from 'react-router-dom';
 import Divider from '../components/partial/Divider';
+import RevealOnScroll from '../components/RevealOnScroll';
 
 const categoryList = [
 	'All',
@@ -58,9 +59,10 @@ export default function Projects() {
 		? 'grid-cols-1 max-w-3xl mx-auto'
 		: 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3';
 
-	return (
-		<div className="space-y-8">
-			<div className="text-center">
+		return (
+			<div className="space-y-8">
+				<RevealOnScroll animation="scale" delay={0}>
+				<div className="text-center">
 				<h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 dark:from-white dark:via-blue-100 dark:to-white bg-clip-text text-transparent mb-8">
 					Projelerim
 				</h1>
@@ -81,10 +83,12 @@ export default function Projects() {
 					))}
 				</div>
 			</div>
+			</RevealOnScroll>
 
 			{/* Featured Projects - Enhanced Design */}
 			{filteredFeatured.length > 0 && (
 				<section id="one-cikan-projeler" className="space-y-6">
+					<RevealOnScroll animation="blur" delay={100}>
 					<div className="text-center">
 						<div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 mb-6 shadow-lg">
 							<div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
@@ -94,10 +98,12 @@ export default function Projects() {
 							Tüm projelerimin kodlarına ve daha detaylı açıklamalarına <a href="https://github.com/menasy?tab=repositories" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium hover:underline transition-colors" target="_blank" rel="noreferrer">GitHub</a> sayfamdan ulaşabilirsiniz.
 						</p>
 					</div>
+					</RevealOnScroll>
 
 					<div className={`grid gap-5 md:gap-6 xl:gap-8 ${featuredGridLayout}`}>
-						{filteredFeatured.map((p) => (
-							<div key={p.title} className="group relative">
+						{filteredFeatured.map((p, index) => (
+							<RevealOnScroll key={p.title} animation="fade-up" delay={100 + (index * 100)}>
+							<div className="group relative">
 								{/* Enhanced background effects */}
 								<div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-md transition-all duration-500"></div>
 								<div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-xl sm:rounded-2xl group-hover:scale-[1.02] transition-transform duration-500"></div>
@@ -106,6 +112,7 @@ export default function Projects() {
 									<ProjectCard {...p} />
 								</div>
 							</div>
+							</RevealOnScroll>
 						))}
 					</div>
 				</section>
@@ -119,16 +126,18 @@ export default function Projects() {
 			{/* Other Projects - Enhanced Design */}
 			{filteredOthers.length > 0 && (
 				<section id="diger-projeler" className="space-y-8">
+					<RevealOnScroll animation="flip" delay={0}>
 					<div className="text-center">
 						<div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-50 to-cyan-50 dark:from-emerald-900/20 dark:to-cyan-900/20 border border-emerald-200 dark:border-emerald-700 mb-6 shadow-lg">
-							<div className="w-4 h-4 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full animate-pulse"></div>
 							<span className="text-base font-semibold text-emerald-700 dark:text-emerald-300 uppercase tracking-wide">Diğer Projelerim</span>
 						</div>
 					</div>
+					</RevealOnScroll>
 
 					<div className={`grid gap-5 md:gap-6 xl:gap-8 ${otherGridLayout}`}>
 						{filteredOthers.map((p, index) => (
-							<div key={p.title} className="group relative">
+							<RevealOnScroll key={p.title} animation="fade-down" delay={100 + (index * 80)}>
+							<div className="group relative">
 								{/* Enhanced background effects */}
 								<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/15 to-cyan-500/15 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-md transition-all duration-500"></div>
 								<div className="absolute inset-0 bg-gradient-to-br from-emerald-400/5 to-cyan-400/5 rounded-xl sm:rounded-2xl group-hover:scale-[1.02] transition-transform duration-500"></div>
@@ -138,9 +147,6 @@ export default function Projects() {
 									{/* Enhanced Header */}
 									<div className="flex items-start justify-between gap-3 mb-4">
 										<div className="flex items-start gap-3 flex-1">
-											<div className="flex-shrink-0 mt-0.5">
-												<div className="w-4 h-4 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500 animate-pulse shadow-lg"></div>
-											</div>
 											<div className="flex-1">
 												<a
 													href={p.link}
@@ -215,6 +221,7 @@ export default function Projects() {
 									</div>
 								</div>
 							</div>
+							</RevealOnScroll>
 						))}
 					</div>
 				</section>
@@ -222,6 +229,7 @@ export default function Projects() {
 
 			{/* No projects message */}
 			{filteredFeatured.length === 0 && filteredOthers.length === 0 && (
+				<RevealOnScroll animation="fade-up" delay={0}>
 				<div className="text-center py-16">
 					<div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center">
 						<svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -235,6 +243,7 @@ export default function Projects() {
 						Başka bir kategori seçerek projelerimi inceleyebilirsiniz.
 					</p>
 				</div>
+				</RevealOnScroll>
 			)}
 		</div>
 	);

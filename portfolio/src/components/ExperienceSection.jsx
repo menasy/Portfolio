@@ -1,4 +1,5 @@
 import React from 'react';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function ExperienceSection() {
 	return (
@@ -22,6 +23,7 @@ export default function ExperienceSection() {
 				<div className="space-y-6 sm:space-y-8 md:space-y-10">
 
 					{/* T3 Vakfı - En güncel (en üstte) */}
+					<RevealOnScroll animation="slide-rotate" delay={0}>
 					<div className="relative flex items-start group">
 						{/* Timeline Dot */}
 						<div className="absolute left-2.5 sm:left-3.5 md:left-5 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-emerald-500 rounded-full border-2 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
@@ -65,8 +67,10 @@ export default function ExperienceSection() {
 							</div>
 						</div>
 					</div>
+				</RevealOnScroll>
 
-					{/* Baykar Teknoloji */}
+				{/* Baykar Teknoloji */}
+				<RevealOnScroll animation="bounce" delay={200}>
 					<div className="relative flex items-start group">
 						{/* Timeline Dot */}
 						<div className="absolute left-2.5 sm:left-3.5 md:left-5 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-red-500 rounded-full border-2 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
@@ -108,11 +112,13 @@ export default function ExperienceSection() {
 									</div>
 								</div>
 							</div>
-						</div>
 					</div>
+				</div>
+				</RevealOnScroll>
 
-					{/* Paka Teknoloji */}
-					<div className="relative flex items-start group">
+				{/* Paka Teknoloji */}
+				<RevealOnScroll animation="fade-left" delay={400}>
+				<div className="relative flex items-start group">
 						{/* Timeline Dot */}
 						<div className="absolute left-2.5 sm:left-3.5 md:left-5 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-blue-500 rounded-full border-2 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
 
@@ -152,12 +158,14 @@ export default function ExperienceSection() {
 										</div>
 									</div>
 								</div>
-							</div>
 						</div>
 					</div>
+				</div>
+				</RevealOnScroll>
 
-					{/* Tencent Holdings Limited - En eski (en altta) */}
-					<div className="relative flex items-start group">
+				{/* Tencent Holdings Limited - En eski (en altta) */}
+				<RevealOnScroll animation="zoom-out" delay={600}>
+				<div className="relative flex items-start group">
 						{/* Timeline Dot */}
 						<div className="absolute left-2.5 sm:left-3.5 md:left-5 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-purple-500 rounded-full border-2 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
 
@@ -197,12 +205,14 @@ export default function ExperienceSection() {
 										</div>
 									</div>
 								</div>
-							</div>
 						</div>
 					</div>
+				</div>
+				</RevealOnScroll>
 
-					{/* Kişisel Projeler - En eski (en altta) */}
-					<div className="relative flex items-start group">
+				{/* Kişisel Projeler - En eski (en altta) */}
+				<RevealOnScroll animation="flip" delay={800}>
+				<div className="relative flex items-start group">
 						{/* Timeline Dot */}
 						<div className="absolute left-2.5 sm:left-3.5 md:left-5 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 bg-indigo-500 rounded-full border-2 border-white dark:border-slate-800 shadow-md group-hover:scale-110 transition-transform duration-300 z-10"></div>
 
@@ -269,6 +279,7 @@ export default function ExperienceSection() {
 							</div>
 						</div>
 					</div>
+					</RevealOnScroll>
 				</div>
 			</div>
 		</section>

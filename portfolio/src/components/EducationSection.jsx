@@ -1,4 +1,5 @@
 import React from 'react';
+import RevealOnScroll from './RevealOnScroll';
 
 export default function EducationSection() {
 	return (
@@ -13,9 +14,10 @@ export default function EducationSection() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
-				{/* 42 İstanbul */}
-				<div className="group relative">
+		<div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+			{/* 42 İstanbul */}
+			<RevealOnScroll animation="bounce" delay={0}>
+			<div className="group relative">
 					<div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 to-slate-600/10 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg transition-all duration-500"></div>
 					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
 
@@ -65,8 +67,10 @@ export default function EducationSection() {
 						</div>
 					</div>
 				</div>
+				</RevealOnScroll>
 
 				{/* İstanbul Gelişim Üniversitesi */}
+				<RevealOnScroll animation="flip" delay={200}>
 				<div className="group relative">
 					<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg transition-all duration-500"></div>
 					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
@@ -117,6 +121,7 @@ export default function EducationSection() {
 						</div>
 					</div>
 				</div>
+				</RevealOnScroll>
 			</div>
 		</section>
 	);

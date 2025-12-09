@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import BlogSection from '../components/BlogSection';
 import ToolsTechnologies from '../components/ToolsTechnologies';
 import ContactCv from '../components/ContactCv';
@@ -8,6 +8,7 @@ import ExperienceSection from '../components/ExperienceSection';
 import TechSkillsCombo from '../components/TechSkillsCombo';
 import Divider from '../components/partial/Divider';
 import AboutSection from '../components/AboutSection';
+import RevealOnScroll from '../components/RevealOnScroll';
 
 export default function Home() {
 	const { pathname } = useLocation();
@@ -47,9 +48,10 @@ export default function Home() {
 		window.scrollTo(0, 0);
 	}, [pathname]);
 
-	return (
-		<div className="space-y-4 sm:space-y-6">
-			<header className="text-center pt-4 sm:pt-6 md:pt-8 relative px-4">
+		return (
+			<div className="space-y-4 sm:space-y-6">
+				<RevealOnScroll animation="scale" delay={0}>
+				<header className="text-center pt-4 sm:pt-6 md:pt-8 relative px-4">
 				{/* Animated background elements */}
 				<div className="absolute inset-0 -z-10">
 					<div className="absolute top-12 sm:top-20 left-1/4 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
@@ -106,34 +108,48 @@ export default function Home() {
 					</div>
 				</div>
 			</header>
+			</RevealOnScroll>
 
+			<RevealOnScroll animation="blur" delay={200}>
 			<AboutSection />
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="fade-left" delay={0}>
 			<EducationSection />
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="fade-right" delay={0}>
 			<ExperienceSection />
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="bounce" delay={0}>
 			<BlogSection />
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="slide-rotate" delay={0}>
 			{/* Teknik Beceriler Section */}
 			<TechSkillsCombo />
-
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="zoom-out" delay={0}>
 			<ToolsTechnologies />
+			</RevealOnScroll>
 
 			<Divider />
 
+			<RevealOnScroll animation="flip" delay={0}>
 			<ContactCv />
+			</RevealOnScroll>
 		</div>
 	);
 }

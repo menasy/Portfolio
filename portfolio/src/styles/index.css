@@ -10,3 +10,142 @@ html, body, #root {
 html {
   scroll-behavior: smooth;
 }
+
+/* ======================================
+   Scroll Reveal Animations
+   ====================================== */
+
+/* Base reveal styles */
+.reveal {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+/* Fade up animation (default) - yumuşak yukarı kayma */
+.reveal-fade-up {
+  transform: translateY(40px);
+}
+
+.reveal-fade-up.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade down animation - yukarıdan aşağı */
+.reveal-fade-down {
+  transform: translateY(-40px);
+}
+
+.reveal-fade-down.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade left animation - sağdan sola */
+.reveal-fade-left {
+  transform: translateX(50px);
+}
+
+.reveal-fade-left.reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade right animation - soldan sağa */
+.reveal-fade-right {
+  transform: translateX(-50px);
+}
+
+.reveal-fade-right.reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale animation - büyüyerek belirme */
+.reveal-scale {
+  transform: scale(0.85);
+}
+
+.reveal-scale.reveal-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom out animation - küçülerek belirme */
+.reveal-zoom-out {
+  transform: scale(1.15);
+}
+
+.reveal-zoom-out.reveal-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Flip animation - dönerek belirme */
+.reveal-flip {
+  transform: perspective(1000px) rotateY(-15deg);
+  transform-origin: center;
+}
+
+.reveal-flip.reveal-visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Slide rotate - kayarak dönme */
+.reveal-slide-rotate {
+  transform: translateY(30px) rotate(-5deg);
+}
+
+.reveal-slide-rotate.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+}
+
+/* Bounce effect - zıplayarak gelme */
+.reveal-bounce {
+  transform: translateY(50px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.reveal-bounce.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blur reveal - bulanıklıktan netleşme */
+.reveal-blur {
+  filter: blur(10px);
+  transform: translateY(20px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-blur.reveal-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+/* Fade only (no movement) */
+.reveal-fade {
+  transform: none;
+}
+
+.reveal-fade.reveal-visible {
+  opacity: 1;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

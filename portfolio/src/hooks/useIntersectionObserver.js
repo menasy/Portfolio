@@ -12,13 +12,13 @@ export const useIntersectionObserver = (options = {}) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-        if (entry.isIntersecting && !hasIntersected) {
+        if (entry.isIntersecting) {
           setHasIntersected(true);
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold: options.threshold || 0.1,
+        rootMargin: options.rootMargin || '0px',
         ...options,
       }
     );
@@ -26,9 +26,12 @@ export const useIntersectionObserver = (options = {}) => {
     observer.observe(element);
 
     return () => {
-      observer.unobserve(element);
+      if (element) {
+        observer.unobserve(element);
+      }
     };
-  }, [hasIntersected, options]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // options dependency kaldırıldı - sonsuz döngüyü önler
 
   return { elementRef, isIntersecting, hasIntersected };
 };
