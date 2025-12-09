@@ -1,0 +1,181 @@
+:root {
+    --primary: #0077FF;
+    --secondary: #002A5C;
+    --accent: #00CCFF;
+    --divider-height: 80px;
+}
+
+/* Divider Styles */
+.geometric-divider {
+    max-width: 80rem;
+    width: 100%;
+    height: var(--divider-height);
+    position: relative;
+    margin: 1.5rem auto;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.divider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.divider-line {
+    position: absolute;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.geometric-shape {
+    position: absolute;
+    background: var(--secondary);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shape-1 {
+    width: 45px;
+    height: 45px;
+    top: 30%;
+    left: 10%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+}
+
+.shape-2 {
+    width: 30px;
+    height: 30px;
+    bottom: 25%;
+    left: 30%;
+    transform: rotate(45deg);
+    background-color: rgba(0, 204, 255, 0.3);
+}
+
+.shape-3 {
+    width: 50px;
+    height: 50px;
+    top: 25%;
+    right: 20%;
+    border-radius: 50%;
+    background-color: rgba(0, 119, 255, 0.15);
+}
+
+.shape-4 {
+    width: 25px;
+    height: 25px;
+    bottom: 30%;
+    right: 10%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background-color: var(--accent);
+}
+
+.dots-grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dot {
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.dot:nth-child(odd) {
+    animation: pulse 3s infinite alternate;
+}
+
+.dot:nth-child(even) {
+    animation: pulse 4s 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(2); opacity: 0.7; }
+}
+
+.digital-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    width: 80%;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    z-index: 2;
+}
+
+.binary {
+    position: absolute;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: rgba(0, 204, 255, 0.3);
+    z-index: 1;
+}
+
+.binary-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.binary-2 {
+    bottom: 25%;
+    right: 30%;
+}
+
+/* Animated particle */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 0 10px 2px rgba(0, 204, 255, 0.5);
+    animation: moveParticle 8s linear infinite;
+}
+
+@keyframes moveParticle {
+    0% { left: -5px; top: 50%; }
+    100% { left: 105%; top: 50%; }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .geometric-divider {
+        height: 60px;
+        margin: 1rem auto;
+    }
+    
+    .shape-1 {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .shape-2 {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .shape-3 {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .shape-4 {
+        width: 18px;
+        height: 18px;
+    }
+}

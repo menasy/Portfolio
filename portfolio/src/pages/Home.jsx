@@ -6,7 +6,7 @@ import ContactCv from '../components/ContactCv';
 import EducationSection from '../components/EducationSection';
 import ExperienceSection from '../components/ExperienceSection';
 import TechSkillsCombo from '../components/TechSkillsCombo';
-import SectionDivider from '../components/SectionDivider';
+import Divider from '../components/partial/Divider';
 import AboutSection from '../components/AboutSection';
 
 export default function Home() {
@@ -109,29 +109,29 @@ export default function Home() {
 
 			<AboutSection />
 
-			<SectionDivider color="from-blue-500 to-purple-500" />
+			<Divider />
 
 			<EducationSection />
 
-			<SectionDivider color="from-emerald-500 to-teal-500" />
+			<Divider />
 
 			<ExperienceSection />
 
-			<SectionDivider color="from-indigo-500 to-purple-500" />
+			<Divider />
 
 			<BlogSection />
 
-			<SectionDivider color="from-orange-500 to-red-500" />
+			<Divider />
 
 			{/* Teknik Beceriler Section */}
 			<TechSkillsCombo />
 
 
-			<SectionDivider color="from-purple-500 to-pink-500" />
+			<Divider />
 
 			<ToolsTechnologies />
 
-			<SectionDivider color="from-cyan-500 to-blue-500" />
+			<Divider />
 
 			<ContactCv />
 		</div>
