@@ -108,7 +108,7 @@ export default function ContactCv() {
 									İletişim ve Bağlantılar
 								</h3>
 							</div>
-							<div className="space-y-4">
+							<div className="space-y-3">
 								{contactItems.map((item, index) => (
 										<a
 											key={index}
@@ -117,19 +117,19 @@ export default function ContactCv() {
 											rel="noopener noreferrer"
 											className="block group/item"
 										>
-										<div className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 p-4 rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
-											<div className="w-12 h-12 flex items-center justify-center rounded-lg flex-shrink-0">
+										<div className={`flex flex-row items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 md:p-4 rounded-lg sm:rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
+											<div className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg flex-shrink-0">
 												<img
 													src={item.icon}
 													alt={item.title}
-													className="w-6 h-6"
+													className="w-5 h-5 sm:w-6 sm:h-6"
 												/>
 											</div>
-											<div className="w-full text-left">
-												<h4 className="font-medium text-slate-800 dark:text-slate-200 text-sm sm:text-base">
+											<div className="flex-1 min-w-0 text-left">
+												<h4 className="font-medium text-slate-800 dark:text-slate-200 text-xs sm:text-sm truncate">
 													{item.title}
 												</h4>
-												<p className="text-xs text-slate-600 dark:text-slate-400 break-words sm:text-sm">
+												<p className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 break-words overflow-wrap-anywhere leading-tight">
 													{item.description}
 												</p>
 											</div>
@@ -164,7 +164,7 @@ export default function ContactCv() {
 									CV İndir
 								</h3>
 							</div>
-							<div className="space-y-4">
+							<div className="space-y-3">
 								{cvItems.map((item, index) => (
 										<a
 											key={index}
@@ -174,22 +174,22 @@ export default function ContactCv() {
 										className="block group/item"
 										download
 									>
-										<div className={`flex flex-col gap-3 rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 p-4 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1 sm:flex-row sm:items-center sm:gap-4`}>
-											<div className="flex items-start gap-3 sm:gap-4 w-full">
+										<div className={`flex flex-col gap-2.5 rounded-lg sm:rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 p-2.5 sm:p-3 md:p-4 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1 sm:flex-row sm:items-center sm:gap-3`}>
+											<div className="flex items-start gap-2.5 sm:gap-3 flex-1 min-w-0">
 												{item.icon}
-												<div className="space-y-1 text-left">
-													<h4 className="font-medium text-slate-800 dark:text-slate-200 text-sm sm:text-base">
+												<div className="space-y-0.5 text-left flex-1 min-w-0">
+													<h4 className="font-medium text-slate-800 dark:text-slate-200 text-xs sm:text-sm truncate">
 														{item.title}
 													</h4>
-													<p className="text-xs text-slate-600 dark:text-slate-400 break-words sm:text-sm">
+													<p className="text-[10px] sm:text-xs text-slate-600 dark:text-slate-400 break-words overflow-wrap-anywhere leading-tight">
 														{item.description}
 													</p>
 												</div>
 											</div>
-											<span className="inline-flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1.5 text-xs font-semibold text-white shadow-md sm:text-sm sm:self-center w-full sm:w-auto text-center">
+											<span className="inline-flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1.5 text-[11px] sm:text-xs font-semibold text-white shadow-md sm:self-center w-full sm:w-auto text-center flex-shrink-0">
 												{item.action}
 												<svg
-													className="w-4 h-4"
+													className="w-3 h-3 sm:w-4 sm:h-4"
 													fill="none"
 													stroke="currentColor"
 													strokeWidth={2}

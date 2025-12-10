@@ -96,18 +96,17 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 								</div>
 							)}
 							<div className="w-16 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6"></div>
-								<div className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
+								<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1">
 								{skills.map((skill, index) => (
 									<div key={index} className="group relative h-full">
 										{/* Enhanced background effects */}
-										<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
-										<div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 rounded-lg group-hover:scale-105 transition-transform duration-500"></div>
-										<div className="relative flex h-full items-center gap-2.5 rounded-lg border border-emerald-200/50 bg-white/95 p-2.5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-emerald-600/50 dark:bg-slate-700/95 sm:gap-3 sm:p-3">
-											<div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 text-xs shadow-sm dark:from-slate-600 dark:to-slate-700 sm:h-7 sm:w-7">
-												<span className="text-sm sm:text-base">{skill.icon}</span>
+										<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg transition-all duration-500"></div>
+										<div className="relative flex h-full items-center gap-2 sm:gap-2.5 rounded-lg border border-emerald-200/50 bg-white/95 p-2 sm:p-2.5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-emerald-600/50 dark:bg-slate-700/95 overflow-hidden">
+											<div className="flex h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 text-xs shadow-sm dark:from-slate-600 dark:to-slate-700">
+												<span className="text-xs sm:text-sm">{skill.icon}</span>
 											</div>
-											<div className="flex-1">
-												<span className="text-xs font-medium text-slate-900 dark:text-white sm:text-sm">{skill.text}</span>
+											<div className="flex-1 min-w-0 overflow-hidden">
+												<span className="text-[11px] sm:text-xs font-medium text-slate-900 dark:text-white break-words leading-tight hyphens-auto" style={{wordBreak: 'break-word', overflowWrap: 'anywhere'}}>{skill.text}</span>
 											</div>
 										</div>
 									</div>

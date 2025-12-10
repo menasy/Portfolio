@@ -26,21 +26,19 @@ export default function ToolsTechnologies() {
   ];
 
   const Card = ({ src, emoji, label, bgColor }) => (
-    <div className="group/item relative">
-      {/* Enhanced background effects - only trigger on individual item hover */}
-      <div className="absolute inset-0 rounded-xl border border-transparent transition-all duration-300 group-hover/item:border-emerald-200/60 dark:group-hover/item:border-emerald-500/40"></div>
+    <div className="group/item relative h-full">
       
-      <div className="relative flex h-full flex-col items-center justify-center rounded-xl border border-emerald-200/50 bg-white p-3 text-center shadow-sm transition-all duration-300 ease-out group-hover/item:-translate-y-1 group-hover/item:shadow-md dark:border-emerald-600/50 dark:bg-slate-800 sm:p-4">
+      <div className="relative flex h-full flex-col items-center justify-center rounded-lg sm:rounded-xl border border-emerald-200/50 bg-white p-2 sm:p-3 text-center shadow-sm transition-all duration-300 ease-out group-hover/item:-translate-y-1 group-hover/item:shadow-md dark:border-emerald-600/50 dark:bg-slate-800 overflow-hidden">
         <div
-          className={`mb-2 flex h-12 w-12 items-center justify-center rounded-lg transition-transform duration-300 group-hover/item:scale-105 sm:h-14 sm:w-14 ${bgColor}`}
+          className={`mb-1.5 sm:mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-lg transition-transform duration-300 group-hover/item:scale-105 flex-shrink-0 ${bgColor}`}
         >
           {src ? (
-            <img src={src} alt={label} className="h-7 w-7 object-contain sm:h-8 sm:w-8" />
+            <img src={src} alt={label} className="h-6 w-6 sm:h-7 sm:w-7 object-contain" />
           ) : (
-            <span className="text-lg sm:text-xl">{emoji}</span>
+            <span className="text-base sm:text-lg">{emoji}</span>
           )}
         </div>
-        <span className="text-xs font-medium leading-snug text-slate-800 dark:text-slate-200 sm:text-sm break-words whitespace-normal">
+        <span className="text-[10px] sm:text-xs font-medium leading-tight text-slate-800 dark:text-slate-200 break-words w-full px-1" style={{wordBreak: 'break-word', overflowWrap: 'anywhere', hyphens: 'auto'}}>
           {label}
         </span>
       </div>
@@ -74,7 +72,7 @@ export default function ToolsTechnologies() {
                 </div>
                 <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">Araçlar</h3>
               </div>
-              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-2.5 md:grid-cols-3 md:gap-3">
                 {tools.map((tool) => (
                   <Card key={tool.label} {...tool} bgColor="bg-green-100 dark:bg-green-900/30" />
                 ))}
@@ -95,7 +93,7 @@ export default function ToolsTechnologies() {
                 </div>
                 <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">Teknolojiler</h3>
               </div>
-              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-4">
+              <div className="grid grid-cols-2 gap-2 sm:gap-2.5 md:grid-cols-3 md:gap-3">
                 {technologies.map((tech) => (
                   <Card key={tech.label} {...tech} bgColor="bg-purple-100 dark:bg-purple-900/30" />
                 ))}
