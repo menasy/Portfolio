@@ -16,8 +16,7 @@ export default function BlogSection() {
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
 			{/* Card 1 - C++ */}
 			<RevealOnScroll animation="slide-rotate" delay={0}>
-			<div className="group relative h-full">
-					<div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg group-hover:from-green-500/30 group-hover:to-emerald-500/30 transition-all duration-500"></div>
+				<div className="group relative h-full">
 					<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-green-200/50 dark:border-green-700/50 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
 						<div className="flex items-start gap-3 mb-4">
 							<div className="w-12 h-12 flex-shrink-0 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -51,7 +50,6 @@ export default function BlogSection() {
 				{/* Card 2 - Docker */}
 				<RevealOnScroll animation="zoom-out" delay={200}>
 				<div className="group relative h-full">
-					<div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg group-hover:from-blue-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
 					<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-blue-200/50 dark:border-blue-700/50 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
 						<div className="flex items-start gap-3 mb-4">
 							<div className="w-12 h-12 flex-shrink-0 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -85,7 +83,6 @@ export default function BlogSection() {
 				{/* Card 3 - Blockchain */}
 				<RevealOnScroll animation="blur" delay={400}>
 				<div className="group relative h-full">
-					<div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-500"></div>
 					<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-purple-200/50 dark:border-purple-700/50 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
 						<div className="flex items-start gap-3 mb-4">
 							<div className="w-12 h-12 flex-shrink-0 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center shadow-lg">
@@ -118,9 +115,7 @@ export default function BlogSection() {
 
 				{/* Card 4 - All Posts */}
 				<RevealOnScroll animation="scale" delay={600}>
-				<div className="group relative h-full">
-					<div className="absolute inset-0 bg-gradient-to-br from-slate-500/20 to-gray-500/20 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg group-hover:from-slate-500/30 group-hover:to-gray-500/30 transition-all duration-500"></div>
-					<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
+				<div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-xl sm:rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1.5 transition-all duration-500 h-full flex flex-col">
 						<div className="flex items-start gap-3 mb-4">
 							<div className="w-12 h-12 flex-shrink-0 bg-gradient-to-br from-slate-600 to-gray-700 rounded-xl flex items-center justify-center shadow-lg">
 								<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,7 +142,6 @@ export default function BlogSection() {
 							</svg>
 						</a>
 					</div>
-				</div>
 				</RevealOnScroll>
 			</div>
 		</section>

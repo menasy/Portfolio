@@ -86,7 +86,6 @@ export default function ContactCv() {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 					{/* İletişim ve Bağlantılar */}
 					<div className="relative group/card">
-						<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
 						<div className="relative p-5 sm:p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-cyan-200/50 dark:border-cyan-700/50">
 							<div className="flex items-center gap-3 mb-6">
 								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-lg">
@@ -142,7 +141,6 @@ export default function ContactCv() {
 
 					{/* CV İndir */}
 					<div className="relative group/card">
-						<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl blur-sm group-hover/card:blur-lg transition-all duration-500"></div>
 						<div className="relative p-5 sm:p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-emerald-200/50 dark:border-emerald-700/50">
 							<div className="flex items-center gap-3 mb-6">
 								<div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg">

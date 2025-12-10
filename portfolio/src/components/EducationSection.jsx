@@ -18,8 +18,7 @@ export default function EducationSection() {
 			{/* 42 İstanbul */}
 			<RevealOnScroll animation="bounce" delay={0}>
 			<div className="group relative">
-					<div className="absolute inset-0 bg-gradient-to-br from-slate-500/10 to-slate-600/10 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg transition-all duration-500"></div>
-					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
+					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/50 dark:border-slate-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
 
 						{/* Header with animated background */}
 						<div className="relative p-4 sm:p-5 md:p-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-700">
@@ -30,7 +29,7 @@ export default function EducationSection() {
 								</div>
 								<div>
 									<h3 className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-0.5 sm:mb-1">42 İstanbul</h3>
-									<p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">Bilişim Teknolojileri Mimarası Uzmanı</p>
+									<p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">Yazılım Mühendisliği</p>
 								</div>
 							</div>
 						</div>
@@ -72,8 +71,7 @@ export default function EducationSection() {
 				{/* İstanbul Gelişim Üniversitesi */}
 				<RevealOnScroll animation="flip" delay={200}>
 				<div className="group relative">
-					<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-lg transition-all duration-500"></div>
-					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-blue-200/50 dark:border-blue-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
+					<div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white dark:bg-slate-800 border border-blue-200/50 dark:border-blue-700/50 shadow-md group-hover:shadow-lg group-hover:-translate-y-1 transition-all duration-500">
 
 						{/* Header with animated background */}
 						<div className="relative p-4 sm:p-5 md:p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">

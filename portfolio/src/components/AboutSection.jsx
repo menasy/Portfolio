@@ -28,7 +28,7 @@ export default function AboutSection() {
 					<div className="about-paragraph-wrapper">
 						<div className="about-paragraph-accent"></div>
 						<p className="about-paragraph">
-							Eğitimim ve projelerim süresince birçok farklı programlama dili, framework ve teknolojiyle çalışma fırsatı buldum. Edindiğim deneyimleri pekiştirmek ve paylaşmak adına düzenli olarak blog yazıları kaleme alıyorum.
+							Eğitimim ve projelerim süresince birçok farklı programlama dili, framework ve teknolojiyle çalışma fırsatı buldum. Edindiğim deneyimleri pekiştirmek ve paylaşmak adına blog yazıları kaleme alıyorum.
 						</p>
 					</div>
 

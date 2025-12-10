@@ -101,7 +101,6 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 					{/* Summary */}
 				{summary && (
 					<div className="relative group/summary">
-						<div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg blur-sm opacity-50 group-hover/summary:opacity-70 transition-opacity duration-300"></div>
 						<div className="relative p-3 sm:p-3.5 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-lg border border-slate-200/70 dark:border-slate-700/60">
 							<div className="flex items-start gap-2">
 								<div className="flex-shrink-0 w-0.5 h-8 sm:h-10 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mt-1"></div>
