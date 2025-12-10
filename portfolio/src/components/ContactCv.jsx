@@ -110,26 +110,26 @@ export default function ContactCv() {
 							</div>
 							<div className="space-y-4">
 								{contactItems.map((item, index) => (
-									<a
-										key={index}
-										href={item.link}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="block group/item"
-									>
-										<div className={`flex items-center gap-4 p-4 rounded-xl border ${item.borderColor} bg-white/90 dark:bg-slate-800/90 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
-											<div className="w-12 h-12 flex items-center justify-center rounded-lg">
+										<a
+											key={index}
+											href={item.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="block group/item"
+										>
+										<div className={`flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4 p-4 rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
+											<div className="w-12 h-12 flex items-center justify-center rounded-lg flex-shrink-0">
 												<img
 													src={item.icon}
 													alt={item.title}
 													className="w-6 h-6"
 												/>
 											</div>
-											<div>
-												<h4 className="font-medium text-slate-800 dark:text-slate-200">
+											<div className="w-full text-left">
+												<h4 className="font-medium text-slate-800 dark:text-slate-200 text-sm sm:text-base">
 													{item.title}
 												</h4>
-												<p className="text-sm text-slate-600 dark:text-slate-400">
+												<p className="text-xs text-slate-600 dark:text-slate-400 break-words sm:text-sm">
 													{item.description}
 												</p>
 											</div>
@@ -166,27 +166,27 @@ export default function ContactCv() {
 							</div>
 							<div className="space-y-4">
 								{cvItems.map((item, index) => (
-									<a
-										key={index}
-										href={item.link}
-										target="_blank"
-										rel="noopener noreferrer"
+										<a
+											key={index}
+											href={item.link}
+											target="_blank"
+											rel="noopener noreferrer"
 										className="block group/item"
 										download
 									>
-										<div className={`flex items-center justify-between p-4 rounded-xl border ${item.borderColor} bg-white/90 dark:bg-slate-800/90 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1`}>
-											<div className="flex items-center gap-4">
+										<div className={`flex flex-col gap-3 rounded-xl border ${item.borderColor} bg-white dark:bg-slate-800 p-4 shadow-sm hover:shadow-md transition-all duration-300 group-hover/item:-translate-y-1 sm:flex-row sm:items-center sm:gap-4`}>
+											<div className="flex items-start gap-3 sm:gap-4 w-full">
 												{item.icon}
-												<div>
-													<h4 className="font-medium text-slate-800 dark:text-slate-200">
+												<div className="space-y-1 text-left">
+													<h4 className="font-medium text-slate-800 dark:text-slate-200 text-sm sm:text-base">
 														{item.title}
 													</h4>
-													<p className="text-sm text-slate-600 dark:text-slate-400">
+													<p className="text-xs text-slate-600 dark:text-slate-400 break-words sm:text-sm">
 														{item.description}
 													</p>
 												</div>
 											</div>
-											<span className="inline-flex items-center gap-1 px-3 py-1.5 text-sm rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md">
+											<span className="inline-flex items-center justify-center gap-1 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1.5 text-xs font-semibold text-white shadow-md sm:text-sm sm:self-center w-full sm:w-auto text-center">
 												{item.action}
 												<svg
 													className="w-4 h-4"

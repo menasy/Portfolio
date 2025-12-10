@@ -9,14 +9,19 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 		{ icon: '⚡', text: 'Çoklu İş Parçacığı Yönetimi', color: 'from-yellow-500 to-orange-500' },
 		{ icon: '⚙️', text: 'Sistem Programlama', color: 'from-red-500 to-red-600' },
 		{ icon: '🌐', text: 'Socket Programlama', color: 'from-teal-500 to-cyan-500' },
-		{ icon: '🌍', text: 'Web Geliştirme', color: 'from-emerald-500 to-green-600' },
+		{ icon: '🌍', text: 'Full-Stack Web Geliştirme', color: 'from-emerald-500 to-green-600' },
 		{ icon: '📱', text: 'Mobil Uygulama Geliştirme', color: 'from-cyan-500 to-blue-500' },
 		{ icon: '🐳', text: 'Docker ve Docker Compose', color: 'from-blue-600 to-indigo-600' },
 		{ icon: '⛓️', text: 'Blockchain Teknolojileri', color: 'from-amber-500 to-orange-500' },
+		{ icon: '📡', text: 'Yayın Teknolojileri', color: 'from-pink-500 to-rose-500' },
 		{ icon: '💾', text: 'Veritabanı Yönetimi', color: 'from-slate-500 to-slate-600' },
+		{ icon: '🎥', text: 'Medya Sunucuları', color: 'from-purple-500 to-indigo-500' },
 		{ icon: '🔒', text: 'Ağ ve Güvenlik', color: 'from-rose-500 to-pink-500' },
 		{ icon: '🔌', text: 'REST API', color: 'from-sky-500 to-cyan-500' },
 		{ icon: '✨', text: 'Clean Code', color: 'from-lime-500 to-green-500' },
+		{ icon: '📐', text: 'MVC Mimarisi', color: 'from-indigo-500 to-purple-500' },
+
+
 		// Soft Skills
 		{ icon: '🧠', text: 'Analitik Düşünce ve Problem Çözme', color: 'from-purple-500 to-purple-600' },
 		{ icon: '📚', text: 'Öğrenmeye Açıklık', color: 'from-violet-500 to-purple-600' },
@@ -55,8 +60,8 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 				<div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
 					{/* Programlama Dilleri Card - Sol */}
 					<div className="relative group">
-						<div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-orange-500/30 group-hover:to-red-600/30 transition-all duration-500"></div>
-						<div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-orange-200/50 dark:border-orange-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
+						<div className="absolute inset-0 rounded-3xl border border-orange-200/40 transition-all duration-500 group-hover:border-orange-400/70 dark:border-orange-700/40 dark:group-hover:border-orange-500/60"></div>
+						<div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-orange-200/50 dark:border-orange-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
 							<div className="flex items-center gap-4 mb-8">
 								<div className="p-3 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 shadow-xl">
 									<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,8 +80,8 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 
 					{/* Yetenekler Card - Sağ */}
 					<div className="relative group">
-						<div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-3xl blur-sm group-hover:blur-lg group-hover:from-green-500/30 group-hover:to-emerald-600/30 transition-all duration-500"></div>
-						<div className="relative p-8 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl border border-emerald-200/50 dark:border-emerald-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
+						<div className="absolute inset-0 rounded-3xl border border-emerald-200/40 transition-all duration-500 group-hover:border-emerald-400/70 dark:border-emerald-700/40 dark:group-hover:border-emerald-500/60"></div>
+						<div className="relative p-8 bg-white dark:bg-slate-800 rounded-3xl border border-emerald-200/50 dark:border-emerald-700/50 shadow-lg hover:shadow-xl group-hover:-translate-y-2 transition-all duration-500">
 							{showHeader && (
 								<div className="flex items-center gap-4 mb-8">
 									<div className="p-3 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-xl">
@@ -91,18 +96,18 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 								</div>
 							)}
 							<div className="w-16 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6"></div>
-							<div className="space-y-2.5">
+								<div className="grid grid-cols-2 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1">
 								{skills.map((skill, index) => (
-									<div key={index} className="group relative">
+									<div key={index} className="group relative h-full">
 										{/* Enhanced background effects */}
 										<div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-lg blur-sm group-hover:blur-lg group-hover:from-emerald-500/30 group-hover:to-cyan-500/30 transition-all duration-500"></div>
 										<div className="absolute inset-0 bg-gradient-to-br from-emerald-400/10 to-cyan-400/10 rounded-lg group-hover:scale-105 transition-transform duration-500"></div>
-										<div className="relative flex items-center gap-3 p-3 rounded-lg bg-white/95 dark:bg-slate-700/95 backdrop-blur-sm border border-emerald-200/50 dark:border-emerald-600/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-											<div className="flex-shrink-0 w-7 h-7 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-600 dark:to-slate-700 flex items-center justify-center shadow-sm">
-												<span className="text-sm">{skill.icon}</span>
+										<div className="relative flex h-full items-center gap-2.5 rounded-lg border border-emerald-200/50 bg-white/95 p-2.5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-emerald-600/50 dark:bg-slate-700/95 sm:gap-3 sm:p-3">
+											<div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 text-xs shadow-sm dark:from-slate-600 dark:to-slate-700 sm:h-7 sm:w-7">
+												<span className="text-sm sm:text-base">{skill.icon}</span>
 											</div>
 											<div className="flex-1">
-												<span className="font-medium text-sm text-slate-900 dark:text-white">{skill.text}</span>
+												<span className="text-xs font-medium text-slate-900 dark:text-white sm:text-sm">{skill.text}</span>
 											</div>
 										</div>
 									</div>

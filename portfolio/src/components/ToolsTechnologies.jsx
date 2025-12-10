@@ -10,6 +10,7 @@ export default function ToolsTechnologies() {
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", label: "Linux" },
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", label: "Git/GitHub" },
     { src: "https://www.svgrepo.com/show/354202/postman-icon.svg", label: "Postman" },
+    { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", label: "PostgreSQL" },
   ];
 
   const technologies = [
@@ -17,6 +18,8 @@ export default function ToolsTechnologies() {
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", label: "Pandas" },
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg", label: "NumPy" },
     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", label: "Firebase" },
+     { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg", label: "Entity Framework"},
+    { src: "https://www.wowza.com/wp-content/uploads/wowz-header-logo-2-1-1-1.png", label: "Wowza Streaming Engine" },
     { emoji: "⚡", label: "REST API" },
     { emoji: "⛓️", label: "BlockChain" },
     { emoji: "🌐", label: "Web3" },
@@ -25,19 +28,19 @@ export default function ToolsTechnologies() {
   const Card = ({ src, emoji, label, bgColor }) => (
     <div className="group/item relative">
       {/* Enhanced background effects - only trigger on individual item hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 rounded-xl blur-sm group-hover/item:blur-lg group-hover/item:from-emerald-500/30 group-hover/item:to-cyan-500/30 transition-all duration-300"></div>
+      <div className="absolute inset-0 rounded-xl border border-transparent transition-all duration-300 group-hover/item:border-emerald-200/60 dark:group-hover/item:border-emerald-500/40"></div>
       
-      <div className="relative flex flex-col items-center justify-center p-4 ease-out rounded-xl shadow-sm group-hover/item:shadow-lg group-hover/item:-translate-y-1 transition-all duration-300 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-emerald-200/50 dark:border-emerald-600/50">
+      <div className="relative flex h-full flex-col items-center justify-center rounded-xl border border-emerald-200/50 bg-white p-3 text-center shadow-sm transition-all duration-300 ease-out group-hover/item:-translate-y-1 group-hover/item:shadow-md dark:border-emerald-600/50 dark:bg-slate-800 sm:p-4">
         <div
-          className={`w-14 h-14 flex items-center justify-center rounded-lg ${bgColor} mb-2 group-hover/item:scale-105 transition-transform duration-300`}
+          className={`mb-2 flex h-12 w-12 items-center justify-center rounded-lg transition-transform duration-300 group-hover/item:scale-105 sm:h-14 sm:w-14 ${bgColor}`}
         >
           {src ? (
-            <img src={src} alt={label} className="w-8 h-8 object-contain" />
+            <img src={src} alt={label} className="h-7 w-7 object-contain sm:h-8 sm:w-8" />
           ) : (
-            <span className="text-xl">{emoji}</span>
+            <span className="text-lg sm:text-xl">{emoji}</span>
           )}
         </div>
-        <span className="text-sm font-medium text-slate-800 dark:text-slate-200 text-center">
+        <span className="text-xs font-medium leading-snug text-slate-800 dark:text-slate-200 sm:text-sm break-words whitespace-normal">
           {label}
         </span>
       </div>
@@ -61,8 +64,8 @@ export default function ToolsTechnologies() {
           {/* Araçlar */}
           <div className="relative group/card">
             {/* Enhanced background effects for the whole card - only on direct hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-green-600/20 rounded-2xl blur-sm group-hover/card:blur-lg group-hover/card:from-teal-500/30 group-hover/card:to-green-600/30 transition-all duration-500"></div>
-            <div className="relative p-5 sm:p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-teal-200/50 dark:border-teal-700/50">
+            <div className="absolute inset-0 rounded-2xl border border-teal-200/40 transition-all duration-500 group-hover/card:border-teal-300/70 dark:border-teal-700/40 dark:group-hover/card:border-teal-600/60"></div>
+            <div className="relative p-5 sm:p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-teal-200/50 dark:border-teal-700/50">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-teal-400 to-green-500 text-white shadow-lg">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -71,7 +74,7 @@ export default function ToolsTechnologies() {
                 </div>
                 <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">Araçlar</h3>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-4">
                 {tools.map((tool) => (
                   <Card key={tool.label} {...tool} bgColor="bg-green-100 dark:bg-green-900/30" />
                 ))}
@@ -82,8 +85,8 @@ export default function ToolsTechnologies() {
           {/* Teknolojiler */}
           <div className="relative group/card">
             {/* Enhanced background effects for the whole card - only on direct hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-600/20 rounded-2xl blur-sm group-hover/card:blur-lg group-hover/card:from-purple-500/30 group-hover/card:to-indigo-600/30 transition-all duration-500"></div>
-            <div className="relative p-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-purple-200/50 dark:border-purple-700/50">
+            <div className="absolute inset-0 rounded-2xl border border-purple-200/40 transition-all duration-500 group-hover/card:border-purple-300/70 dark:border-purple-700/40 dark:group-hover/card:border-purple-600/60"></div>
+            <div className="relative p-6 bg-white dark:bg-slate-800 rounded-2xl shadow-lg group-hover/card:shadow-xl group-hover/card:-translate-y-2 transition-all duration-500 border border-purple-200/50 dark:border-purple-700/50">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -92,7 +95,7 @@ export default function ToolsTechnologies() {
                 </div>
                 <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200">Teknolojiler</h3>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-4">
                 {technologies.map((tech) => (
                   <Card key={tech.label} {...tech} bgColor="bg-purple-100 dark:bg-purple-900/30" />
                 ))}
