@@ -1,14 +1,13 @@
-import ContactCv from '../components/ContactCv';
-import RevealOnScroll from '../components/RevealOnScroll';
+import { ContactCvLazy as ContactCv } from '../components/lazySections';
+import SectionReveal from '../components/SectionReveal';
 
 export default function Contact() {
 	return (
 		<div className="space-y-6">
-			<RevealOnScroll animation="scale" delay={0}>
-			<ContactCv />
-			</RevealOnScroll>
+			<SectionReveal animation="scale" label="İletişim">
+				<ContactCv />
+			</SectionReveal>
 		</div>
 	);
 }
-
 

@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import BlogSection from '../components/BlogSection';
-import ToolsTechnologies from '../components/ToolsTechnologies';
-import ContactCv from '../components/ContactCv';
-import EducationSection from '../components/EducationSection';
-import ExperienceSection from '../components/ExperienceSection';
-import TechSkillsCombo from '../components/TechSkillsCombo';
+import {
+	AboutSectionLazy as AboutSection,
+	BlogSectionLazy as BlogSection,
+	ContactCvLazy as ContactCv,
+	EducationSectionLazy as EducationSection,
+	ExperienceSectionLazy as ExperienceSection,
+	TechSkillsComboLazy as TechSkillsCombo,
+	ToolsTechnologiesLazy as ToolsTechnologies,
+} from '../components/lazySections';
 import Divider from '../components/partial/Divider';
-import AboutSection from '../components/AboutSection';
 import RevealOnScroll from '../components/RevealOnScroll';
+import SectionReveal from '../components/SectionReveal';
 
 export default function Home() {
 	const { pathname } = useLocation();
@@ -110,48 +113,46 @@ export default function Home() {
 			</header>
 			</RevealOnScroll>
 
-			<RevealOnScroll animation="blur" delay={200}>
-			<AboutSection />
-			</RevealOnScroll>
+			<SectionReveal animation="blur" delay={200} label="Hakkımda">
+				<AboutSection />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="fade-left" delay={0}>
-			<EducationSection />
-			</RevealOnScroll>
+			<SectionReveal animation="fade-left" label="Eğitim">
+				<EducationSection />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="fade-right" delay={0}>
-			<ExperienceSection />
-			</RevealOnScroll>
+			<SectionReveal animation="fade-right" label="Deneyimler">
+				<ExperienceSection />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="bounce" delay={0}>
-			<BlogSection />
-			</RevealOnScroll>
+			<SectionReveal animation="bounce" label="Blog Yazılarım">
+				<BlogSection />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="slide-rotate" delay={0}>
-			{/* Teknik Beceriler Section */}
-			<TechSkillsCombo />
-			</RevealOnScroll>
+			<SectionReveal animation="slide-rotate" label="Teknik Beceriler">
+				<TechSkillsCombo />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="zoom-out" delay={0}>
-			<ToolsTechnologies />
-			</RevealOnScroll>
+			<SectionReveal animation="zoom-out" label="Araçlar ve Teknolojiler">
+				<ToolsTechnologies />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="flip" delay={0}>
-			<ContactCv />
-			</RevealOnScroll>
+			<SectionReveal animation="flip" label="İletişim ve CV">
+				<ContactCv />
+			</SectionReveal>
 		</div>
 	);
 }
-
 

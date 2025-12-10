@@ -101,7 +101,6 @@ const quickLinks = [
 							</div>
 						</div>
 
-						{/* ...existing code... */}
 					</div>
 
 					{/* Center - Quick Links */}
@@ -119,7 +118,7 @@ const quickLinks = [
 									<a
 										key={link.name}
 										href={link.href}
-										className="group flex items-center justify-between p-2.5 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 w-full md:w-64"
+										className="group flex items-center justify-between rounded-lg border border-slate-700/30 bg-slate-800/30 p-2.5 transition-all duration-300 hover:translate-x-1 hover:border-slate-600/50 hover:bg-slate-700/40"
 										>
 											<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-xs font-medium">
 												{link.name}
@@ -132,7 +131,7 @@ const quickLinks = [
 									<Link
 										key={link.name}
 										to={link.href}
-										className="group flex items-center justify-between p-2.5 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 w-full md:w-64"
+										className="group flex items-center justify-between rounded-lg border border-slate-700/30 bg-slate-800/30 p-2.5 transition-all duration-300 hover:translate-x-1 hover:border-slate-600/50 hover:bg-slate-700/40"
 									>
 										<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-xs font-medium">
 											{link.name}
@@ -147,7 +146,7 @@ const quickLinks = [
 					</div>
 
 					{/* Right - Bağlantılar Section */}
-					<div className="hidden lg:flex flex-col space-y-3 ">
+					<div className="flex flex-col space-y-3">
 						<h4 className="text-base font-semibold text-white flex items-center gap-2">
 							<svg className="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -161,7 +160,7 @@ const quickLinks = [
 									href={social.url}
 									target="_blank"
 									rel="noreferrer"
-								className={`group flex items-center justify-between p-2.5 rounded-lg bg-slate-800/30 border border-slate-700/30 hover:bg-slate-700/40 hover:border-slate-600/50 transition-all duration-300 hover:translate-x-1 ${social.color} w-full md:w-64`}
+								className={`group flex items-center justify-between rounded-lg border border-slate-700/30 bg-slate-800/30 p-2.5 transition-all duration-300 hover:translate-x-1 hover:border-slate-600/50 hover:bg-slate-700/40 ${social.color}`}
 								title={social.name}
 							>
 								<span className="text-slate-300 group-hover:text-white transition-colors duration-300 text-xs font-medium flex items-center gap-1.5">

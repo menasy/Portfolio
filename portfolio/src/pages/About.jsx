@@ -1,28 +1,29 @@
-import ToolsTechnologies from '../components/ToolsTechnologies';
-import TechSkillsCombo from '../components/TechSkillsCombo';
-import AboutSection from '../components/AboutSection';
+import {
+	AboutSectionLazy as AboutSection,
+	TechSkillsComboLazy as TechSkillsCombo,
+	ToolsTechnologiesLazy as ToolsTechnologies,
+} from '../components/lazySections';
 import Divider from '../components/partial/Divider';
-import RevealOnScroll from '../components/RevealOnScroll';
+import SectionReveal from '../components/SectionReveal';
 
 export default function About() {
 		return (
 			<div className="space-y-4 sm:space-y-6">
-				<RevealOnScroll animation="blur" delay={0}>
-				<AboutSection />
-			</RevealOnScroll>
+				<SectionReveal animation="blur" label="Hakkımda">
+					<AboutSection />
+				</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="flip" delay={0}>
-			{/* Teknik Becerilerim Section */}
-			<TechSkillsCombo />
-			</RevealOnScroll>
+			<SectionReveal animation="flip" label="Teknik Beceriler">
+				<TechSkillsCombo />
+			</SectionReveal>
 
 			<Divider />
 
-			<RevealOnScroll animation="bounce" delay={0}>
-			<ToolsTechnologies />
-			</RevealOnScroll>
+			<SectionReveal animation="bounce" label="Araçlar ve Teknolojiler">
+				<ToolsTechnologies />
+			</SectionReveal>
 		</div>
 	);
 }

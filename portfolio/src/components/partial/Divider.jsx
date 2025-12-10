@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Divider.css';
+import '../../styles/Divider.css';
 
 const Divider = () => {
   const dividerRef = useRef(null);
