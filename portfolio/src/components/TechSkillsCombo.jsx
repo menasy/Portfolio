@@ -9,6 +9,7 @@ export default function TechSkillsCombo({ showHeader = true, variant = "grid" })
 		{ icon: '⚡', text: 'Çoklu İş Parçacığı Yönetimi', color: 'from-yellow-500 to-orange-500' },
 		{ icon: '⚙️', text: 'Sistem Programlama', color: 'from-red-500 to-red-600' },
 		{ icon: '🌐', text: 'Socket Programlama', color: 'from-teal-500 to-cyan-500' },
+		{ icon: '🧩', text: 'Mikroservis Mimarisi', color: 'from-purple-500 to-pink-500' },
 		{ icon: '🌍', text: 'Full-Stack Web Geliştirme', color: 'from-emerald-500 to-green-600' },
 		{ icon: '📱', text: 'Mobil Uygulama Geliştirme', color: 'from-cyan-500 to-blue-500' },
 		{ icon: '🐳', text: 'Docker ve Docker Compose', color: 'from-blue-600 to-indigo-600' },

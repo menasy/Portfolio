@@ -83,12 +83,12 @@ export default function TechSkillsInner() {
       <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" label="Git" level="expert" />
       <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" label="C#/.NET" level="middle" />
       <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" label="Java" level="middle" />
-      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" label="JavaScript/React" level="middle" />
-      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" label="Python" level="middle" />
-      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" label="SQL" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" label="JavaScript/TypeScript/React" level="middle" />
       <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" label="HTML/Tailwind/CSS" level="middle" />
-      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" label="Bash" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" label="Python" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" label="SQL/PostgreSQL" level="middle" />
       <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" alt="XML" label="XML" level="middle" />
+      <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" label="Bash" level="begin" />
       <LanguageItem src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" label="Kotlin" level="begin" />
       <LanguageItem src="https://raw.githubusercontent.com/devicons/devicon/master/icons/solidity/solidity-original.svg" alt="Solidity" label="Solidity" level="begin" />
         </div>
