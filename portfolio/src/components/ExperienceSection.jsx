@@ -102,7 +102,7 @@ export default function ExperienceSection() {
 												Medya sunucuları ve video akış teknolojileri üzerine çalışmalar yürüttüm. Wowza Streaming Engine, .NET Web API ve React mimarilerini kullanarak uçtan uca (Full-Stack) bir canlı yayın platformunu hayata geçirdim. Medya iletim süreçlerini modern web teknolojileriyle birleştirerek proje hedeflerini tamamladım.
 											</p>
 											<div className="flex flex-wrap gap-1.5 sm:gap-2">
-												{['ASP.NET Core', 'React', 'Web API', 'Wowza Streaming Engine', 'Full Stack'].map((tech) => (
+												{['ASP.NET Core', 'React', 'Web API', 'Wowza Streaming Engine', 'Full Stack', 'WebRtc'].map((tech) => (
 													<span key={tech} className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 rounded text-xs sm:text-sm">
 														{tech}
 													</span>

@@ -16,7 +16,7 @@ import SectionReveal from '../components/SectionReveal';
 export default function Home() {
 	const { pathname } = useLocation();
 	const [typingText, setTypingText] = useState('');
-	const roles = ['Software Developer', 'Mobile Application Developer'];
+	const roles = ['Software Developer', 'Web Developer', 'Mobile Developer'];
 
 	useEffect(() => {
 		let roleIndex = 0;

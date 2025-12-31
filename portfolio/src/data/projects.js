@@ -7,6 +7,70 @@ export const categorizeProject = (title, description) => {
 
 export const featuredProjects = [
 	{
+		title: 'StreamApp',
+		link: 'https://github.com/menasy/StreamApp',
+		summary:
+			'StreamApp, canlı yayın ve medya süreçlerinin yönetimi için geliştirilmiş, .NET 8 ve React 18 tabanlı bir platformdur. Wowza Streaming Engine entegrasyonu ile HLS, MPEG-DASH, RTMP, RTSP ve WebRTC protokollerini destekleyerek hem düşük gecikmeli hem de adaptif yayın yetenekleri sunar. Katmanlı mimari prensipleriyle tasarlanan projede; PostgreSQL veri tabanı, JWT tabanlı kimlik doğrulama, RBAC (Rol Bazlı Erişim Kontrolü) ve VOD arşivleme sistemi bulunmaktadır. Gerçek zamanlı bildirimler SignalR ile, otomatik kayıt süreçleri ise Webhook entegrasyonları ile sağlanmıştır. Tüm altyapı Docker Compose ile konteynerize edilmiş olup, Grafana-Loki-Alloy yığını ile merkezi izlenebilirlik (observability) sağlanmıştır.',
+			media: (
+			<div className="flex flex-col gap-3">
+				<img
+					src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamAppU%C4%B1Summary.png?raw=true"
+					alt="StreamApp Dashboard ve Arayüzler"
+					loading="lazy"
+					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+				/>
+				<div className="grid grid-cols-2 gap-3">
+					<img
+						src="https://github.com/menasy/Project_icons/blob/main/StreamApp/DelayTests.png?raw=true"
+						alt="Protokol Gecikme Testleri"
+						loading="lazy"
+						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+					/>
+					<img
+						src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamApp_Architecture.png?raw=true"
+						alt="StreamApp Mimari Diyagramı"
+						loading="lazy"
+						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+					/>
+				</div>
+			</div>
+		),
+		features: [
+			'Çoklu Protokol Desteği: HLS (~31.9s), MPEG-DASH (~7.4s), WebRTC (~0ms) ile farklı kullanım senaryolarına optimal gecikme değerleri',
+			'WebRTC Ultra-Düşük Gecikmeli Oynatma: Sub-second latency ile interaktif canlı yayınlar, dinamik kalite değiştirme sistemi',
+			'Çoklu Görünüm Paneli: Birden fazla stream\'i aynı anda farklı protokollerle izleme, esnek layout yönetimi',
+			'Kapsamlı Stream Yönetimi: SMIL dosyaları ile adaptive bitrate, transcoder ve DVR kontrolü, stream lifecycle yönetimi',
+			'VOD ve Arşiv Sistemi: Webhook entegrasyonlu otomatik kayıt, tarih bazlı filtreleme, zaman sınırlı erişim izinleri',
+			'Güvenlik ve Yetkilendirme: JWT authentication, refresh token, RBAC, stream-level permissions, secure token ile korumalı oynatma',
+			'Gerçek Zamanlı Bildirimler: SignalR ile kullanıcı ve admin kanallarında anlık UI güncellemeleri',
+			'Observability Stack: Serilog structured logging, Grafana-Loki-Alloy entegrasyonu, custom dashboards, trace ID takibi',
+			'Admin Panel: Kullanıcı ve rol yönetimi, permission atama, arşiv erişim talepleri, toplu işlemler ve dashboard istatistikleri',
+			'Konteynerize Altyapı: Docker Compose ile PostgreSQL, Wowza, Grafana, Loki, Alloy servislerinin yönetimi',
+		],
+		technologies: [
+			'ASP.NET Core 8',
+			'React 18',
+			'TypeScript',
+			'Entity Framework Core',
+			'PostgreSQL',
+			'Wowza Streaming Engine',
+			'SignalR',
+			'JWT Authentication',
+			'Docker & Docker Compose',
+			'Video.js',
+			'Tailwind CSS',
+			'Grafana',
+			'Loki',
+			'Alloy',
+			'Serilog',
+			'WebRTC',
+			'HLS/MPEG-DASH',
+			'Vite',
+		],
+		categories: ['Full Stack', 'Backend Development', 'Frontend Development', 'DevOps / Containerization', 'Media Streaming'],
+		isFeaturedHighlight: true,
+	},
+	{
 		title: 'HesKit MobilApp',
 		link: 'https://github.com/menasy/HesKit-MobilApp',
 		summary:

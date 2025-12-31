@@ -19,7 +19,8 @@
 
 @media (min-width: 1024px) {
   .project-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Limit to two columns even on large screens for balanced card sizing */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

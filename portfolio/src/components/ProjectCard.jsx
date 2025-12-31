@@ -6,9 +6,9 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 			{/* Card container with simplified design for wrapper compatibility */}
 			<div className="relative h-full overflow-hidden">
 
-			{/* Media cover */}
+			{/* Media cover - Full visibility for all images */}
 			{media && (
-				<div className="relative aspect-[4/3] sm:aspect-video overflow-hidden cursor-pointer rounded-t-xl sm:rounded-t-2xl"
+				<div className="relative overflow-hidden cursor-pointer rounded-t-xl sm:rounded-t-2xl"
 					onClick={(e) => {
 							e.stopPropagation();
 							const video = e.currentTarget.querySelector('video');
@@ -20,7 +20,7 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 								}
 							}
 						}}>
-						<div className="h-full w-full [&_*]:h-full [&_*]:w-full [&_*]:object-cover group-hover:scale-105 transition-transform duration-700">
+						<div className="h-full w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-contain [&_video]:w-full [&_video]:h-full [&_video]:object-cover group-hover:scale-[1.02] transition-transform duration-700">
 							{React.isValidElement(media) && media.type === 'video' ?
 								React.cloneElement(media, {
 									autoPlay: true,
@@ -51,8 +51,8 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 						</div>
 
 						{/* Overlay gradients */}
-						<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
-						<div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/10 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+						<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+						<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
 						{/* Hover indicator */}
 						<div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3">
@@ -77,7 +77,7 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 								rel="noreferrer"
 								className="block group/title"
 							>
-								<h3 className="text-base sm:text-lg font-bold bg-gradient-to-r from-slate-900 via-blue-800 to-slate-900 dark:from-white dark:via-blue-200 dark:to-white bg-clip-text text-transparent group-hover/title:from-blue-600 group-hover/title:via-purple-600 group-hover/title:to-blue-600 dark:group-hover/title:from-blue-300 dark:group-hover/title:via-purple-300 dark:group-hover/title:to-blue-300 transition-all duration-300 leading-tight mb-2">
+								<h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300 leading-tight mb-2">
 									{title}
 								</h3>
 							</a>
@@ -101,10 +101,10 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 					{/* Summary */}
 				{summary && (
 					<div className="relative group/summary">
-						<div className="relative p-3 sm:p-3.5 bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-lg border border-slate-200/70 dark:border-slate-700/60">
+						<div className="relative p-3 sm:p-3.5 bg-slate-50 dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700">
 							<div className="flex items-start gap-2">
 								<div className="flex-shrink-0 w-0.5 h-8 sm:h-10 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full mt-1"></div>
-								<p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{summary}</p>
+								<p className="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-medium">{summary}</p>
 								</div>
 							</div>
 						</div>
@@ -128,7 +128,7 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 														<path fillRule="evenodd" d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.028 7.07a1 1 0 0 1-1.42.005L3.29 8.82a1 1 0 1 1 1.42-1.41l3.05 3.07 6.318-6.36a1 1 0 0 1 1.626.17z" clipRule="evenodd" />
 													</svg>
 												</div>
-												<span className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{f}</span>
+												<span className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">{f}</span>
 											</li>
 										))}
 									</ul>
@@ -146,10 +146,10 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 										{technologies.map((t, idx) => (
 											<div
 												key={idx}
-												className="group/tech flex items-center gap-2 p-1.5 rounded border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-700/80 hover:bg-slate-50 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600 hover:-translate-y-0.5 transition-all duration-200"
+												className="group/tech flex items-center gap-2 p-1.5 rounded border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600 hover:-translate-y-0.5 transition-all duration-200"
 											>
 												<div className="w-1 h-1 rounded-full bg-gradient-to-r from-orange-500 to-red-500 group-hover/tech:scale-125 transition-transform duration-200"></div>
-												<span className="flex-1 text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">{t}</span>
+												<span className="flex-1 text-sm font-semibold text-slate-800 dark:text-slate-200">{t}</span>
 											</div>
 										))}
 									</div>
