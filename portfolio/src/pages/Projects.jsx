@@ -103,25 +103,16 @@ export default function Projects() {
 					</RevealOnScroll>
 
 					<Suspense fallback={<LoadingState label="Projeler yükleniyor..." variant="section" />}>
-						{/* Highlighted Featured Project - StreamApp (Full Width, Alone) */}
-						{filteredFeatured.filter(p => p.isFeaturedHighlight).map((p) => (
+						{/* StreamApp - Full Width Card (Alone, Col-span-2) */}
+						{filteredFeatured.filter(p => p.title === 'StreamApp').map((p) => (
 							<div key={p.title} className="mb-8">
 								<RevealOnScroll animation="fade-up" delay={100}>
 									<div className="group relative w-full">
-										{/* Enhanced background effects for highlighted project */}
+										{/* Enhanced background effects for StreamApp */}
 										<div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/15 to-pink-500/20 rounded-xl sm:rounded-2xl blur-md group-hover:blur-lg transition-all duration-500"></div>
 										<div className="absolute inset-0 bg-gradient-to-br from-indigo-400/5 via-purple-400/5 to-pink-400/5 rounded-xl sm:rounded-2xl group-hover:scale-[1.01] transition-transform duration-500"></div>
 
 										<div className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-indigo-300/50 dark:border-indigo-600/50 bg-white dark:bg-slate-800 shadow-lg transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl ring-2 ring-indigo-500/20">
-											{/* Featured Badge */}
-											<div className="absolute top-3 left-3 z-10">
-												<span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-bold shadow-lg">
-													<svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-														<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-													</svg>
-													Öne Çıkan Proje
-												</span>
-											</div>
 											<ProjectCard {...p} />
 										</div>
 									</div>
@@ -129,10 +120,10 @@ export default function Projects() {
 							</div>
 						))}
 
-						{/* Regular Featured Projects (2-Column Grid) */}
-						{filteredFeatured.filter(p => !p.isFeaturedHighlight).length > 0 && (
-							<div className={resolveGridClass(filteredFeatured.filter(p => !p.isFeaturedHighlight).length)}>
-								{filteredFeatured.filter(p => !p.isFeaturedHighlight).map((p, index) => (
+						{/* Regular Featured Projects (2-Column Grid) - Excluding StreamApp */}
+						{filteredFeatured.filter(p => p.title !== 'StreamApp').length > 0 && (
+							<div className={resolveGridClass(filteredFeatured.filter(p => p.title !== 'StreamApp').length)}>
+								{filteredFeatured.filter(p => p.title !== 'StreamApp').map((p, index) => (
 									<RevealOnScroll key={p.title} animation="fade-up" delay={100 + (index * 100)}>
 										<div className="group relative">
 											{/* Enhanced background effects */}

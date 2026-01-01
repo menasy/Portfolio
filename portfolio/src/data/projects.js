@@ -12,27 +12,36 @@ export const featuredProjects = [
 		summary:
 			'StreamApp, canlı yayın ve medya süreçlerinin yönetimi için geliştirilmiş, .NET 8 ve React 18 tabanlı bir platformdur. Wowza Streaming Engine entegrasyonu ile HLS, MPEG-DASH, RTMP, RTSP ve WebRTC protokollerini destekleyerek hem düşük gecikmeli hem de adaptif yayın yetenekleri sunar. Katmanlı mimari prensipleriyle tasarlanan projede; PostgreSQL veri tabanı, JWT tabanlı kimlik doğrulama, RBAC (Rol Bazlı Erişim Kontrolü) ve VOD arşivleme sistemi bulunmaktadır. Gerçek zamanlı bildirimler SignalR ile, otomatik kayıt süreçleri ise Webhook entegrasyonları ile sağlanmıştır. Tüm altyapı Docker Compose ile konteynerize edilmiş olup, Grafana-Loki-Alloy yığını ile merkezi izlenebilirlik (observability) sağlanmıştır.',
 			media: (
-			<div className="flex flex-col gap-3">
-				<img
-					src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamAppU%C4%B1Summary.png?raw=true"
-					alt="StreamApp Dashboard ve Arayüzler"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
-				<div className="grid grid-cols-2 gap-3">
+			
+			<div className="flex flex-col gap-2">
+				<div className="grid grid-cols-2 gap-2">
+					<div className="aspect-video overflow-hidden rounded-lg">
+						<img
+							src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamApp_Architecture.png?raw=true"
+							alt="StreamApp Mimari Diyagramı"
+							loading="lazy"
+							className="w-full h-full object-cover"
+						/>
+					</div>
+					<div className="aspect-video overflow-hidden rounded-lg">
+						<img
+							src="https://github.com/menasy/Project_icons/blob/main/StreamApp/DelayTests.png?raw=true"
+							alt="Protokol Gecikme Testleri"
+							loading="lazy"
+							className="w-full h-full object-cover"
+						/>
+					</div>
+					
+				</div>
+				<div className="aspect-video overflow-hidden rounded-lg">
 					<img
-						src="https://github.com/menasy/Project_icons/blob/main/StreamApp/DelayTests.png?raw=true"
-						alt="Protokol Gecikme Testleri"
+						src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamAppU%C4%B1Summary.png?raw=true"
+						alt="StreamApp Dashboard ve Arayüzler"
 						loading="lazy"
-						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-					/>
-					<img
-						src="https://github.com/menasy/Project_icons/blob/main/StreamApp/StreamApp_Architecture.png?raw=true"
-						alt="StreamApp Mimari Diyagramı"
-						loading="lazy"
-						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+						className="w-full h-full object-cover"
 					/>
 				</div>
+				
 			</div>
 		),
 		features: [
@@ -68,7 +77,6 @@ export const featuredProjects = [
 			'Vite',
 		],
 		categories: ['Full Stack', 'Backend Development', 'Frontend Development', 'DevOps / Containerization', 'Media Streaming'],
-		isFeaturedHighlight: true,
 	},
 	{
 		title: 'HesKit MobilApp',
@@ -76,12 +84,14 @@ export const featuredProjects = [
 		summary:
 			'Android platformunda Java ile geliştirdiğim HesKit MobilApp, işletmeler için kapsamlı bir finansal yönetim çözümüdür. SQLite veritabanı entegrasyonuyla çalışan bilgileri, mesai takibi ve ödemeleri tek noktadan yönetim sağlar. Android Jetpack ve Room Database kullanarak kullanıcı dostu ve güvenli bir finansal yönetim deneyimi sundum.',
 		media: (
-			<img
-				src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png"
-				alt="HesKit Fotoğraf"
-				loading="lazy"
-				className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-			/>
+			<div className="aspect-video overflow-hidden rounded-lg">
+				<img
+					src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png"
+					alt="HesKit Fotoğraf"
+					loading="lazy"
+					className="w-full h-full object-cover"
+				/>
+			</div>
 		),
 		features: [
 			'Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi',
@@ -98,26 +108,32 @@ export const featuredProjects = [
 		summary:
 			'WebServ, ekip arkadaşımla birlikte C++ dilinde sıfırdan geliştirdiğimiz kendi HTTP/1.1 web sunucumuzdur. Nginx benzeri olay tabanlı mimari (event-driven architecture) ile tek bir işlemde birden fazla bağlantıyı eşzamanlı olarak yönetebilen, socket programlama kullanarak tek thread üzerinde çalışan yüksek performanslı bir yapı tasarladık. Non-blocking I/O mekanizmaları sayesinde çoklu istemci bağlantılarını etkin şekilde yöneten sunucumuz, çoklu port desteği, dinamik içerik işleme ve özelleştirilebilir yönlendirme özellikleriyle modern web sunucusu ihtiyaçlarını karşılamaktadır. Bu proje, ağ programlama, HTTP protokolü ve sistem kaynaklarının optimum kullanımı konularında derinlemesine teknik deneyim sağladı.',
 		media: (
-			<div className="flex flex-col gap-3">
-				<img
-					src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/42WebServer.png?raw=true"
-					alt="WebServer Görseli"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
-				<div className="grid grid-cols-2 gap-3">
+			<div className="flex flex-col gap-2">
+				<div className="aspect-video overflow-hidden rounded-lg">
 					<img
-						src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/ServerClientDiagram.png?raw=true"
-						alt="Server-Client Diyagramı"
+						src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/42WebServer.png?raw=true"
+						alt="WebServer Görseli"
 						loading="lazy"
-						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+						className="w-full h-full object-cover"
 					/>
-					<img
-						src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/eventDriven.jpg?raw=true"
-						alt="Olay Tabanlı Mimari"
-						loading="lazy"
-						className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-					/>
+				</div>
+				<div className="grid grid-cols-2 gap-2">
+					<div className="aspect-video overflow-hidden rounded-lg">
+						<img
+							src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/ServerClientDiagram.png?raw=true"
+							alt="Server-Client Diyagramı"
+							loading="lazy"
+							className="w-full h-full object-cover"
+						/>
+					</div>
+					<div className="aspect-video overflow-hidden rounded-lg">
+						<img
+							src="https://github.com/menasy/Project_icons/blob/main/WebServer_Images/eventDriven.jpg?raw=true"
+							alt="Olay Tabanlı Mimari"
+							loading="lazy"
+							className="w-full h-full object-cover"
+						/>
+					</div>
 				</div>
 			</div>
 		),
@@ -140,19 +156,23 @@ export const featuredProjects = [
 		summary:
 			'Docker teknolojisini derinlemesine öğrenmek amacıyla geliştirdiğim Inception projesi, web hizmetlerinin konteynerleştirilmiş bir altyapısını oluşturur. Her bir servisi (NGINX, WordPress, MariaDB) ayrı konteynerlerde çalıştırarak izolasyon ve ölçeklenebilirlik sağladım. TLS/SSL sertifikaları ile güvenli bağlantılar oluşturdum ve Docker Compose ile tüm sistem bileşenlerini tek bir yapılandırma dosyasıyla yönetmeyi başardım. Deneyimlerimi Medium yazısında detaylı olarak paylaştım.',
 		media: (
-			<div className="grid grid-cols-2 gap-3">
-				<img
-					src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png"
-					alt="Inception Mimari"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
-				<img
-					src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg"
-					alt="Docker Compose"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
+			<div className="grid grid-cols-2 gap-2">
+				<div className="aspect-video overflow-hidden rounded-lg">
+					<img
+						src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/inceptionArtitech.png"
+						alt="Inception Mimari"
+						loading="lazy"
+						className="w-full h-full object-cover"
+					/>
+				</div>
+				<div className="aspect-video overflow-hidden rounded-lg">
+					<img
+						src="https://raw.githubusercontent.com/menasy/Project_icons/main/InceptionImages/DockerCompose.jpg"
+						alt="Docker Compose"
+						loading="lazy"
+						className="w-full h-full object-cover"
+					/>
+				</div>
 			</div>
 		),
 		features: [
@@ -171,18 +191,20 @@ export const featuredProjects = [
 		summary:
 			'Ekip arkadaşımla birlikte C dilinde geliştirdiğimiz Minishell projesi, Unix benzeri bir komut satırı arayüzünü sıfırdan tasarlamamızı sağladı. Komut ayrıştırma, boru hatları (pipe) yönetimi ve yönlendirme mekanizmalarını başarıyla uygulayarak, girdi/çıktı akışlarını kontrol eden bir sistem oluşturduk. POSIX sistem çağrılarını kullanarak sinyal yönetimi ve bellek kontrolü konularında pratik deneyim elde ettim. Takım çalışması sürecinde iş bölümü ve ortak kod kalitesi standartları üzerinde çalışarak iletişim ve problem çözme becerilerimizi de geliştirdik.',
 		media: (
-			<video
-				autoPlay
-				muted
-				loop
-				playsInline
-				preload="metadata"
-				className="w-full h-full object-cover"
-				style={{ pointerEvents: 'none' }}
-			>
-				<source src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4" type="video/mp4" />
-				Your browser does not support the video tag.
-			</video>
+			<div className="aspect-video overflow-hidden rounded-lg">
+				<video
+					autoPlay
+					muted
+					loop
+					playsInline
+					preload="metadata"
+					className="w-full h-full object-cover"
+					style={{ pointerEvents: 'none' }}
+				>
+					<source src="https://raw.githubusercontent.com/menasy/Project_icons/main/MinishellFiles/MinishellVideo.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
 		),
 		features: [
 			'Komut Ayırma: cd, echo, pwd',
@@ -202,18 +224,20 @@ export const featuredProjects = [
 		summary:
 			"Wolfenstein 3D'den esinlenerek ekip arkadaşımla C dili ve MiniLibX kullanarak geliştirdiğim Cub3D projesi, raycasting tekniğiyle 2D haritaları gerçek zamanlı 3D görünüme dönüştürür. Matematiksel hesaplamalarla dokulu duvarlar oluşturarak doğru perspektif sağladık. WASD ve ok tuşları ile kontrol sistemi tasarlayarak kullanıcı dostu bir oyun deneyimi sunmayı başardık.",
 		media: (
-			<video
-				autoPlay
-				muted
-				loop
-				playsInline
-				preload="metadata"
-				className="w-full h-full object-cover"
-				style={{ pointerEvents: 'none' }}
-			>
-				<source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4" type="video/mp4" />
-				Your browser does not support the video tag.
-			</video>
+			<div className="aspect-video overflow-hidden rounded-lg">
+				<video
+					autoPlay
+					muted
+					loop
+					playsInline
+					preload="metadata"
+					className="w-full h-full object-cover"
+					style={{ pointerEvents: 'none' }}
+				>
+					<source src="https://raw.githubusercontent.com/e-kose/cub3d/main/GameView/cub3dVideo.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+			</div>
 		),
 		features: [
 			'Ray Casting: 2D haritaları 3D dünyaya dönüştürme',
@@ -231,19 +255,23 @@ export const featuredProjects = [
 		summary:
 			'Web3 tabanlı noter uygulamam, belgeleri SHA256 algoritmasıyla benzersiz şekilde imzalayıp Ethereum Sepolia test ağındaki Solidity akıllı sözleşmeler aracılığıyla blok zincirine kaydeder. Belgeler değiştirilemez, zaman damgalı ve herkese açık biçimde saklanır. MetaMask entegrasyonu ve sade web arayüzüyle kullanıcılar, belgelerini güvenle doğrulayıp kayıt altına alabilir.',
 		media: (
-			<div className="grid grid-cols-2 gap-3">
-				<img
-					src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/BlockChainNotaryWeb.png?raw=true"
-					alt="Blockchain Noter Web Arayüzü"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
-				<img
-					src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/solFileRemixIDE.png?raw=true"
-					alt="Remix IDE Solidity Kodu"
-					loading="lazy"
-					className="w-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
-				/>
+			<div className="grid grid-cols-2 gap-2">
+				<div className="aspect-video overflow-hidden rounded-lg">
+					<img
+						src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/BlockChainNotaryWeb.png?raw=true"
+						alt="Blockchain Noter Web Arayüzü"
+						loading="lazy"
+						className="w-full h-full object-cover"
+					/>
+				</div>
+				<div className="aspect-video overflow-hidden rounded-lg">
+					<img
+						src="https://github.com/menasy/Project_icons/blob/main/BlockChan_Web3/solFileRemixIDE.png?raw=true"
+						alt="Remix IDE Solidity Kodu"
+						loading="lazy"
+						className="w-full h-full object-cover"
+					/>
+				</div>
 			</div>
 		),
 		features: [
@@ -263,12 +291,14 @@ export const featuredProjects = [
 		summary:
 			'C dilinde geliştirdiğim Philosophers42 projesi, klasik "The Dining Philosophers Problem" simülasyonudur. Pthread ve mutex mekanizmalarını kullanarak paylaşılan kaynaklar için rekabet eden filozofların deadlock yaşamadan yemek yeme ve düşünme döngülerini yönettim. Yarış koşulları ve senkronizasyon problemlerini çözerek, çoklu iş parçacığı programlama konusunda değerli deneyim kazandım.',
 		media: (
-			<img
-				src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png"
-				alt="Philo Icon"
-				loading="lazy"
-				className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-			/>
+			<div className="aspect-video overflow-hidden rounded-lg">
+				<img
+					src="https://raw.githubusercontent.com/menasy/Project_icons/main/Philo/philo.png"
+					alt="Philo Icon"
+					loading="lazy"
+					className="w-full h-full object-cover"
+				/>
+			</div>
 		),
 		features: [
 			'Yarış koşulları (race conditions)',
