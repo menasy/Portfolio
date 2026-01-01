@@ -1,0 +1,127 @@
+/* BorderAnimationCard - Rotating Gradient Border Animation */
+/* Based on the card design with rotating gradient bar */
+
+.border-animation-card {
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+/* Light mode background */
+.border-animation-card {
+  background: #f8fafc;
+}
+
+.dark .border-animation-card {
+  background: #1e293b;
+}
+
+/* Content wrapper - slightly smaller than parent to show border */
+.border-animation-content {
+  border-radius: 0.875rem;
+  background: white;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .border-animation-content {
+  background: #1e293b;
+}
+
+/* Inner glow effect */
+.border-animation-content::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: "";
+  display: block;
+  background: white;
+  width: 8px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.border-animation-card:hover .border-animation-content::before {
+  opacity: 0.8;
+}
+
+/* THE ROTATING GRADIENT BAR - This is the magic! */
+.border-animation-card::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 400%;
+  background: linear-gradient(
+    180deg,
+    #3b82f6 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #f43f5e 75%,
+    #3b82f6 100%
+  );
+  transition: opacity 300ms;
+  animation: rotation_border 4000ms infinite linear;
+  animation-play-state: paused;
+  z-index: 1;
+}
+
+.border-animation-card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+/* Blur overlay behind content */
+.border-animation-card::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(50px);
+  z-index: 1;
+}
+
+.dark .border-animation-card::after {
+  background: rgba(30, 41, 59, 0.3);
+}
+
+/* Rotation animation */
+@keyframes rotation_border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shadow enhancement on hover */
+.border-animation-card {
+  transition: box-shadow 400ms ease, transform 300ms ease;
+}
+
+.border-animation-card:hover {
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(139, 92, 246, 0.2),
+    0 0 60px rgba(236, 72, 153, 0.1);
+  transform: translateY(-4px);
+}

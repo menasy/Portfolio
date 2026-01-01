@@ -107,15 +107,7 @@ export default function Projects() {
 						{filteredFeatured.filter(p => p.title === 'StreamApp').map((p) => (
 							<div key={p.title} className="mb-8">
 								<RevealOnScroll animation="fade-up" delay={100}>
-									<div className="group relative w-full">
-										{/* Enhanced background effects for StreamApp */}
-										<div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 via-purple-500/15 to-pink-500/20 rounded-xl sm:rounded-2xl blur-md group-hover:blur-lg transition-all duration-500"></div>
-										<div className="absolute inset-0 bg-gradient-to-br from-indigo-400/5 via-purple-400/5 to-pink-400/5 rounded-xl sm:rounded-2xl group-hover:scale-[1.01] transition-transform duration-500"></div>
-
-										<div className="relative overflow-hidden rounded-xl sm:rounded-2xl border-2 border-indigo-300/50 dark:border-indigo-600/50 bg-white dark:bg-slate-800 shadow-lg transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-2xl ring-2 ring-indigo-500/20">
-											<ProjectCard {...p} />
-										</div>
-									</div>
+                                                                        <ProjectCard {...p} />
 								</RevealOnScroll>
 							</div>
 						))}
@@ -125,15 +117,7 @@ export default function Projects() {
 							<div className={resolveGridClass(filteredFeatured.filter(p => p.title !== 'StreamApp').length)}>
 								{filteredFeatured.filter(p => p.title !== 'StreamApp').map((p, index) => (
 									<RevealOnScroll key={p.title} animation="fade-up" delay={100 + (index * 100)}>
-										<div className="group relative">
-											{/* Enhanced background effects */}
-											<div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-xl sm:rounded-2xl blur-sm group-hover:blur-md transition-all duration-500"></div>
-											<div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-xl sm:rounded-2xl group-hover:scale-[1.02] transition-transform duration-500"></div>
-
-											<div className="relative overflow-hidden rounded-xl sm:rounded-2xl border border-blue-200/40 dark:border-blue-700/40 bg-white dark:bg-slate-800 shadow-sm transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-lg">
-												<ProjectCard {...p} />
-											</div>
-										</div>
+                                                                                <ProjectCard {...p} />
 									</RevealOnScroll>
 								))}
 							</div>

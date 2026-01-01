@@ -79,30 +79,6 @@ export const featuredProjects = [
 		categories: ['Full Stack', 'Backend Development', 'Frontend Development', 'DevOps / Containerization', 'Media Streaming'],
 	},
 	{
-		title: 'HesKit MobilApp',
-		link: 'https://github.com/menasy/HesKit-MobilApp',
-		summary:
-			'Android platformunda Java ile geliştirdiğim HesKit MobilApp, işletmeler için kapsamlı bir finansal yönetim çözümüdür. SQLite veritabanı entegrasyonuyla çalışan bilgileri, mesai takibi ve ödemeleri tek noktadan yönetim sağlar. Android Jetpack ve Room Database kullanarak kullanıcı dostu ve güvenli bir finansal yönetim deneyimi sundum.',
-		media: (
-			<div className="aspect-video overflow-hidden rounded-lg">
-				<img
-					src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png"
-					alt="HesKit Fotoğraf"
-					loading="lazy"
-					className="w-full h-full object-cover"
-				/>
-			</div>
-		),
-		features: [
-			'Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi',
-			'Ödeme İşlemleri: Havale, harçlık ve transfer takibi',
-			'Mesai Takibi: Çalışma günleri ve fazla mesailer',
-			'Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi',
-		],
-		technologies: ['Java', 'SQLite', 'Android SDK', 'XML, Gradle', 'Room Database', 'Singleton Pattern', 'Android Jetpack', 'RecyclerView'],
-		categories: ['Mobile Application Development'],
-	},
-	{
 		title: 'WebServ',
 		link: 'https://github.com/menasy/WebServer',
 		summary:
@@ -150,6 +126,31 @@ export const featuredProjects = [
 		technologies: ['C++', 'Socket Programlama', 'I/O Multiplexing (poll/select)', 'Olay Tabanlı Mimari', 'HTTP Protokolü', 'POSIX API', 'CGI (Common Gateway Interface)', 'Config Dosyası Parsing'],
 		categories: ['Backend Development', 'System Programming'],
 	},
+	{
+		title: 'HesKit MobilApp',
+		link: 'https://github.com/menasy/HesKit-MobilApp',
+		summary:
+			'Android platformunda Java ile geliştirdiğim HesKit MobilApp, işletmeler için kapsamlı bir finansal yönetim çözümüdür. SQLite veritabanı entegrasyonuyla çalışan bilgileri, mesai takibi ve ödemeleri tek noktadan yönetim sağlar. Android Jetpack ve Room Database kullanarak kullanıcı dostu ve güvenli bir finansal yönetim deneyimi sundum.',
+		media: (
+			<div className="aspect-video overflow-hidden rounded-lg">
+				<img
+					src="https://raw.githubusercontent.com/menasy/Project_icons/main/HesKitFiles/HeskitFigma.png"
+					alt="HesKit Fotoğraf"
+					loading="lazy"
+					className="w-full h-full object-cover"
+				/>
+			</div>
+		),
+		features: [
+			'Çalışan Yönetimi: İş bilgileri, ekleme ve profil yönetimi',
+			'Ödeme İşlemleri: Havale, harçlık ve transfer takibi',
+			'Mesai Takibi: Çalışma günleri ve fazla mesailer',
+			'Gerçek Zamanlı Güncelleme: Dinamik veri yönetimi',
+		],
+		technologies: ['Java', 'SQLite', 'Android SDK', 'XML, Gradle', 'Room Database', 'Singleton Pattern', 'Android Jetpack', 'RecyclerView'],
+		categories: ['Mobile Application Development'],
+	},
+	
 	{
 		title: 'Inception',
 		link: 'https://github.com/menasy/Inception_Docker',

@@ -1,29 +1,36 @@
 import React, { useState } from 'react';
+import BorderAnimationCard from './partial/BorderAnimationCard';
+import MediaLayout from './MediaLayout';
 
-export default function ProjectCard({ title, link, summary, media, features, technologies, categories }) {
+export default function ProjectCard({ title, link, summary, media, mediaItems, features, technologies, categories }) {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (
-		<div className="group block relative h-full">
-			{/* Card container with simplified design for wrapper compatibility */}
-			<div className="relative h-full overflow-hidden">
+		<BorderAnimationCard className="group block relative h-full flex flex-col">
+			{/* Card container with flex structure for equal height cards */}
+			<div className="relative flex-1 flex flex-col overflow-hidden">
 
-			{/* Media cover - Full visibility for all images - No zoom on hover for stability */}
-			{media && (
+		{/* Media cover - Supports both legacy JSX and new mediaItems array */}
+			{(media || mediaItems) && (
 				<div className="relative overflow-hidden cursor-pointer rounded-t-xl sm:rounded-t-2xl"
 					onClick={(e) => {
-							e.stopPropagation();
-							const video = e.currentTarget.querySelector('video');
-							if (video) {
-								if (video.paused) {
-									video.play().catch(() => { });
-								} else {
-									video.pause();
-								}
+						e.stopPropagation();
+						const video = e.currentTarget.querySelector('video');
+						if (video) {
+							if (video.paused) {
+								video.play().catch(() => { });
+							} else {
+								video.pause();
 							}
-						}}>
-						{/* Removed group-hover:scale for stable hover */}
-						<div className="h-full w-full [&_img]:w-full [&_img]:h-auto [&_img]:object-contain [&_video]:w-full [&_video]:h-full [&_video]:object-cover transition-transform duration-700">
+						}
+					}}>
+					
+					{/* New mediaItems array format - uses MediaLayout */}
+					{mediaItems && mediaItems.length > 0 ? (
+						<MediaLayout mediaItems={mediaItems} />
+					) : (
+						/* Legacy JSX media format - styles defined in projects.css */
+						<div className="legacy-media-container">
 							{React.isValidElement(media) && media.type === 'video' ?
 								React.cloneElement(media, {
 									autoPlay: true,
@@ -52,24 +59,25 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 									media
 							}
 						</div>
+					)}
 
-						{/* Overlay gradient - stable, no hover glow */}
-						<div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
+					{/* Overlay gradient - stable, no hover glow */}
+					<div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
 
-						{/* Hover indicator */}
-						<div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3">
-							<div className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm text-white/95 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-								<span className="hidden sm:inline">Projeyi Görüntüle</span>
-								<svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-								</svg>
-							</div>
+					{/* Hover indicator */}
+					<div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-3">
+						<div className="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-slate-900/90 backdrop-blur-sm text-white/95 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+							<span className="hidden sm:inline">Projeyi Görüntüle</span>
+							<svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+							</svg>
 						</div>
 					</div>
-				)}
+				</div>
+			)}
 
-				{/* Body */}
-				<div className="relative p-4 sm:p-5 space-y-4">
+				{/* Body - Flex structure for equal height cards */}
+				<div className="relative p-4 sm:p-5 space-y-4 flex-1 flex flex-col">
 					{/* Header with title - Always visible */}
 					<div className="flex items-start justify-between gap-3">
 						<div className="flex-1">
@@ -180,8 +188,8 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 						</div>
 					</div>
 
-					{/* Bottom action - Always visible */}
-					<div className="pt-2 flex justify-end">
+					{/* Bottom action - Always visible, sticks to bottom */}
+					<div className="pt-2 flex justify-end mt-auto">
 						<a
 							href={link}
 							target="_blank"
@@ -196,7 +204,7 @@ export default function ProjectCard({ title, link, summary, media, features, tec
 					</div>
 				</div>
 			</div>
-		</div>
+		</BorderAnimationCard>
 	);
 }
 
